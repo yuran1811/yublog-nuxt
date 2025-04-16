@@ -6,7 +6,6 @@ export default defineNuxtConfig({
     '@nuxt/image',
     '@nuxt/ui',
     '@nuxt/eslint',
-    '@nuxthq/studio',
     '@vueuse/nuxt',
     '@pinia/nuxt',
     'reka-ui/nuxt',
