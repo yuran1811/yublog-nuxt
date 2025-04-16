@@ -8,7 +8,7 @@
   "author": "yuran1811",
   "license": "MIT",
   "engines": {
-    "node": ">=23"
+    "node": "22.x"
   },
   "scripts": {
     "dev": "nuxt dev",
