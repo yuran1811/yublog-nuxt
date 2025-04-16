@@ -5,18 +5,11 @@ import { parseAuthorData } from '~/shared/utils';
 
 const slug = useRouteParams('slug');
 
-const { data: post } = await useAsyncData(`blog-${slug.value}`, () =>
-  queryCollection('blog').path(`/blog/${slug.value}`).first(),
+const { data: post } = await useAsyncData(`note-${slug.value}`, () =>
+  queryCollection('notes').path(`/notes/${slug.value}`).first(),
 );
 
-const { data: relatedPosts } = await useAsyncData(
-  `blog-${slug.value}-surround`,
-  () => {
-    return queryCollectionItemSurroundings('blog', `/blog/${slug.value}`);
-  },
-);
-
-const postData = computed(() => ({
+const noteData = computed(() => ({
   title: post.value?.title || 'Untitled',
   author: post.value?.author || 'anonymous',
   date: post.value?.date || new Date(),
@@ -25,26 +18,26 @@ const postData = computed(() => ({
 }));
 
 const { data: authorData } = await useAsyncData(
-  `blog-author-${postData.value.author}`,
+  `note-author-${noteData.value.author}`,
   () =>
     queryCollection('authors')
-      .where('name', '=', postData.value.author)
+      .where('name', '=', noteData.value.author)
       .first(),
 );
 
 useSeoMeta({
-  title: `${postData.value.title}`,
-  description: postData.value.desc,
+  title: `${noteData.value.title}`,
+  description: noteData.value.desc,
 });
 
 const tocLinks = computed(() => post.value?.body?.toc?.links || []);
 
 const breadCrumbItems = ref([
   { label: 'Home', icon: 'lucide:house', to: '/' },
-  { label: 'Blog', icon: 'lucide:book-open', to: '/blog' },
+  { label: 'Notes', icon: 'lucide:notebook-pen', to: '/notes' },
   {
-    label: post.value?.title ? post.value.title : 'Post',
-    icon: 'lucide:file',
+    label: post.value?.title ? post.value.title : 'Note',
+    icon: 'lucide:sticky-note',
   },
 ]);
 </script>
@@ -57,31 +50,27 @@ const breadCrumbItems = ref([
 
     <div class="mx-auto w-full space-y-4 text-center">
       <p class="text-xs font-semibold tracking-wider uppercase">
-        <template v-for="tag in postData.tags" :key="tag">
-          <NuxtLink
-            :to="`/blog/tags/${tag}`"
+        <template v-for="tag in noteData.tags" :key="tag">
+          <span
             class="inline-block rounded-md bg-(--ui-bg) px-2 py-1 text-xs font-semibold tracking-wider text-(--ui-text-muted) lowercase hover:text-(--ui-text)"
           >
             #{{ tag }}
-          </NuxtLink>
+          </span>
         </template>
       </p>
 
       <h1 class="text-4xl leading-tight font-bold md:text-5xl">
-        {{ postData.title }}
+        {{ noteData.title }}
       </h1>
 
       <p class="text-sm text-(--ui-text-muted)">
         by
-        <NuxtLink
-          :to="`/blog/authors/${postData.author}`"
-          class="text-violet-400 underline"
-        >
-          <span itemprop="name">{{ postData.author }}</span>
-        </NuxtLink>
+        <span itemprop="name" class="text-violet-400">{{
+          noteData.author
+        }}</span>
         on
         <time datetime="2021-02-12 15:34:18-0200">{{
-          useDateFormat(postData.date, DefaultDateFormat).value
+          useDateFormat(noteData.date, DefaultDateFormat).value
         }}</time>
       </p>
     </div>
@@ -98,17 +87,8 @@ const breadCrumbItems = ref([
         :value="post"
       />
       <div v-else>
-        <p class="p-4 text-center font-bold">Post not found.</p>
+        <p class="p-4 text-center font-bold">Note not found.</p>
       </div>
-    </div>
-
-    <div class="flex justify-between">
-      <NuxtLink v-if="relatedPosts?.[0]" :to="relatedPosts[0].path">
-        ← {{ relatedPosts[0].title }}
-      </NuxtLink>
-      <NuxtLink v-if="relatedPosts?.[1]" :to="relatedPosts[1].path">
-        {{ relatedPosts[1].title }} →
-      </NuxtLink>
     </div>
   </article>
 </template>

@@ -201,27 +201,45 @@ export const IconsMapping: Record<string, Record<string, string>> = {
 
 export const DockItems: DockItemType[] = [
   {
+    type: 'component',
+    name: 'Avatar',
+    icon: '',
+    img: 'https://avatars.githubusercontent.com/u/76398420?v=4',
+    link: '',
+  },
+  {
     type: 'link',
     name: 'Github',
-    icon: '/images/github.png',
+    icon: 'lucide:github',
+    img: '',
     link: 'https://github.com/yuran1811',
   },
   {
     type: 'link',
+    name: 'Linkedin',
+    icon: 'lucide:linkedin',
+    img: '',
+    link: 'https://www.linkedin.com/in/yuran-legends-6252b6222/',
+  },
+  {
+    type: 'link',
     name: 'Facebook',
-    icon: '/images/fb.png',
+    icon: 'lucide:facebook',
+    img: '',
     link: 'https://www.facebook.com/YuranLegends/',
   },
   {
     type: 'link',
     name: 'Instagram',
-    icon: '/images/insta.png',
+    icon: 'lucide:instagram',
+    img: '',
     link: 'https://www.instagram.com/_yuranlegends_',
   },
   {
     type: 'link',
     name: 'Youtube',
-    icon: '/images/youtube.png',
+    icon: 'lucide:youtube',
+    img: '',
     link: 'https://www.youtube.com/channel/UCLXNBb-jZRS_3o_itGGrGRA?view_as=subscriber',
   },
 ];

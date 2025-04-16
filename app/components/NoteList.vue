@@ -1,9 +1,12 @@
 <script setup lang="ts">
-import type { BlogCollectionItem } from '@nuxt/content';
+import type { NotesCollectionItem } from '@nuxt/content';
 import { DefaultDateFormat } from '@/constants';
 
 defineProps<{
-  posts?: Pick<BlogCollectionItem, 'id' | 'title' | 'date' | 'path' | 'tags'>[];
+  notes?: Pick<
+    NotesCollectionItem,
+    'id' | 'title' | 'date' | 'path' | 'tags'
+  >[];
 }>();
 </script>
 
@@ -11,7 +14,7 @@ defineProps<{
   <div
     class="mx-auto grid max-w-220 auto-rows-fr grid-cols-1 justify-items-center-safe gap-8 py-6 md:grid-cols-2"
   >
-    <template v-for="post in posts" :key="post.id">
+    <template v-for="note in notes" :key="note.id">
       <article
         class="hover:animate-background w-full max-w-105 scale-100 rounded-xl bg-gradient-to-r from-green-300 via-blue-500 to-purple-600 p-0.5 shadow-xl transition hover:scale-[1.02] hover:bg-[length:400%_400%] hover:shadow-xs hover:[animation-duration:_4s] dark:shadow-gray-700/25"
       >
@@ -19,33 +22,21 @@ defineProps<{
           class="relative flex h-full flex-col items-start justify-end overflow-hidden rounded-[10px] bg-white p-4 !pt-18 sm:p-6 dark:bg-gray-900"
         >
           <p class="block text-xs text-gray-500 dark:text-gray-400">
-            {{ useDateFormat(post.date || new Date(), DefaultDateFormat) }}
+            {{ useDateFormat(note.date || new Date(), DefaultDateFormat) }}
           </p>
 
           <NuxtLink
-            :to="post.path"
+            :to="note.path"
             class="mt-0.5 line-clamp-2 text-lg font-medium text-gray-900 dark:text-white"
           >
-            {{ post.title || 'Untitled' }}
+            {{ note.title || 'Untitled' }}
           </NuxtLink>
-
-          <div class="mt-4 flex flex-wrap gap-1">
-            <template v-for="tag in post.tags || []" :key="tag">
-              <NuxtLink :to="`/blog/tags/${tag}`">
-                <span
-                  class="rounded-full px-2.5 py-0.5 text-xs whitespace-nowrap dark:bg-purple-600 dark:text-purple-100"
-                >
-                  {{ tag }}
-                </span>
-              </NuxtLink>
-            </template>
-          </div>
         </div>
       </article>
     </template>
 
-    <div v-if="posts?.length === 0" class="col-span-full">
-      <p class="text-center">No posts found.</p>
+    <div v-if="notes?.length === 0" class="col-span-full">
+      <p class="text-center">No notes found.</p>
     </div>
   </div>
 </template>

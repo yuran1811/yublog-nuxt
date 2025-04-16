@@ -7,7 +7,7 @@ export const usePages = () => {
     .filter(
       (route) =>
         !['index', 'about', 'notes', 'all'].includes(route.name as string) &&
-        !(route.name as string)?.includes('blog-'),
+        ['notes-', 'blog-'].every((_) => !(route.name as string)?.includes(_)),
     );
 
   const categorizedRoutes = routes.reduce(

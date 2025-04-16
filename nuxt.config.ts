@@ -1,10 +1,11 @@
 export default defineNuxtConfig({
   modules: [
     '@nuxtjs/seo',
-    '@nuxt/eslint',
+    '@nuxtjs/mdc',
     '@nuxt/content',
     '@nuxt/image',
     '@nuxt/ui',
+    '@nuxt/eslint',
     '@vueuse/nuxt',
     '@pinia/nuxt',
     'reka-ui/nuxt',
@@ -83,6 +84,33 @@ export default defineNuxtConfig({
       anchorLinks: false,
     },
   },
+  mdc: {
+    headings: {
+      anchorLinks: false,
+    },
+    highlight: {
+      theme: {
+        default: 'one-dark-pro',
+        dark: 'one-dark-pro',
+        light: 'one-light',
+      },
+      langs: [
+        'bash',
+        'css',
+        'html',
+        'js',
+        'json',
+        'md',
+        'mdc',
+        'python',
+        'rust',
+        'shell',
+        'ts',
+        'vue',
+        'yaml',
+      ],
+    },
+  },
   dir: {
     modules: './app/modules',
   },
@@ -110,7 +138,7 @@ export default defineNuxtConfig({
   },
   icon: {
     serverBundle: {
-      collections: ['catppuccin', 'lucide'],
+      collections: ['catppuccin', 'lucide', 'ic'],
     },
     customCollections: [
       {

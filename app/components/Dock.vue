@@ -1,7 +1,7 @@
 <script setup lang="ts">
 import { DockItems } from '@/constants';
 
-const dockItemSize = 48;
+const dockItemSize = 36;
 
 const dockItems = ref<NodeListOf<HTMLImageElement> | null>(null);
 
@@ -22,10 +22,10 @@ const mouseMoveHandler = (e: MouseEvent) => {
     const distance = Math.abs(e.clientX - leftAlign);
     const newSize =
       distance < maxDistance
-        ? dockItemSize + (maxDistance - distance) * 0.16
+        ? dockItemSize + (maxDistance - distance) * 0.14
         : dockItemSize;
 
-    element.style.width = `${newSize}px`;
+    element.style.width = element.style.height = `${newSize}px`;
   });
 };
 
@@ -33,7 +33,7 @@ const mouseLeaveHandler = (_: MouseEvent) => {
   if (!dockItems.value) return;
 
   dockItems.value.forEach((element: HTMLImageElement) => {
-    element.style.width = `${dockItemSize}px`;
+    element.style.width = element.style.height = `${dockItemSize}px`;
   });
 };
 
@@ -58,15 +58,17 @@ const clickHandler = (name: string) => {
       :data-tooltip="item.name"
       :class="{
         opened: false,
+        'cursor-pointer': item.type === 'link',
       }"
     >
-      <NuxtImg
-        class="dock-item"
-        alt="dock item"
-        :src="item.icon"
-        :placeholder="45"
-        @click="clickHandler(item.name)"
-      />
+      <div class="dock-item size-9" @click="clickHandler(item.name)">
+        <Icon v-if="item.icon.length" :name="item.icon" class="size-full" />
+        <NuxtImg
+          v-else-if="item.img.length"
+          :src="item.img"
+          :placeholder="36"
+        />
+      </div>
     </div>
   </div>
 </template>

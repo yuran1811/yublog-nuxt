@@ -1,8 +1,14 @@
 <script setup lang="ts">
+useSeoMeta({
+  title: 'md editor',
+  description: `yublog markdown editor`,
+});
+
 definePageMeta({
   name: 'Markdown Editor',
+  layout: 'fixnav',
   icon: 'lucide:pen-line',
-  description: 'A simple markdown editor using @nuxt/content',
+  description: 'A simple markdown editor using @nuxt/mdc',
 });
 
 const input = ref<string>('');
@@ -14,30 +20,31 @@ const { data } = await useAsyncData(`examples-md`, () =>
 if (data.value) {
   const parsed = data.value.rawbody.replace(/\\n/g, '\n');
   input.value = parsed;
-  output.value = parsed;
+  output.value = await parseMarkdown(parsed);
 }
 
-const debouncedFn = useDebounceFn(() => {
-  output.value = input.value;
+const debouncedFn = useDebounceFn(async () => {
+  output.value = await parseMarkdown(input.value);
 }, 400);
 </script>
 
 <template>
-  <div class="h-screen w-full overflow-hidden">
+  <div class="mt-20 w-full">
     <h1 class="pb-6 text-center text-2xl font-bold">Markdown Editor</h1>
 
-    <div class="xs:grid-cols-2 grid *:p-2">
+    <div
+      class="container mx-auto grid overflow-hidden *:h-full *:p-2 *:outline-none sm:h-screen sm:max-h-[calc(100dvh-10rem)] sm:grid-cols-2"
+    >
       <textarea
         v-model="input"
-        class="xs:h-full h-72 resize-none bg-(--ui-bg-muted) outline-none"
+        class="resize-none bg-(--ui-bg-muted) max-sm:h-72"
         @input="debouncedFn"
       />
-      <UContainer
-        class="xs:h-full h-72 overflow-y-auto outline-none"
-        :style="{ 'max-height': 'calc(100dvh - 11rem)' }"
-      >
-        <MDC class="prose prose-invert container mx-auto" :value="output" />
-      </UContainer>
+      <ContentRenderer
+        class="prose prose-invert overflow-y-auto max-sm:h-72"
+        :prose="true"
+        :value="output"
+      />
     </div>
   </div>
 </template>

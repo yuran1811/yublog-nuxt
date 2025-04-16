@@ -1,18 +1,12 @@
 <script setup lang="ts">
 useSeoMeta({
-  title: 'all posts',
-  description: `yublog all posts`,
+  title: 'notes',
+  description: `yublog notes page`,
 });
 
-definePageMeta({
-  name: 'All Posts',
-  icon: 'lucide:book-open-text',
-  description: 'All my latest, interested, useful posts',
+const { data } = await useAsyncData('notes', () => {
+  return queryCollection('notes').order('date', 'DESC').all();
 });
-
-const { data: posts } = await useAsyncData('blog', () =>
-  queryCollection('blog').order('date', 'DESC').all(),
-);
 </script>
 
 <template>
@@ -30,17 +24,16 @@ const { data: posts } = await useAsyncData('blog', () =>
               <h2
                 class="mb-4 text-3xl font-bold text-white sm:text-4xl md:text-[40px]"
               >
-                My Recent Posts
+                My Notes
               </h2>
               <p class="text-dark-6 text-base">
-                I write about my life, work, and the things I love. I hope you
-                find something that resonates with you.
+                My notes for the things I learn and want to remember.
               </p>
             </div>
           </div>
         </div>
 
-        <PostList :posts="posts" />
+        <NoteList :notes="data" />
       </div>
     </section>
   </LayoutDefault>

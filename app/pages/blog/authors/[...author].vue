@@ -1,15 +1,22 @@
 <script setup lang="ts">
 import { useRouteParams } from '@vueuse/router';
+import { parseAuthorData } from '~/shared/utils';
 
 const rawAuthor = useRouteParams('author');
-const author = ref(rawAuthor.value?.at(0) || 'anonymous');
+const author = (rawAuthor.value || ['all'])[0];
 
 useSeoMeta({
-  title: `author - ${author.value}`,
-  description: `yublog author - ${author.value}`,
+  title: `@${author}`,
+  description: `yublog author - ${author}`,
 });
 
-const { data: rawPosts } = await useAsyncData('blog-authors', () =>
+const { data: authorData } = await useAsyncData(`blog-author-${author}`, () =>
+  rawAuthor.value
+    ? queryCollection('authors').where('name', '=', author).all()
+    : queryCollection('authors').order('name', 'ASC').all(),
+);
+
+const { data: rawPosts } = await useAsyncData(`blog-authors-posts`, () =>
   queryCollection('blog')
     .select('title', 'date', 'tags', 'path', 'author')
     .order('date', 'DESC')
@@ -18,11 +25,7 @@ const { data: rawPosts } = await useAsyncData('blog-authors', () =>
 
 const posts = computed(() =>
   rawAuthor.value
-    ? rawPosts.value?.filter((post) =>
-        author.value === 'anonymous'
-          ? !post.author
-          : post.author === author.value,
-      ) || []
+    ? rawPosts.value?.filter((post) => post.author === author) || []
     : rawPosts.value,
 );
 
@@ -31,7 +34,7 @@ const breadCrumbItems = ref([
   { label: 'Blog', icon: 'lucide:book-open', to: '/blog' },
   { label: 'Author', icon: 'lucide:users-round', to: '/blog/authors' },
   {
-    label: rawAuthor.value ? author.value : 'All authors',
+    label: rawAuthor.value ? author : 'All authors',
     icon: 'lucide:user-round',
   },
 ]);
@@ -39,10 +42,30 @@ const breadCrumbItems = ref([
 
 <template>
   <article
-    class="mx-auto max-w-2xl space-y-12 bg-(--ui-bg) px-6 pt-8 pb-24 text-(--ui-text)"
+    class="mx-auto max-w-2xl space-y-8 bg-(--ui-bg) px-6 pt-8 pb-24 text-(--ui-text)"
   >
-    <UBreadcrumb :items="breadCrumbItems" />
+    <UBreadcrumb :items="breadCrumbItems" class="max-md:hidden" />
 
-    <PostList :posts="posts" />
+    <AuthorInfo
+      v-if="authorData?.length === 1 && authorData?.at(0)"
+      :author="parseAuthorData(authorData.at(0))"
+    />
+    <template v-if="authorData?.length && authorData.length > 1">
+      <h2 class="text-center text-2xl font-bold">All authors</h2>
+      <div
+        class="container mx-auto flex flex-wrap items-start justify-center gap-4"
+      >
+        <template v-for="author in authorData" :key="author.name">
+          <UButton
+            :label="`@${author.name}`"
+            :to="`/blog/authors/${author.name}`"
+            color="neutral"
+            variant="subtle"
+          />
+        </template>
+      </div>
+    </template>
+
+    <PostList v-if="rawAuthor !== undefined" :posts="posts" />
   </article>
 </template>
