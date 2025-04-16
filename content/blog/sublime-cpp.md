@@ -8,6 +8,9 @@ tags:
   - sublime-text
   - config
 image: /cover-imgs/sublime.png
+seo:
+  title: Sublime Text x C++ trên Windows
+  description: Hướng dẫn cài đặt C++ cho Sublime Text trên Windows
 ---
 
 - Để có thể biên dịch và chạy được các file `.cpp` với *Sublime Text*, ta cần cấu hình cho ứng dụng và thiết lập môi trường cho compiler.

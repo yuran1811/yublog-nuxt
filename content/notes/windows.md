@@ -5,7 +5,10 @@ author: yuran1811
 date: 2024-03-15T13:24:00Z
 tags:
   - windows
-image: '/cover-imgs/win11-bloom-dark.jpg'
+image: /cover-imgs/win11-bloom-dark.jpg
+seo:
+  title: Windows Notes
+  description: Windows Notes are collection of useful tips and tricks for Windows users.
 ---
 
 ## Xem lại pass Wifi

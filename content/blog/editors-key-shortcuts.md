@@ -70,18 +70,23 @@ Tabs
 - ***Ctrl + Tab*** : Di chuyển qua lại giữa các tab
 - ***Ctrl + W*** : Đóng tab hiện tại
 - ***Alt + NUM*** : Đi tới tab thứ
+
   [NUM]
 
 ## Chia màn hình
 
 - ***Alt + Shift + NUM*** : Chia màn hình thành
+
   [NUM]
+
   cột
 - ***Alt + Shift + 5*** : Chia màn hình thành grid gồm 4 groups
 - ***Alt + Shift + 8*** : Chia màn hình thành 2 hàng
 - ***Ctrl + NUM*** : Đi tới group thứ
+
   [NUM]
 - ***Ctrl + Shift + NUM*** : Chuyển file tới group thứ
+
   [NUM]
 - ***Shift + F11*** : Vào mode "nghiêm túc" (không làm phiền)
 

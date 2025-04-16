@@ -6,6 +6,9 @@ date: 2024-02-05T16:37:34Z
 tags:
   - web
 image: /cover-imgs/pwa-logo.png
+seo:
+  title: 7+ web features you may not know
+  description: 7+ web features you may not know, amazing web features you may not know
 ---
 
 ## 1. Link sharing
