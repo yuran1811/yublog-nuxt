@@ -62,25 +62,20 @@ const copyToClipboard = (text) => {
 
 Chỉ hỗ trợ ảnh với mime type là "image/png"
 
-## ::code-tab
-
-tabs:
-
-- index.html
-- utils.js
-- script.js
-
+::code-tab
 ---
-
+tabs:
+  - index.html
+  - utils.js
+  - script.js
+---
 #tab1
-
 ```html [index.html]
 <img crossorigin="anonymous" src="https://picsum.photos/200" alt="" />
 <button>Copy</button>
 ```
 
 #tab2
-
 ```js [utils.js]
 const copyImageToClipboard = async (imageElement) => {
   let canvas = document.createElement('canvas');
@@ -100,28 +95,22 @@ const copyImageToClipboard = async (imageElement) => {
 ```
 
 #tab3
-
 ```js [script.js]
 document.querySelector('button').onclick = () => {
   copyImageToClipboard(document.querySelector('img'));
 };
 ```
-
 ::
 
 ## 4. Tính khoảng thời gian đã qua
 
-## ::code-tab
-
-tabs:
-
-- utils.js
-- script.js
-
+::code-tab
 ---
-
+tabs:
+  - utils.js
+  - script.js
+---
 #tab1
-
 ```js [utils.js]
 const calculateElapsedTime = (timeCreated) => {
   const created = new Date(timeCreated).getTime();
@@ -147,12 +136,10 @@ const calculateElapsedTime = (timeCreated) => {
 ```
 
 #tab2
-
 ```js [script.js]
 calculateElapsedTime('2022-05-20T09:03:20.229Z');
 // output: 2 minutes ago
 ```
-
 ::
 
 ## 5. CSS hex color ngẫu nhiên
@@ -164,17 +151,13 @@ const randomColor = () =>
 
 ## 6. Định dạng số
 
-## ::code-tab
-
-tabs:
-
-- utils.js
-- script.js
-
+::code-tab
 ---
-
+tabs:
+  - utils.js
+  - script.js
+---
 #tab1
-
 ```js [utils.js]
 const formatNumber = (num) => {
   return Intl.NumberFormat('en-US', {
@@ -185,12 +168,10 @@ const formatNumber = (num) => {
 ```
 
 #tab2
-
 ```js [script.js]
 formatNumber(389210);
 // output: '389.2K'
 ```
-
 ::
 
 ## 7. Thay thế tất cả các ký tự trong chuỗi
@@ -233,17 +214,13 @@ const flatten = (arr) => arr.flat(Infinity);
 
 ## 9. Format video time
 
-## ::code-tab
-
-tabs:
-
-- utils.js
-- script.js
-
+::code-tab
 ---
-
+tabs:
+  - utils.js
+  - script.js
+---
 #tab1
-
 ```js [utils.js]
 const formatVideoTime = (seconds) => {
   try {
@@ -265,29 +242,23 @@ const formatVideoTime = (seconds) => {
 ```
 
 #tab2
-
 ```js [script.js]
 formatVideoTime(20); // output: "0:20"
 formatVideoTime(135); // output: "2:15"
 formatVideoTime(3214); // output: "53:34"
 formatVideoTime(32143); // output: "8:55:43"
 ```
-
 ::
 
 ## 10. Format file size
 
-## ::code-tab
-
-tabs:
-
-- utils.js
-- script.js
-
+::code-tab
 ---
-
+tabs:
+  - utils.js
+  - script.js
+---
 #tab1
-
 ```js [utils.js]
 const formatFileSize = (size) => {
   let i = Math.floor(Math.log(size) / Math.log(1024));
@@ -299,12 +270,10 @@ const formatFileSize = (size) => {
 ```
 
 #tab2
-
 ```js [script.js]
 formatFileSize(32143332); // output: "30.7 MB"
 formatFileSize(8904869085); // output: "8.3 GB"
 ```
-
 ::
 
 ## Kết luận
