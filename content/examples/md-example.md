@@ -5,7 +5,7 @@
 ##### H5
 ###### H6
 
-![](https://skill-icons-livid.vercel.app/icons?i=nuxt,vue,ts)
+![](https://skill-icons-livid.vercel.app/icons?i=nuxt,vue,tailwind,ts)
 
 ## Horizontal Rules
 
@@ -84,12 +84,18 @@ Indented code
 
 Block code "fences"
 
-```
+Syntax Highlighting
+
+```js
 var foo = function (bar) {
   return bar++;
 };
 
 console.log(foo(5));
+```
+
+```py
+print("Hello World")
 ```
 
 ## Tables
