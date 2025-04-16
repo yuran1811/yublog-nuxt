@@ -6,6 +6,7 @@ export default defineNuxtConfig({
     '@nuxt/image',
     '@nuxt/ui',
     '@nuxt/eslint',
+    '@nuxthq/studio',
     '@vueuse/nuxt',
     '@pinia/nuxt',
     'reka-ui/nuxt',
@@ -82,6 +83,9 @@ export default defineNuxtConfig({
     },
     renderer: {
       anchorLinks: false,
+    },
+    preview: {
+      api: 'https://api.nuxt.studio',
     },
   },
   mdc: {
