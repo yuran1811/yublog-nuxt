@@ -55,10 +55,10 @@ const breadCrumbItems = ref([
       <div
         class="container mx-auto flex flex-wrap items-start justify-center gap-4"
       >
-        <template v-for="author in authorData" :key="author.name">
+        <template v-for="_ in authorData" :key="_.name">
           <UButton
-            :label="`@${author.name}`"
-            :to="`/blog/authors/${author.name}`"
+            :label="`@${_.name}`"
+            :to="`/blog/authors/${_.name}`"
             color="neutral"
             variant="subtle"
           />

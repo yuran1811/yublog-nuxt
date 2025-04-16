@@ -49,10 +49,10 @@ const breadCrumbItems = ref([
       <div
         class="container mx-auto flex flex-wrap items-start justify-center gap-4"
       >
-        <template v-for="tag in allTags" :key="tag">
+        <template v-for="_ in allTags" :key="_">
           <UButton
-            :label="`#${tag}`"
-            :to="`/blog/tags/${tag}`"
+            :label="`#${_}`"
+            :to="`/blog/tags/${_}`"
             color="neutral"
             variant="subtle"
           />
