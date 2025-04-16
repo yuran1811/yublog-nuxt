@@ -2,23 +2,26 @@
 title: Fireworks Visualization with Canvas - JavaScript
 description: Visualize fireworks with pure Javascript from scratch
 author: yuran1811
-date: 2024-02-05T16:37:34Z
+date: 2023-03-16T16:37:34.000Z
 tags:
   - js
   - canvas
-image: '/cover-imgs/javascript.jpg'
+image: /cover-imgs/javascript.jpg
+seo:
+  title: Fireworks Visualization with Canvas - JavaScript
+  description: Visualize fireworks with pure Javascript from scratch
 ---
 
 ## Prerequisite
 
 - HTML/CSS: not required
-- Javascrip:t ES6 (class), Array methods (map, ...)
+- Javascrip\:t ES6 (class), Array methods (map, ...)
 
 ## Step 1 - HTML base
 
 - The folder structure will look like this
 
-```
+```text
 fireworks
 ├── index.html
 ├── fireworks.js

@@ -7,23 +7,20 @@ tags:
   - cpp
   - sublime-text
   - config
-image: '/cover-imgs/sublime.png'
+image: /cover-imgs/sublime.png
 ---
 
-- Để có thể biên dịch và chạy được các file `.cpp` với _Sublime Text_, ta cần cấu hình cho ứng dụng và thiết lập môi trường cho compiler.
-
+- Để có thể biên dịch và chạy được các file `.cpp` với *Sublime Text*, ta cần cấu hình cho ứng dụng và thiết lập môi trường cho compiler.
 - Sau đây là cách thiết lập compiler C++ cho Sublime Text **đơn giản** và **nhanh nhất**.
 
 ## Bước 1: Tải MinGW về máy tính (nếu đã có CodeBlocks thì bỏ qua bước này)
 
 - Tải [**CodeBlocks (20.03) kèm MinGW**](https://www.fosshub.com/Code-Blocks.html?dwl=codeblocks-20.03mingw-setup.exe)
-
   - Sau khi tải về, mở file cài đặt lên và chọn **Next** cho đến khi cài xong.
   - Vào thư mục cài `CodeBlocks`:
     1. Mở **MinGW**.
     2. Mở **bin**.
     3. Sao chép **đường dẫn** trên thanh địa chỉ và tiến hành bước 2.
-
 - Tải **MinGW**
   - Nguồn:
     - [**winlibs**](https://winlibs.com/) (khuyên dùng)
@@ -48,31 +45,27 @@ image: '/cover-imgs/sublime.png'
 ### Kiểm tra
 
 - Kiểm tra phiên bản hiện tại của `gcc/g++`:
-
-  1.  `Win + R`
-  2.  Gõ `cmd` rồi `Enter`
-  3.  Nhập lệnh dưới đây
-
+  1. `Win + R`
+  2. Gõ `cmd` rồi `Enter`
+  3. Nhập lệnh dưới đây
   ```bash
   gcc --version
   // hoặc
   g++ --version
   ```
-
-  4.  Nếu hiện như hình thì bạn đã cài thành công
-
+  4. Nếu hiện như hình thì bạn đã cài thành công
+  :br
   ![](/screenshots/cpp-on-windows-check.png)
 
 ---
 
 ## Cấu hình cho Sublime Text
 
-- Để có thể chạy được file **_.cpp_** trên **Sublime Text**, ta cần file cấu hình:
-
-  1.  Mở **Sublime Text**
-  2.  Ấn tổ hợp phím `Alt + T + U`
-  3.  Chọn **New Build System**
-  4.  Chép đoạn code sau vào và lưu lại với tên tùy thích
+- Để có thể chạy được file ***.cpp*** trên **Sublime Text**, ta cần file cấu hình:
+  1. Mở **Sublime Text**
+  2. Ấn tổ hợp phím `Alt + T + U`
+  3. Chọn **New Build System**
+  4. Chép đoạn code sau vào và lưu lại với tên tùy thích
 
 ```json
 // C++ Older Version
@@ -137,25 +130,20 @@ image: '/cover-imgs/sublime.png'
 ```
 
 - Mở thử file `.cpp` bất kì hoặc tạo mới với code mẫu này
-
   ```cpp
   #include <iostream>
   using namespace std;
 
   int main() {
-  	cout << "Hello World !";
-  	return 0;
+      cout << "Hello World !";
+      return 0;
   }
   ```
-
 - Sau đó:
-
   1. Ấn tổ hợp phím `Ctrl + Shift + B`
   2. Chọn dòng có tên bạn vừa đặt và có chữ **Run**
   3. Nhấn **Enter**
-
 - Về sau chỉ cần `F7` (hoặc `Ctrl + B`) để **compile and run**, hoặc có thể đổi compile loại ngôn ngữ lập trình khác bằng cách `Ctrl + Shift + B` để chọn
-
 - Vậy là giờ đã có thể code C++ với Sublime Text rồi !
 
 > Nếu thấy hay hãy share cho những người khác cùng đọc nhé !

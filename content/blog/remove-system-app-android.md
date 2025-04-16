@@ -1,12 +1,13 @@
 ---
 title: Xóa ứng dụng hệ thống trên điện thoại (Thành công 100%)
-description: Xóa ứng dụng hệ thống trên điện thoại nhanh gọn và miễn phí với tỉ lệ thành công 100%
+description: Xóa ứng dụng hệ thống trên điện thoại nhanh gọn và miễn phí với tỉ
+  lệ thành công 100%
 author: yuran1811
 date: 2023-10-12T21:21:10Z
 tags:
   - android
   - tips
-image: '/cover-imgs/android.jpg'
+image: /cover-imgs/android.jpg
 ---
 
 ## Ứng dụng mặc định trên điện thoại
@@ -22,12 +23,10 @@ image: '/cover-imgs/android.jpg'
 ### Bước 2 - Chuẩn bị những thứ cần thiết
 
 - Trên điện thoại mở chế độ nhà phát triển và bật những chế độ sau:
-
   - Gỡ lỗi USB
   - Xác thực ứng dụng bằng USB
   - Mở khóa OEM
-
-- Tải app [**Application Inspector**](https://play.google.com/store/apps/details?id=com.ubqsoft.sec01&hl=vi&gl=US)
+- Tải app [**Application Inspector**](https://play.google.com/store/apps/details?id=com.ubqsoft.sec01\&hl=vi\&gl=US)
 
 ### Bước 3 - Kết nối
 

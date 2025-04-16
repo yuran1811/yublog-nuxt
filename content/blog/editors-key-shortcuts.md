@@ -7,120 +7,92 @@ tags:
   - vscode
   - sublime-text
   - key-shortcuts
-image: '/cover-imgs/shortcut.jpg'
+image: /cover-imgs/shortcut.jpg
+seo:
+  title: Tổng hợp phím tắt trong Sublime Text, VSCode
+  description: Tổng hợp phím tắt trong Sublime Text, VSCode
 ---
 
 Nếu dùng **Visual Studio Code** và muốn sử dụng những phím tắt này:
 
-1. Ấn tổ hợp phím **_Ctrl + Shift + X_**
-2. Gõ **_Sublime Text Keymap_**
-3. Nhấn nút **_Install_**
+1. Ấn tổ hợp phím ***Ctrl + Shift + X***
+2. Gõ ***Sublime Text Keymap***
+3. Nhấn nút ***Install***
 
 ## Chung
 
-- **_Ctrl + Shift + P_** : Mở Command Prompt
-
-- **_Ctrl + K + B_** : Ẩn / hiện Side bar
-
-- **_Ctrl + N_** : Tạo file mới
-- **_Ctrl + Shift + N_** : Tạo cửa sổ mới
-
-- **_Ctrl + O_** : Mở file
-
-- **_Ctrl + S_** : Lưu file
-
-- **_Ctrl + Shift + S_** : Lưu file với tên mới
+- ***Ctrl + Shift + P*** : Mở Command Prompt
+- ***Ctrl + K + B*** : Ẩn / hiện Side bar
+- ***Ctrl + N*** : Tạo file mới
+- ***Ctrl + Shift + N*** : Tạo cửa sổ mới
+- ***Ctrl + O*** : Mở file
+- ***Ctrl + S*** : Lưu file
+- ***Ctrl + Shift + S*** : Lưu file với tên mới
 
 ## Chỉnh sửa
 
-- **_Ctrl + Shift + ↑_** : Dịch chuyển dòng/vùng chọn lên 1 dòng
-
-- **_Ctrl + Shift + ↓_** : Dịch chuyển dòng/vùng chọn xuống 1 dòng
-
-- **_Ctrl + L_** : Chọn dòng hiện tại, tiếp tục nhấn Ctrl + L để chọn dòng tiếp theo
-
-- **_Ctrl + D_** : Chọn một từ, tiếp tục nhấn Ctrl + D để chọn những từ giống vậy
-
-- **_Ctrl + Shift + D_** : Nhân đôi dòng/vùng chọn hiện tại
-
-- **_Ctrl + M_** : Đi tới dấu đóng ngoặc / mở ngoặc gần nhất
-
-- **_Ctrl + Shift + M_** : Chọn toàn bộ nội dung trong dấu ngoặc
-
-- **_Ctrl + Shift + K_** : Xóa toàn bộ dòng
-
-- **_Ctrl + ]_** : Lùi dòng hiện tại vào trong 1 tab
-
-- **_Ctrl + [_** : Lùi dòng hiện tại ra ngoài 1 tab
-
-- **_Ctrl + /_** : Comment / Un-comment dòng / vùng chọn hiện tại ("// ")
-
-- **_Ctrl + Shift + /_** : Đóng / Mở toàn bộ dòng / vùng chọn hiện tại ("/\* \*/")
+- ***Ctrl + Shift + ↑*** : Dịch chuyển dòng/vùng chọn lên 1 dòng
+- ***Ctrl + Shift + ↓*** : Dịch chuyển dòng/vùng chọn xuống 1 dòng
+- ***Ctrl + L*** : Chọn dòng hiện tại, tiếp tục nhấn Ctrl + L để chọn dòng tiếp theo
+- ***Ctrl + D*** : Chọn một từ, tiếp tục nhấn Ctrl + D để chọn những từ giống vậy
+- ***Ctrl + Shift + D*** : Nhân đôi dòng/vùng chọn hiện tại
+- ***Ctrl + M*** : Đi tới dấu đóng ngoặc / mở ngoặc gần nhất
+- ***Ctrl + Shift + M*** : Chọn toàn bộ nội dung trong dấu ngoặc
+- ***Ctrl + Shift + K*** : Xóa toàn bộ dòng
+- ***Ctrl + ]*** : Lùi dòng hiện tại vào trong 1 tab
+- ***Ctrl + \[*** : Lùi dòng hiện tại ra ngoài 1 tab
+- ***Ctrl + /*** : Comment / Un-comment dòng / vùng chọn hiện tại ("// ")
+- ***Ctrl + Shift + /*** : Đóng / Mở toàn bộ dòng / vùng chọn hiện tại ("/\* \*/")
 
 ## Thu gọn code
 
-- **_Ctrl + Shift + [_** : Thu gọn lựa chọn
-
-- **_Ctrl + K + 1_** : Thu gọn tất cả
-
-- **_Ctrl + K + J_** : Mở toàn bộ
-
-- **_Ctrl + 2 - 9_** : Cấp độ thu gọn
+- ***Ctrl + Shift + \[*** : Thu gọn lựa chọn
+- ***Ctrl + K + 1*** : Thu gọn tất cả
+- ***Ctrl + K + J*** : Mở toàn bộ
+- ***Ctrl + 2 - 9*** : Cấp độ thu gọn
 
 ## Điều hướng/di chuyển
 
-- **_Ctrl + P_** : Mở nhanh file bằng tên
-
-- **_Ctrl + R_** : Đi đến **_kí tự_** cần tìm
-
-- **_Ctrl + ;_** : Đi đến **_từ_** trong file hiện tại
-
-- **_Ctrl + G_** : Đi đến **_dòng_** trong file hiện tại
+- ***Ctrl + P*** : Mở nhanh file bằng tên
+- ***Ctrl + R*** : Đi đến ***kí tự*** cần tìm
+- ***Ctrl + ;*** : Đi đến ***từ*** trong file hiện tại
+- ***Ctrl + G*** : Đi đến ***dòng*** trong file hiện tại
 
 ## Tìm kiếm và thay thế
 
-- **_Ctrl + F_** : Tìm
-
-- **_Ctrl + H_** : Thay thế
-
-- **_Ctrl + Shift + F_** : Tìm trong các file đang mở
+- ***Ctrl + F*** : Tìm
+- ***Ctrl + H*** : Thay thế
+- ***Ctrl + Shift + F*** : Tìm trong các file đang mở
 
 Tabs
 
-- **_Ctrl + Shift + T_** : Mở tab đã đóng gần nhất
-
-- **_Ctrl + Tab_** : Di chuyển qua lại giữa các tab
-
-- **_Ctrl + W_** : Đóng tab hiện tại
-
-- **_Alt + [NUM]_** : Đi tới tab thứ [NUM]
+- ***Ctrl + Shift + T*** : Mở tab đã đóng gần nhất
+- ***Ctrl + Tab*** : Di chuyển qua lại giữa các tab
+- ***Ctrl + W*** : Đóng tab hiện tại
+- ***Alt + NUM*** : Đi tới tab thứ
+  [NUM]
 
 ## Chia màn hình
 
-- **_Alt + Shift + NUM_** : Chia màn hình thành [NUM] cột
-
-- **_Alt + Shift + 5_** : Chia màn hình thành grid gồm 4 groups
-
-- **_Alt + Shift + 8_** : Chia màn hình thành 2 hàng
-
-- **_Ctrl + [NUM]_** : Đi tới group thứ [NUM]
-
-- **_Ctrl + Shift + [NUM]_** : Chuyển file tới group thứ [NUM]
-
-- **_Shift + F11_** : Vào mode "nghiêm túc" (không làm phiền)
+- ***Alt + Shift + NUM*** : Chia màn hình thành
+  [NUM]
+  cột
+- ***Alt + Shift + 5*** : Chia màn hình thành grid gồm 4 groups
+- ***Alt + Shift + 8*** : Chia màn hình thành 2 hàng
+- ***Ctrl + NUM*** : Đi tới group thứ
+  [NUM]
+- ***Ctrl + Shift + NUM*** : Chuyển file tới group thứ
+  [NUM]
+- ***Shift + F11*** : Vào mode "nghiêm túc" (không làm phiền)
 
 ## Bookmarks
 
-- **_F2_** : Đi tới bookmarks tiếp theo
-
-- **_Ctrl + F2_** : Bookmarks/Bỏ bookmarks
-
-- **_Shift + F2_** : Đi tới bookmarks trước
-
-- **_Ctrl + Shift + F2_** : Xóa tất cả bookmarks
+- ***F2*** : Đi tới bookmarks tiếp theo
+- ***Ctrl + F2*** : Bookmarks/Bỏ bookmarks
+- ***Shift + F2*** : Đi tới bookmarks trước
+- ***Ctrl + Shift + F2*** : Xóa tất cả bookmarks
 
 ## Thao tác với văn bản
 
-- **_Ctrl + K + U_** : Chuyển vùng chọn sang chữ in hoa
-
-- **_Ctrl + K + L_** : Chuyển vùng chọn sang chữ thường
+- ***Ctrl + K + U*** : Chuyển vùng chọn sang chữ in hoa
+- ***Ctrl + K + L*** : Chuyển vùng chọn sang chữ thường

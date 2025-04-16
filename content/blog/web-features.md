@@ -5,7 +5,7 @@ author: yuran1811
 date: 2024-02-05T16:37:34Z
 tags:
   - web
-image: '/cover-imgs/pwa-logo.png'
+image: /cover-imgs/pwa-logo.png
 ---
 
 ## 1. Link sharing

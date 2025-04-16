@@ -7,7 +7,7 @@ tags:
   - js
   - tech
   - utility
-image: '/cover-imgs/javascript.jpg'
+image: /cover-imgs/javascript.jpg
 ---
 
 ## 1. Force download file
@@ -69,14 +69,14 @@ tabs:
 
 ---
 
-#tab1
+\#tab1
 
 ```html [index.html]
 <img crossorigin="anonymous" src="https://picsum.photos/200" alt="" />
 <button>Copy</button>
 ```
 
-#tab2
+\#tab2
 
 ```js [utils.js]
 const copyImageToClipboard = async (imageElement) => {
@@ -96,7 +96,7 @@ const copyImageToClipboard = async (imageElement) => {
 };
 ```
 
-#tab3
+\#tab3
 
 ```js [script.js]
 document.querySelector('button').onclick = () => {
@@ -104,7 +104,7 @@ document.querySelector('button').onclick = () => {
 };
 ```
 
-::
+\::
 
 ## 4. Tính khoảng thời gian đã qua
 
@@ -117,7 +117,7 @@ tabs:
 
 ---
 
-#tab1
+\#tab1
 
 ```js [utils.js]
 const calculateElapsedTime = (timeCreated) => {
@@ -143,14 +143,14 @@ const calculateElapsedTime = (timeCreated) => {
 };
 ```
 
-#tab2
+\#tab2
 
 ```js [script.js]
 calculateElapsedTime('2022-05-20T09:03:20.229Z');
 // output: 2 minutes ago
 ```
 
-::
+\::
 
 ## 5. CSS hex color ngẫu nhiên
 
@@ -170,7 +170,7 @@ tabs:
 
 ---
 
-#tab1
+\#tab1
 
 ```js [utils.js]
 const formatNumber = (num) => {
@@ -181,14 +181,14 @@ const formatNumber = (num) => {
 };
 ```
 
-#tab2
+\#tab2
 
 ```js [script.js]
 formatNumber(389210);
 // output: '389.2K'
 ```
 
-::
+\::
 
 ## 7. Thay thế tất cả các ký tự trong chuỗi
 
@@ -239,7 +239,7 @@ tabs:
 
 ---
 
-#tab1
+\#tab1
 
 ```js [utils.js]
 const formatVideoTime = (seconds) => {
@@ -261,7 +261,7 @@ const formatVideoTime = (seconds) => {
 };
 ```
 
-#tab2
+\#tab2
 
 ```js [script.js]
 formatVideoTime(20); // output: "0:20"
@@ -270,7 +270,7 @@ formatVideoTime(3214); // output: "53:34"
 formatVideoTime(32143); // output: "8:55:43"
 ```
 
-::
+\::
 
 ## 10. Format file size
 
@@ -283,7 +283,7 @@ tabs:
 
 ---
 
-#tab1
+\#tab1
 
 ```js [utils.js]
 const formatFileSize = (size) => {
@@ -295,14 +295,14 @@ const formatFileSize = (size) => {
 };
 ```
 
-#tab2
+\#tab2
 
 ```js [script.js]
 formatFileSize(32143332); // output: "30.7 MB"
 formatFileSize(8904869085); // output: "8.3 GB"
 ```
 
-::
+\::
 
 ## Kết luận
 
