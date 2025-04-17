@@ -162,7 +162,7 @@ export default defineNuxtConfig({
       scan: true,
       includeCustomCollections: true,
       sizeLimitKb: 16,
-      icons: ['lucide:chevron-right'],
+      icons: ['lucide:menu', 'lucide:chevron-right'],
     },
     customCollections: [
       {

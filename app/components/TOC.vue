@@ -14,7 +14,7 @@ const { tocs = [] } = defineProps<{ tocs?: TOC[] }>();
 
     <template #content>
       <nav
-        class="w-full max-w-md bg-(--ui-bg)/75 backdrop-blur transition **:text-base lg:bg-[initial]"
+        class="w-full max-w-md bg-(--ui-bg)/75 transition **:text-base lg:bg-[initial]"
       >
         <div
           class="relative top-1/2 right-0 flex max-h-[calc(100%-8rem)] -translate-y-1/2 flex-col px-4"
