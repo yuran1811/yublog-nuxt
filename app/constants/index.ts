@@ -237,6 +237,13 @@ export const DockItems: DockItemType[] = [
   },
   {
     type: 'link',
+    name: 'Discord',
+    icon: 'ic:round-discord',
+    img: '',
+    link: 'https://discord.com/users/756862462967676980',
+  },
+  {
+    type: 'link',
     name: 'Youtube',
     icon: 'lucide:youtube',
     img: '',

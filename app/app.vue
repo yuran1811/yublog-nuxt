@@ -1,5 +1,5 @@
 <template>
-  <Html class="overflow-x-hidden">
+  <Html class="dark overflow-x-hidden">
     <Body class="font-sans antialiased">
       <UApp>
         <UToaster>
@@ -7,7 +7,6 @@
           <NuxtLayout>
             <NuxtErrorBoundary>
               <NuxtPage />
-              <!-- <CursorDot /> -->
 
               <template #error="{ error }">
                 <Error :error="error" />

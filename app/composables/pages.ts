@@ -6,8 +6,10 @@ export const usePages = () => {
     .getRoutes()
     .filter(
       (route) =>
-        !['index', 'about', 'notes', 'all'].includes(route.name as string) &&
-        ['notes-', 'blog-'].every((_) => !(route.name as string)?.includes(_)),
+        !['index', 'about', 'blog', 'notes', 'all'].includes(
+          route.name as string,
+        ) &&
+        ['blog-', 'notes-'].every((_) => !(route.name as string)?.includes(_)),
     );
 
   const categorizedRoutes = routes.reduce(
@@ -55,9 +57,9 @@ export const usePages = () => {
     pages: [
       [
         {
-          label: 'About',
-          icon: 'lucide:info',
-          to: '/about',
+          label: 'Posts',
+          icon: 'lucide:book-open',
+          to: '/blog',
         },
         {
           label: 'Tags',
@@ -68,6 +70,11 @@ export const usePages = () => {
           label: 'Notes',
           icon: 'lucide:pen-line',
           to: '/notes',
+        },
+        {
+          label: 'About',
+          icon: 'lucide:info',
+          to: '/about',
         },
         ...Object.values(categorizedRoutes),
       ],

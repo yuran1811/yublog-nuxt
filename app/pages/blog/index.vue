@@ -1,6 +1,5 @@
 <script setup lang="ts">
 definePageMeta({
-  name: 'All Posts',
   icon: 'lucide:book-open-text',
   description: 'All my latest, interested, useful posts',
 });
@@ -33,7 +32,7 @@ defineOgImageComponent('Nuxt');
               <h2
                 class="mb-4 text-3xl font-bold text-white sm:text-4xl md:text-[40px]"
               >
-                My Recent Posts
+                All my posts
               </h2>
               <p class="text-dark-6 text-base">
                 I write about my life, work, and the things I love. I hope you

@@ -76,5 +76,6 @@ defineOgImageComponent('Nuxt');
     </section>
 
     <Dock />
+    <CursorDot />
   </LayoutDefault>
 </template>

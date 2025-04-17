@@ -1,7 +1,7 @@
 <script setup lang="ts">
 import { DefaultDateFormat } from '@/constants';
+import { parseAuthorData } from '@/shared/utils';
 import { useRouteParams } from '@vueuse/router';
-import { parseAuthorData } from '~/shared/utils';
 
 const slug = useRouteParams('slug');
 

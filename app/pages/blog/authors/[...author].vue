@@ -1,6 +1,6 @@
 <script setup lang="ts">
+import { parseAuthorData } from '@/shared/utils';
 import { useRouteParams } from '@vueuse/router';
-import { parseAuthorData } from '~/shared/utils';
 
 const rawAuthor = useRouteParams('author');
 const author = (rawAuthor.value || ['all'])[0];

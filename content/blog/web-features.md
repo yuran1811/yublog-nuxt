@@ -5,6 +5,7 @@ author: yuran1811
 date: 2024-02-05T16:37:34Z
 tags:
   - web
+  - js
 image: /cover-imgs/pwa-logo.png
 seo:
   title: 7+ web features you may not know

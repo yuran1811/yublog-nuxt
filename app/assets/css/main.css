@@ -113,7 +113,7 @@ body {
     @apply relative;
 
     &::before {
-      @apply pointer-events-none invisible absolute top-[-40px] left-1/2 w-max min-w-10 -translate-x-1/2 rounded-xl border-2 border-(--ui-text-muted) bg-(--ui-bg) px-2 py-1 text-center font-semibold whitespace-nowrap text-(--ui-text-muted) opacity-0 duration-300 content-[attr(data-tooltip)];
+      @apply pointer-events-none invisible absolute top-[-40px] left-1/2 w-max min-w-10 -translate-x-1/2 rounded-xl border-2 border-(--ui-text-muted) bg-(--ui-bg) px-2 py-1 text-center font-semibold whitespace-nowrap text-(--ui-text-muted) opacity-0 duration-250 content-[attr(data-tooltip)];
     }
 
     &:hover::before {
@@ -130,11 +130,11 @@ body {
   }
 
   &:hover #card::before {
-    @apply opacity-80 duration-200 content-[""];
+    @apply opacity-80 duration-250 content-[""];
   }
 
   #card {
-    @apply flex-center absolute inset-0 rounded-[20px] duration-700;
+    @apply flex-center absolute inset-0 rounded-[20px] duration-250;
 
     &,
     &::before {
@@ -142,12 +142,12 @@ body {
     }
 
     &::before {
-      @apply absolute inset-0 -z-1 opacity-30 blur-xl duration-200 content-[""];
+      @apply absolute inset-0 -z-1 opacity-30 blur-xl duration-250 content-[""];
     }
   }
 
   #prompt {
-    @apply absolute bottom-2 left-3 z-1 max-w-28 text-xl font-bold text-(--ui-text) delay-100 duration-300 ease-in-out;
+    @apply absolute bottom-2 left-3 z-1 max-w-28 text-xl font-bold text-(--ui-text) delay-100 duration-250 ease-in-out;
   }
 
   .canvas {
@@ -166,34 +166,34 @@ body {
   }
 
   .title {
-    @apply absolute text-2xl font-bold text-(--ui-text) opacity-0 delay-100 duration-300 ease-in-out;
+    @apply absolute text-2xl font-bold text-(--ui-text) opacity-0 delay-100 duration-250 ease-in-out;
   }
 }
 
 .page-enter-active,
 .page-leave-active {
-  @apply transition-opacity duration-300 ease-in-out;
+  @apply transition-all duration-250 ease-in-out;
 }
 .layout-enter-active,
 .layout-leave-active {
-  @apply transition-opacity duration-500 ease-in-out;
+  @apply transition-all duration-250 ease-in-out;
 }
 .page-enter-from,
 .page-leave-to,
 .layout-enter-from,
 .layout-leave-to {
-  @apply opacity-0;
+  @apply opacity-5 blur-xl;
 }
 
 .fade {
   &-enter-active,
   &-leave-active {
-    @apply opacity-100 duration-500;
+    @apply opacity-100 duration-250;
   }
 
   &-enter-from,
   &-leave-to {
-    @apply opacity-0 duration-500;
+    @apply opacity-0 duration-250;
   }
 }
 

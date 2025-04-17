@@ -161,7 +161,7 @@ export default defineNuxtConfig({
     clientBundle: {
       scan: true,
       includeCustomCollections: true,
-      sizeLimitKb: 24,
+      sizeLimitKb: 16,
       icons: ['lucide:chevron-right'],
     },
     customCollections: [

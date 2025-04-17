@@ -26,7 +26,10 @@ netsh wlan show profile "_name_" key=clear
 ## Kiểm tra tình trạng Pin Laptop
 
 - Run as Administrator PowerShell
-- Gõ `powercfg /batteryreport`
+
+```bash
+powercfg /batteryreport
+```
 
 ## Cài "Auto Shutdown" máy
 

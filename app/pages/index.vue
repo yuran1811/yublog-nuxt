@@ -7,10 +7,10 @@ definePageMeta({
 const { app } = useAppConfig();
 
 const { status: loadPosts, data: latestPostsData } = await useLazyFetch(
-  '/api/latest-posts?limit=4',
+  '/api/latest-posts?limit=6',
 );
 const { status: loadNotes, data: latestNotesData } = await useLazyFetch(
-  '/api/latest-notes?limit=4',
+  '/api/latest-notes?limit=6',
 );
 
 const posts = ref<any[]>([...(latestPostsData.value || [])]);
@@ -42,7 +42,7 @@ defineOgImageComponent('Nuxt');
         <p class="text-center text-3xl font-black tracking-wide">yublog</p>
       </div>
 
-      <div class="flex w-full flex-col items-center justify-start gap-4">
+      <div class="mt-12 flex w-full flex-col items-center justify-start gap-16">
         <div class="container mx-auto">
           <p class="text-center text-2xl font-semibold">Recent Posts</p>
 

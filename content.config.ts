@@ -6,14 +6,14 @@ import { asSitemapCollection } from '@nuxtjs/sitemap/content';
 import { asOgImageCollection } from 'nuxt-og-image/content';
 import { asSchemaOrgCollection } from 'nuxt-schema-org/content';
 
-const withSEOWrapper = (collection: Collection) =>
+const withSEOWrapper = (_: Collection) =>
   asRobotsCollection(
     asSeoCollection(
       asSitemapCollection(
         asOgImageCollection(
           asSchemaOrgCollection(
             //
-            collection,
+            _,
           ),
         ),
       ),
