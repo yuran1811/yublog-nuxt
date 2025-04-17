@@ -152,9 +152,13 @@ export default defineNuxtConfig({
     },
   },
   icon: {
-    provider: 'server',
     serverBundle: {
       collections: ['catppuccin', 'lucide', 'ic'],
+    },
+    clientBundle: {
+      scan: true,
+      includeCustomCollections: true,
+      sizeLimitKb: 32,
     },
     customCollections: [
       {

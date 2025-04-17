@@ -7,7 +7,7 @@
           <NuxtLayout>
             <NuxtErrorBoundary>
               <NuxtPage />
-              <CursorDot />
+              <!-- <CursorDot /> -->
 
               <template #error="{ error }">
                 <Error :error="error" />

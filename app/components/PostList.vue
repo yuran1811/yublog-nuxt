@@ -12,8 +12,7 @@ defineProps<{
     class="mx-auto grid max-w-220 auto-rows-fr grid-cols-1 justify-items-center-safe gap-8 py-6 md:grid-cols-2"
   >
     <template v-for="post in posts" :key="post.path">
-      <NuxtLink
-        :to="post.path"
+      <article
         class="hover:animate-background w-full max-w-105 scale-100 rounded-xl bg-gradient-to-r from-green-300 via-blue-500 to-purple-600 p-0.5 shadow-xl transition hover:scale-[1.02] hover:bg-[length:400%_400%] hover:shadow-xs hover:[animation-duration:_4s] dark:shadow-gray-700/25"
       >
         <div
@@ -23,12 +22,12 @@ defineProps<{
             {{ useDateFormat(post.date || new Date(), DefaultDateFormat) }}
           </p>
 
-          <p
+          <NuxtLink
             :to="post.path"
             class="mt-0.5 line-clamp-2 text-lg font-medium text-gray-900 dark:text-white"
           >
             {{ post.title || 'Untitled' }}
-          </p>
+          </NuxtLink>
 
           <div class="mt-4 flex flex-wrap gap-1">
             <template v-for="tag in post.tags || []" :key="tag">
@@ -42,7 +41,7 @@ defineProps<{
             </template>
           </div>
         </div>
-      </NuxtLink>
+      </article>
     </template>
 
     <div v-if="posts?.length === 0" class="col-span-full">
