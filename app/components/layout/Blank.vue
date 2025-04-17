@@ -5,7 +5,7 @@ defineProps<{ fixed?: boolean }>();
 <template>
   <div>
     <SiteNavbar
-      :class="fixed ? 'fixed w-full' : 'sticky bg-(--ui-bg)/75 backdrop-blur'"
+      :class="fixed ? 'fixed w-full' : 'sticky bg-(--ui-bg)/75 md:backdrop-blur'"
     />
     <SiteSidebar />
 

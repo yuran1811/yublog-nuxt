@@ -33,7 +33,7 @@ defineOgImageComponent('Nuxt');
 <template>
   <UContainer class="relative h-screen overflow-hidden">
     <section class="no-scrollbar mt-22 h-[calc(100dvh-10rem)] overflow-y-auto">
-      <div class="pt-12 pb-24">
+      <div class="pt-12 pb-16 md:pb-24">
         <SvgoLogo
           :filled="true"
           :font-controlled="false"
@@ -42,24 +42,20 @@ defineOgImageComponent('Nuxt');
         <p class="text-center text-3xl font-black tracking-wide">yublog</p>
       </div>
 
-      <div class="mt-12 flex w-full flex-col items-center justify-start gap-16">
+      <div
+        class="mt-4 flex w-full flex-col items-center justify-start gap-16 md:mt-12"
+      >
         <div class="container mx-auto">
           <p class="text-center text-2xl font-semibold">Recent Posts</p>
 
-          <USkeleton
-            v-if="loadPosts === 'pending'"
-            class="h-30 w-100 rounded-lg"
-          />
+          <PostsSkeleton v-if="loadPosts === 'pending'" />
           <PostList v-else :posts="posts" />
         </div>
 
         <div class="container mx-auto">
           <p class="text-center text-2xl font-semibold">Recent Notes</p>
 
-          <USkeleton
-            v-if="loadNotes === 'pending'"
-            class="h-30 w-100 rounded-lg"
-          />
+          <PostsSkeleton v-if="loadNotes === 'pending'" />
           <NoteList v-else :notes="notes" />
         </div>
       </div>

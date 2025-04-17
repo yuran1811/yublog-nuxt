@@ -62,7 +62,7 @@ defineOgImageComponent('Nuxt');
           },
         ]"
       >
-        <div class="flex-center-col mx-auto mb-8 gap-6">
+        <div class="flex-center-col mx-auto mb-4 gap-6 md:mb-8">
           <h2 class="text-center text-2xl font-bold sm:text-4xl md:text-6xl">
             yublog
           </h2>
