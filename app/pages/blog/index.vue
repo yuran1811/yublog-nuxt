@@ -9,9 +9,11 @@ const { data: posts } = await useAsyncData('blog', () =>
   queryCollection('blog').order('date', 'DESC').all(),
 );
 
+const { app } = useAppConfig();
+
 useSeoMeta({
   title: 'all posts',
-  description: `yublog all posts`,
+  description: `Hi there! I'm ${app.author}, a software engineer and open source enthusiast. I love to share my knowledge, experience, my life, and the things I love. I hope you find something that resonates with you.`,
 });
 defineOgImageComponent('Nuxt');
 </script>

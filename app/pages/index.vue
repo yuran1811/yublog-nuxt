@@ -25,7 +25,7 @@ watch(latestNotesData, (_: any) => {
 
 useSeoMeta({
   title: 'home',
-  description: `yublog home page`,
+  description: `Hi there! I'm ${app.author}, a software engineer and open source enthusiast. I love to share my knowledge, experience, my life, and the things I love. I hope you find something that resonates with you.`,
 });
 defineOgImageComponent('Nuxt');
 </script>

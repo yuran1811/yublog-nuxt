@@ -3,9 +3,11 @@ const { data } = await useAsyncData('notes', () => {
   return queryCollection('notes').order('date', 'DESC').all();
 });
 
+const { app } = useAppConfig();
+
 useSeoMeta({
   title: 'notes',
-  description: `yublog notes page`,
+  description: `Hi there! I'm ${app.author}, a software engineer and open source enthusiast. You can find my notes about tips and tricks or guide here.`,
 });
 defineOgImageComponent('Nuxt');
 </script>

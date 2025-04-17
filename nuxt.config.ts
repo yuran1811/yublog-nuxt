@@ -36,6 +36,9 @@ export default defineNuxtConfig({
         separator: '•',
         siteName: 'yublog',
       },
+      htmlAttrs: {
+        lang: 'en',
+      },
       link: [{ rel: 'icon', type: 'image/svg+xml', href: '/logo.svg' }],
     },
     pageTransition: {
@@ -158,7 +161,8 @@ export default defineNuxtConfig({
     clientBundle: {
       scan: true,
       includeCustomCollections: true,
-      sizeLimitKb: 32,
+      sizeLimitKb: 24,
+      icons: ['lucide:chevron-right'],
     },
     customCollections: [
       {

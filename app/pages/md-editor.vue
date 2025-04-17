@@ -24,7 +24,7 @@ const debouncedFn = useDebounceFn(async () => {
 
 useSeoMeta({
   title: 'md editor',
-  description: `yublog markdown editor`,
+  description: `yublog markdown editor - a simple markdown editor with live preview using @nuxt/mdc`,
 });
 defineOgImageComponent('Nuxt');
 </script>
