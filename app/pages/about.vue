@@ -3,6 +3,7 @@ useSeoMeta({
   title: 'about',
   description: `yublog about page`,
 });
+defineOgImageComponent('Nuxt');
 </script>
 
 <template>
@@ -10,6 +11,15 @@ useSeoMeta({
     <section class="space-y-12">
       <GlowGrid
         :list="[
+          {
+            title: '@nuxtjs/seo',
+            description:
+              'Nuxt SEO is a collection of modules that handle all of the technical aspects in growing your sites organic traffic.',
+            color: '#10B981',
+            fgClass: 'text-green-500',
+            bgClass: 'bg-green-500/20',
+            icon: 'lucide:package',
+          },
           {
             title: '@nuxt/content',
             description:

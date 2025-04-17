@@ -1,12 +1,13 @@
 <script setup lang="ts">
+definePageMeta({
+  layout: 'plain',
+});
+
 useSeoMeta({
   title: 'not found',
   description: `yublog page not found`,
 });
-
-definePageMeta({
-  layout: 'plain',
-});
+defineOgImageComponent('Nuxt');
 </script>
 
 <template>

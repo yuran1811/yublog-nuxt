@@ -1,9 +1,4 @@
 <script setup lang="ts">
-useSeoMeta({
-  title: 'home',
-  description: `yublog home page`,
-});
-
 definePageMeta({
   layout: 'home',
   description: 'yublog home page',
@@ -21,17 +16,23 @@ const { status: loadNotes, data: latestNotesData } = await useLazyFetch(
 const posts = ref<any[]>([...(latestPostsData.value || [])]);
 const notes = ref<any[]>([...(latestNotesData.value || [])]);
 
-watch(latestPostsData, (newData) => {
-  posts.value = [...(newData || [])];
+watch(latestPostsData, (_: any) => {
+  posts.value = [...(_ || [])];
 });
-watch(latestNotesData, (newData) => {
-  notes.value = [...(newData || [])];
+watch(latestNotesData, (_: any) => {
+  notes.value = [...(_ || [])];
 });
+
+useSeoMeta({
+  title: 'home',
+  description: `yublog home page`,
+});
+defineOgImageComponent('Nuxt');
 </script>
 
 <template>
   <UContainer class="relative h-screen overflow-hidden">
-    <section class="no-scrollbar mt-32 h-[calc(100dvh-12rem)] overflow-y-auto">
+    <section class="no-scrollbar mt-22 h-[calc(100dvh-10rem)] overflow-y-auto">
       <div class="pt-12 pb-24">
         <SvgoLogo
           :filled="true"

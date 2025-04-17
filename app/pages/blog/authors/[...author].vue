@@ -5,11 +5,6 @@ import { parseAuthorData } from '~/shared/utils';
 const rawAuthor = useRouteParams('author');
 const author = (rawAuthor.value || ['all'])[0];
 
-useSeoMeta({
-  title: `@${author}`,
-  description: `yublog author - ${author}`,
-});
-
 const { data: authorData } = await useAsyncData(`blog-author-${author}`, () =>
   rawAuthor.value
     ? queryCollection('authors').where('name', '=', author).all()
@@ -38,6 +33,12 @@ const breadCrumbItems = ref([
     icon: 'lucide:user-round',
   },
 ]);
+
+useSeoMeta({
+  title: `@${author}`,
+  description: `yublog author - ${author}`,
+});
+defineOgImageComponent('Nuxt');
 </script>
 
 <template>

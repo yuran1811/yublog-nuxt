@@ -1,9 +1,4 @@
 <script setup lang="ts">
-useSeoMeta({
-  title: 'all posts',
-  description: `yublog all posts`,
-});
-
 definePageMeta({
   name: 'All Posts',
   icon: 'lucide:book-open-text',
@@ -13,6 +8,12 @@ definePageMeta({
 const { data: posts } = await useAsyncData('blog', () =>
   queryCollection('blog').order('date', 'DESC').all(),
 );
+
+useSeoMeta({
+  title: 'all posts',
+  description: `yublog all posts`,
+});
+defineOgImageComponent('Nuxt');
 </script>
 
 <template>

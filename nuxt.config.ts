@@ -1,7 +1,7 @@
 export default defineNuxtConfig({
   modules: [
-    '@nuxtjs/seo',
     '@nuxtjs/mdc',
+    '@nuxtjs/seo',
     '@nuxt/content',
     '@nuxt/image',
     '@nuxt/ui',
@@ -27,11 +27,15 @@ export default defineNuxtConfig({
     ],
   },
   devtools: {
-    enabled: false,
+    enabled: true,
   },
   app: {
     head: {
-      title: 'yublog',
+      titleTemplate: '%s %separator %siteName',
+      templateParams: {
+        separator: '•',
+        siteName: 'yublog',
+      },
       link: [{ rel: 'icon', type: 'image/svg+xml', href: '/logo.svg' }],
     },
     pageTransition: {
@@ -63,6 +67,7 @@ export default defineNuxtConfig({
             light: 'one-light',
           },
           langs: [
+            'diff',
             'bash',
             'shell',
             'vue',
@@ -100,6 +105,7 @@ export default defineNuxtConfig({
         light: 'one-light',
       },
       langs: [
+        'diff',
         'bash',
         'shell',
         'vue',
@@ -122,11 +128,13 @@ export default defineNuxtConfig({
     modules: './app/modules',
   },
   srcDir: 'app',
+
   routeRules: {
     // more info: https://github.com/danielroe/nuxt-vercel-isr
     '/**': { isr: 60, prerender: true },
     '/md-editor': { ssr: false },
   },
+
   future: {
     compatibilityVersion: 4,
   },

@@ -1,12 +1,13 @@
 <script setup lang="ts">
+const { data } = await useAsyncData('notes', () => {
+  return queryCollection('notes').order('date', 'DESC').all();
+});
+
 useSeoMeta({
   title: 'notes',
   description: `yublog notes page`,
 });
-
-const { data } = await useAsyncData('notes', () => {
-  return queryCollection('notes').order('date', 'DESC').all();
-});
+defineOgImageComponent('Nuxt');
 </script>
 
 <template>

@@ -1,9 +1,4 @@
 <script setup lang="ts">
-useSeoMeta({
-  title: 'md editor',
-  description: `yublog markdown editor`,
-});
-
 definePageMeta({
   name: 'Markdown Editor',
   layout: 'fixnav',
@@ -26,6 +21,12 @@ if (data.value) {
 const debouncedFn = useDebounceFn(async () => {
   output.value = await parseMarkdown(input.value);
 }, 400);
+
+useSeoMeta({
+  title: 'md editor',
+  description: `yublog markdown editor`,
+});
+defineOgImageComponent('Nuxt');
 </script>
 
 <template>

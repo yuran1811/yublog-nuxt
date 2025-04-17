@@ -11,9 +11,10 @@ const { data: post } = await useAsyncData(`blog-${slug.value}`, () =>
 
 const { data: relatedPosts } = await useAsyncData(
   `blog-${slug.value}-surround`,
-  () => {
-    return queryCollectionItemSurroundings('blog', `/blog/${slug.value}`);
-  },
+  () =>
+    queryCollectionItemSurroundings('blog', `/blog/${slug.value}`, {
+      fields: ['title', 'description'],
+    }),
 );
 
 const postData = computed(() => ({
@@ -32,11 +33,6 @@ const { data: authorData } = await useAsyncData(
       .first(),
 );
 
-useSeoMeta({
-  title: `${postData.value.title}`,
-  description: postData.value.desc,
-});
-
 const tocLinks = computed(() => post.value?.body?.toc?.links || []);
 
 const breadCrumbItems = ref([
@@ -47,6 +43,10 @@ const breadCrumbItems = ref([
     icon: 'lucide:file',
   },
 ]);
+
+useSeoMeta(post.value?.seo || {});
+useHead(post.value?.head || {});
+defineOgImageComponent('Nuxt', post.value?.ogImage);
 </script>
 
 <template>
@@ -102,12 +102,55 @@ const breadCrumbItems = ref([
       </div>
     </div>
 
-    <div class="flex justify-between">
-      <NuxtLink v-if="relatedPosts?.[0]" :to="relatedPosts[0].path">
-        ← {{ relatedPosts[0].title }}
+    <div class="grid grid-cols-1 gap-8 sm:grid-cols-2">
+      <NuxtLink
+        v-if="relatedPosts?.[0]"
+        :to="relatedPosts[0].path"
+        class="group block rounded-[calc(var(--ui-radius)*2)] border border-(--ui-border) px-6 py-8 transition-colors hover:bg-(--ui-bg-elevated)/50 focus-visible:outline-(--ui-primary)"
+      >
+        <div
+          class="mb-4 inline-flex items-center rounded-full bg-(--ui-bg-elevated) p-1.5 ring ring-(--ui-border-accented) transition group-hover:bg-(--ui-primary)/10 group-hover:ring-(--ui-primary)/50"
+        >
+          <Icon
+            name="lucide:arrow-left"
+            class="size-5 shrink-0 text-(--ui-text-highlighted) transition-[color,translate] group-hover:text-(--ui-primary) group-active:-translate-x-0.5"
+          />
+        </div>
+
+        <p
+          class="mb-1 truncate text-[15px] font-medium text-(--ui-text-highlighted)"
+        >
+          {{ relatedPosts[0].title }}
+        </p>
+
+        <p class="line-clamp-2 text-sm text-(--ui-text-muted)">
+          {{ relatedPosts[0].description }}
+        </p>
       </NuxtLink>
-      <NuxtLink v-if="relatedPosts?.[1]" :to="relatedPosts[1].path">
-        {{ relatedPosts[1].title }} →
+
+      <NuxtLink
+        v-if="relatedPosts?.[1]"
+        :to="relatedPosts[1].path"
+        class="group block rounded-[calc(var(--ui-radius)*2)] border border-(--ui-border) px-6 py-8 text-right transition-colors hover:bg-(--ui-bg-elevated)/50 focus-visible:outline-(--ui-primary)"
+      >
+        <div
+          class="mb-4 inline-flex items-center rounded-full bg-(--ui-bg-elevated) p-1.5 ring ring-(--ui-border-accented) transition group-hover:bg-(--ui-primary)/10 group-hover:ring-(--ui-primary)/50"
+        >
+          <Icon
+            name="lucide:arrow-right"
+            class="size-5 shrink-0 text-(--ui-text-highlighted) transition-[color,translate] group-hover:text-(--ui-primary) group-active:translate-x-0.5"
+          />
+        </div>
+
+        <p
+          class="mb-1 truncate text-[15px] font-medium text-(--ui-text-highlighted)"
+        >
+          {{ relatedPosts[1].title }}
+        </p>
+
+        <p class="line-clamp-2 text-sm text-(--ui-text-muted)">
+          {{ relatedPosts[1].description }}
+        </p>
       </NuxtLink>
     </div>
   </article>

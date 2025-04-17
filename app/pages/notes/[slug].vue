@@ -25,11 +25,6 @@ const { data: authorData } = await useAsyncData(
       .first(),
 );
 
-useSeoMeta({
-  title: `${noteData.value.title}`,
-  description: noteData.value.desc,
-});
-
 const tocLinks = computed(() => post.value?.body?.toc?.links || []);
 
 const breadCrumbItems = ref([
@@ -40,6 +35,10 @@ const breadCrumbItems = ref([
     icon: 'lucide:sticky-note',
   },
 ]);
+
+useSeoMeta(post.value?.seo || {});
+useHead(post.value?.head || {});
+defineOgImageComponent('Nuxt', post.value?.ogImage);
 </script>
 
 <template>

@@ -4,11 +4,6 @@ import { useRouteParams } from '@vueuse/router';
 const tags = useRouteParams('tag');
 const tag = (tags.value || ['all'])[0];
 
-useSeoMeta({
-  title: `#${tag}`,
-  description: `yublog tags - ${tag}`,
-});
-
 const { data: rawPosts } = await useAsyncData('blog-tags', () =>
   queryCollection('blog')
     .select('title', 'date', 'tags', 'path')
@@ -36,6 +31,12 @@ const breadCrumbItems = ref([
   { label: 'Tags', icon: 'lucide:tags', to: '/blog/tags' },
   { label: tag, icon: 'lucide:tag' },
 ]);
+
+useSeoMeta({
+  title: `#${tag}`,
+  description: `yublog tags - ${tag}`,
+});
+defineOgImageComponent('Nuxt');
 </script>
 
 <template>
