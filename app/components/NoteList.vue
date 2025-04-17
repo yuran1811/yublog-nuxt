@@ -3,10 +3,7 @@ import type { NotesCollectionItem } from '@nuxt/content';
 import { DefaultDateFormat } from '@/constants';
 
 defineProps<{
-  notes?: Pick<
-    NotesCollectionItem,
-    'id' | 'title' | 'date' | 'path' | 'tags'
-  >[];
+  notes?: Pick<NotesCollectionItem, 'title' | 'date' | 'path' | 'tags'>[];
 }>();
 </script>
 
@@ -14,7 +11,7 @@ defineProps<{
   <div
     class="mx-auto grid max-w-220 auto-rows-fr grid-cols-1 justify-items-center-safe gap-8 py-6 md:grid-cols-2"
   >
-    <template v-for="note in notes" :key="note.id">
+    <template v-for="note in notes" :key="note.path">
       <article
         class="hover:animate-background w-full max-w-105 scale-100 rounded-xl bg-gradient-to-r from-green-300 via-blue-500 to-purple-600 p-0.5 shadow-xl transition hover:scale-[1.02] hover:bg-[length:400%_400%] hover:shadow-xs hover:[animation-duration:_4s] dark:shadow-gray-700/25"
       >
