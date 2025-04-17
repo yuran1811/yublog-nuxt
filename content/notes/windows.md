@@ -13,7 +13,9 @@ seo:
 
 ## Xem lại pass Wifi
 
-`netsh wlan show profile "_name_" key=clear`
+```bash
+netsh wlan show profile "_name_" key=clear
+```
 
 ## Ẩn thư mục hoàn toàn
 

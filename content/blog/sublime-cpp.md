@@ -13,7 +13,7 @@ seo:
   description: Hướng dẫn cài đặt C++ cho Sublime Text trên Windows
 ---
 
-- Để có thể biên dịch và chạy được các file `.cpp` với *Sublime Text*, ta cần cấu hình cho ứng dụng và thiết lập môi trường cho compiler.
+- Để có thể biên dịch và chạy được các file `.cpp` với _Sublime Text_, ta cần cấu hình cho ứng dụng và thiết lập môi trường cho compiler.
 - Sau đây là cách thiết lập compiler C++ cho Sublime Text **đơn giản** và **nhanh nhất**.
 
 ## Bước 1: Tải MinGW về máy tính (nếu đã có CodeBlocks thì bỏ qua bước này)
@@ -48,23 +48,23 @@ seo:
 ### Kiểm tra
 
 - Kiểm tra phiên bản hiện tại của `gcc/g++`:
+
   1. `Win + R`
   2. Gõ `cmd` rồi `Enter`
   3. Nhập lệnh dưới đây
+
   ```bash
-  gcc --version
-  // hoặc
   g++ --version
   ```
+
   4. Nếu hiện như hình thì bạn đã cài thành công
-  :br
-  ![](/screenshots/cpp-on-windows-check.png)
+     ![](/screenshots/cpp-on-windows-check.png)
 
 ---
 
 ## Cấu hình cho Sublime Text
 
-- Để có thể chạy được file ***.cpp*** trên **Sublime Text**, ta cần file cấu hình:
+- Để có thể chạy được file **_.cpp_** trên **Sublime Text**, ta cần file cấu hình:
   1. Mở **Sublime Text**
   2. Ấn tổ hợp phím `Alt + T + U`
   3. Chọn **New Build System**
@@ -133,15 +133,17 @@ seo:
 ```
 
 - Mở thử file `.cpp` bất kì hoặc tạo mới với code mẫu này
-  ```cpp
-  #include <iostream>
-  using namespace std;
 
-  int main() {
-      cout << "Hello World !";
-      return 0;
-  }
-  ```
+```cpp
+#include <iostream>
+using namespace std;
+
+int main() {
+    cout << "Hello World !";
+    return 0;
+}
+```
+
 - Sau đó:
   1. Ấn tổ hợp phím `Ctrl + Shift + B`
   2. Chọn dòng có tên bạn vừa đặt và có chữ **Run**

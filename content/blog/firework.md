@@ -15,7 +15,7 @@ seo:
 ## Prerequisite
 
 - HTML/CSS: not required
-- Javascrip\:t ES6 (class), Array methods (map, ...)
+- Javascript ES6 (class), Array methods (map, ...)
 
 ## Step 1 - HTML base
 
@@ -27,8 +27,13 @@ fireworks
 ├── fireworks.js
 ```
 
-- `index.html`
-
+::code-tab
+---
+tabs:
+  - index.html
+  - fireworks.js
+---
+#tab1
 ```html
 <style>
   * {
@@ -41,12 +46,12 @@ fireworks
 <script src="index.js"></script>
 ```
 
-- `fireworks.js`
-
+#tab2
 ```js
 const canvas = document.querySelector('#fireworks');
 const ctx = canvas.getContext('2d');
 ```
+::
 
 ## Step 2 - Particle Class
 
