@@ -1,6 +1,6 @@
 <script setup lang="ts">
 definePageMeta({
-  layout: 'home',
+  layout: 'fixnav',
   description: 'yublog home page',
 });
 
@@ -31,42 +31,31 @@ defineOgImageComponent('Nuxt');
 </script>
 
 <template>
-  <UContainer class="relative h-screen overflow-hidden">
-    <section class="no-scrollbar mt-22 h-[calc(100dvh-10rem)] overflow-y-auto">
-      <div class="pt-12 pb-16 md:pb-24">
-        <SvgoLogo
-          :filled="true"
-          :font-controlled="false"
-          class="mx-auto size-16 sm:size-24"
-        />
-        <p class="text-center text-3xl font-black tracking-wide">yublog</p>
+  <UContainer class="relative py-36">
+    <div class="mb-20">
+      <SvgoLogo
+        :filled="true"
+        :font-controlled="false"
+        class="mx-auto size-16 sm:size-24"
+      />
+      <p class="text-center text-3xl font-black tracking-wide">yublog</p>
+    </div>
+
+    <div
+      class="mt-4 flex w-full flex-col items-center justify-start gap-16 md:mt-12"
+    >
+      <div class="container mx-auto">
+        <p class="text-center text-2xl font-semibold">Recent Posts</p>
+
+        <PostsSkeleton v-if="loadPosts === 'pending'" />
+        <PostList v-else :posts="posts" />
       </div>
 
-      <div
-        class="mt-4 flex w-full flex-col items-center justify-start gap-16 md:mt-12"
-      >
-        <div class="container mx-auto">
-          <p class="text-center text-2xl font-semibold">Recent Posts</p>
+      <div class="container mx-auto">
+        <p class="text-center text-2xl font-semibold">Recent Notes</p>
 
-          <PostsSkeleton v-if="loadPosts === 'pending'" />
-          <PostList v-else :posts="posts" />
-        </div>
-
-        <div class="container mx-auto">
-          <p class="text-center text-2xl font-semibold">Recent Notes</p>
-
-          <PostsSkeleton v-if="loadNotes === 'pending'" />
-          <NoteList v-else :notes="notes" />
-        </div>
-      </div>
-    </section>
-
-    <div class="absolute-center-h fixed bottom-6 text-sm">
-      <div class="flex items-center gap-1 text-(--ui-text-muted)">
-        <p class="text-sm">Made by</p>
-        <ULink :to="app.repo" external target="_blank">
-          {{ app.author }}
-        </ULink>
+        <PostsSkeleton v-if="loadNotes === 'pending'" />
+        <NoteList v-else :notes="notes" />
       </div>
     </div>
   </UContainer>
