@@ -8,6 +8,9 @@ defineOgImageComponent('Nuxt');
 
 <template>
   <LayoutDefault>
+    <DesignTopBlob />
+    <DesignBottomBlob />
+
     <section class="space-y-12">
       <GlowGrid
         :list="[

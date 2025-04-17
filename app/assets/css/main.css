@@ -54,7 +54,7 @@
 
 * {
   -webkit-tap-highlight-color: transparent;
-  @apply cursor-none !select-none;
+  @apply !select-none lg:cursor-none;
 
   &::-webkit-scrollbar {
     @apply rounded-2xl bg-(--ui-bg-muted);
