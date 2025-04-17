@@ -19,8 +19,8 @@
     "preinstall": "npx only-allow pnpm",
     "postinstall": "nuxt prepare",
     "bump": "bumpp",
-    "lint": "eslint ./app ./*.ts",
-    "lint:fix": "eslint ./app ./*.ts --fix"
+    "lint": "eslint ./app ./server ./*.ts",
+    "lint:fix": "eslint ./app ./server ./*.ts --fix"
   },
   "devDependencies": {
     "@antfu/eslint-config": "^4.12.0",

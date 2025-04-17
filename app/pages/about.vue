@@ -10,8 +10,8 @@ defineOgImageComponent('Nuxt');
 
 <template>
   <LayoutDefault>
-    <DesignTopBlob />
-    <DesignBottomBlob />
+    <DesignTopBlob class="hidden lg:block" />
+    <DesignBottomBlob class="hidden lg:block" />
 
     <section class="space-y-12">
       <GlowGrid

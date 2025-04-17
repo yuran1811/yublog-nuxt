@@ -1,6 +1,4 @@
 <script setup lang="ts">
-import { useMouse } from '@vueuse/core';
-
 const { x, y } = usePointer();
 </script>
 
@@ -12,5 +10,5 @@ const { x, y } = usePointer();
       left: `${x}px`,
       transform: 'translate(-50%, -50%)',
     }"
-  ></div>
+  />
 </template>

@@ -41,14 +41,14 @@ export default defineNuxtConfig({
       },
       link: [{ rel: 'icon', type: 'image/svg+xml', href: '/logo.svg' }],
     },
-    pageTransition: {
-      name: 'page',
-      mode: 'out-in',
-    },
-    layoutTransition: {
-      name: 'layout',
-      mode: 'out-in',
-    },
+    // pageTransition: {
+    //   name: 'page',
+    //   mode: 'out-in',
+    // },
+    // layoutTransition: {
+    //   name: 'layout',
+    //   mode: 'out-in',
+    // },
   },
   css: ['@/assets/css/main.css'],
   router: {
