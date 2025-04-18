@@ -56,6 +56,10 @@ export default defineNuxtConfig({
       scrollBehaviorType: 'smooth',
     },
   },
+  site: {
+    url: 'https://yublog-nuxt.vercel.app',
+    name: 'yuran1811 blog',
+  },
   content: {
     build: {
       markdown: {
