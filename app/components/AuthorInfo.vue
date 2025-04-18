@@ -28,7 +28,7 @@ const avatar = computed(() => {
           <p>
             {{ author.name }}
           </p>
-          <div class="flex-center gap-4 *:scale-125 *:transition">
+          <div class="flex-center flex-wrap gap-4 *:scale-125 *:transition">
             <template
               v-for="account in [
                 { icon: 'lucide:mail', url: author.mail },

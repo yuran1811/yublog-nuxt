@@ -67,7 +67,7 @@ defineOgImageComponent('Nuxt', post.value?.ogImage);
         </template>
       </p>
 
-      <h1 class="text-4xl leading-tight font-bold md:text-5xl">
+      <h1 class="text-2xl leading-tight font-bold md:text-4xl lg:text-5xl">
         {{ postData.title }}
       </h1>
 

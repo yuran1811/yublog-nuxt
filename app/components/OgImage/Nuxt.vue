@@ -65,12 +65,14 @@ const description = computed(() => (props.description || '').slice(0, 200));
       >
         {{ headline }}
       </p>
+
       <h1
         v-if="title"
-        class="m-0 mb-4 flex w-[600px] items-center text-[52px] font-semibold text-white"
+        class="m-0 mb-4 flex w-[600px] items-center text-[48px] font-semibold text-white"
       >
         <span>{{ title }}</span>
       </h1>
+
       <p v-if="description" class="text-[32px] leading-tight text-[#E4E4E7]">
         {{ description }}
       </p>
