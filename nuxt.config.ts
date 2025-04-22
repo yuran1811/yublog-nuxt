@@ -138,8 +138,8 @@ export default defineNuxtConfig({
 
   routeRules: {
     // more info: https://github.com/danielroe/nuxt-vercel-isr
-    '/**': { isr: 60, prerender: true },
-    '/md-editor': { ssr: false },
+    '/**': { prerender: true },
+    '/md-editor': { isr: false, ssr: false },
   },
 
   future: {
