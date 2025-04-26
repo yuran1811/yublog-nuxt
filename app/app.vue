@@ -7,6 +7,7 @@
           <NuxtLayout>
             <NuxtErrorBoundary>
               <NuxtPage />
+              <ToTop />
 
               <template #error="{ error }">
                 <Error :error="error" />

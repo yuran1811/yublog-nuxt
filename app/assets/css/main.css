@@ -90,12 +90,35 @@ body {
   @apply top-1/2 -translate-y-1/2 transform;
 }
 
+.totop {
+  @apply fixed right-2.5 bottom-16 z-50 size-12 cursor-pointer xl:right-1/5;
+
+  &:hover {
+    &::after,
+    &::before {
+      transform: rotateZ(0);
+    }
+  }
+  &::after,
+  &::before {
+    @apply absolute bottom-2.5 h-1 w-[29.6px] bg-current transition-all duration-200 content-[""];
+  }
+  &::after {
+    left: 0;
+    transform: rotateZ(-225deg);
+  }
+  &::before {
+    right: 0;
+    transform: rotateZ(225deg);
+  }
+}
+
 .dock {
   @apply max-xs:hidden fixed bottom-6 left-1/2 z-100 flex h-16 -translate-x-1/2 items-end gap-4 rounded-[22px] p-2 transition before:absolute before:inset-0 before:opacity-30 before:blur-xl before:content-[""] hover:brightness-110 hover:before:opacity-80;
-  &,
+  /* &,
   &::before {
-    /* @apply bg-(image:--gd-bg1); */
-  }
+    @apply bg-(image:--gd-bg1);
+  } */
 
   img {
     @apply rounded-[16px] transition;
