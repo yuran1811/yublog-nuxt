@@ -45,7 +45,11 @@ defineOgImageComponent('Nuxt');
   >
     <UBreadcrumb :items="breadCrumbItems" class="max-md:hidden" />
     <div v-if="tags !== undefined" class="flex-center">
-      <NuxtLink to="/blog/tags" class="group flex-center cursor-pointer gap-3">
+      <NuxtLink
+        external
+        to="/blog/tags"
+        class="group flex-center cursor-pointer gap-3"
+      >
         <div
           class="inline-flex items-center rounded-full bg-(--ui-bg-elevated) p-1.5 ring ring-(--ui-border-accented) transition group-hover:-translate-x-0.5 group-hover:bg-(--ui-primary)/10 group-hover:ring-(--ui-primary)/50"
         >

@@ -43,10 +43,9 @@ const avatar = computed(() => {
               :key="account"
             >
               <NuxtLink
-                class="flex-center size-4 rounded-md text-(--ui-bg-revert) transition-transform hover:scale-150 hover:text-violet-400"
                 :to="account.url"
                 target="_blank"
-                rel="noopener noreferrer"
+                class="flex-center size-4 rounded-md text-(--ui-bg-revert) transition-transform hover:scale-150 hover:text-violet-400"
               >
                 <Icon :name="account.icon" class="size-4 fill-current" />
               </NuxtLink>

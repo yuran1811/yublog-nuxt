@@ -59,6 +59,7 @@ defineOgImageComponent('Nuxt', post.value?.ogImage);
       <p class="text-xs font-semibold tracking-wider uppercase">
         <template v-for="tag in postData.tags" :key="tag">
           <NuxtLink
+            external
             :to="`/blog/tags/${tag}`"
             class="inline-block rounded-md bg-(--ui-bg) px-2 py-1 text-xs font-semibold tracking-wider text-(--ui-text-muted) lowercase hover:text-(--ui-text)"
           >
@@ -74,6 +75,7 @@ defineOgImageComponent('Nuxt', post.value?.ogImage);
       <p class="text-sm text-(--ui-text-muted)">
         by
         <NuxtLink
+          external
           :to="`/blog/authors/${postData.author}`"
           class="text-violet-400 underline"
         >

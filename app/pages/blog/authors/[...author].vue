@@ -51,6 +51,7 @@ defineOgImageComponent('Nuxt');
       class="flex-center"
     >
       <NuxtLink
+        external
         to="/blog/authors"
         class="group flex-center cursor-pointer gap-3"
       >
