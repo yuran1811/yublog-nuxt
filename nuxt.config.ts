@@ -149,6 +149,9 @@ export default defineNuxtConfig({
     typedPages: true,
   },
   compatibilityDate: '2025-03-01',
+  nitro: {
+    static: true,
+  },
 
   eslint: {
     config: {
