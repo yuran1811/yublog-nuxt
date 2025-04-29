@@ -14,14 +14,14 @@ seo:
 ## Xem lại pass Wifi
 
 ```bash
-netsh wlan show profile "_name_" key=clear
+netsh wlan show profile "<name>" key=clear
 ```
 
 ## Ẩn thư mục hoàn toàn
 
-- Mở powershell (shift + left click)
-- Gõ `attrib +s +h "__folder_name__"` để ẩn
-- Gõ `attrib -s -h "__folder_name__"` để hiện
+- Mở `powershell` (shift + left click)
+- Gõ `attrib +s +h "<folder_name>"` để ẩn
+- Gõ `attrib -s -h "<folder_name>"` để hiện
 
 ## Kiểm tra tình trạng Pin Laptop
 
@@ -34,7 +34,7 @@ powercfg /batteryreport
 ## Cài "Auto Shutdown" máy
 
 - Gõ `shutdown -a` : tắt auto shutdown
-- Gõ `shutdown -s -t __time__` : tắt máy theo thời gian (giây)
+- Gõ `shutdown -s -t <time>` : tắt máy theo thời gian (giây)
 
 ## Window shortcut
 

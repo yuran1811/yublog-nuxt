@@ -17,7 +17,8 @@ const avatar = computed(() => {
     >
       <NuxtImg
         :src="avatar"
-        alt="avatar"
+        :alt="`${author.name} avatar`"
+        :title="`${author.name} avatar`"
         class="size-16 min-h-16 min-w-16 flex-shrink-0 self-center rounded-full border border-(--ui-text-dimmed) bg-gray-500 md:size-24 md:justify-self-start"
       />
 
@@ -43,6 +44,7 @@ const avatar = computed(() => {
               :key="account"
             >
               <NuxtLink
+                :aria-label="account.url"
                 :to="account.url"
                 target="_blank"
                 class="flex-center size-4 rounded-md text-(--ui-bg-revert) transition-transform hover:scale-150 hover:text-violet-400"

@@ -91,7 +91,7 @@ body {
 }
 
 .totop {
-  @apply fixed right-2.5 bottom-16 z-50 size-12 cursor-pointer xl:right-1/5;
+  @apply fixed right-8 bottom-16 z-100 size-12 cursor-pointer xl:right-1/5;
 
   &:hover {
     &::after,
@@ -174,7 +174,7 @@ body {
   }
 
   .canvas {
-    @apply absolute inset-0 z-3 grid grid-cols-5 grid-rows-5 gap-0 perspective-midrange;
+    @apply absolute inset-0 z-2 grid grid-cols-5 grid-rows-5 gap-0 perspective-midrange;
     grid-template-areas:
       'tr-1 tr-2 tr-3 tr-4 tr-5'
       'tr-6 tr-7 tr-8 tr-9 tr-10'

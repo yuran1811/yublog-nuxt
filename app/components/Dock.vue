@@ -67,6 +67,8 @@ const clickHandler = (name: string) => {
           v-else-if="item.img.length"
           :src="item.img"
           :placeholder="36"
+          :alt="item.name"
+          :title="item.name"
         />
       </div>
     </div>

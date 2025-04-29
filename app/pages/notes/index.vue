@@ -1,7 +1,7 @@
 <script setup lang="ts">
-const { data } = await useAsyncData('notes', () => {
-  return queryCollection('notes').order('date', 'DESC').all();
-});
+const { data } = await useAsyncData('notes', () =>
+  queryCollection('notes').order('date', 'DESC').all(),
+);
 
 const { app } = useAppConfig();
 

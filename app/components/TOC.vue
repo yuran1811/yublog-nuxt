@@ -3,9 +3,10 @@ const { tocs = [] } = defineProps<{ tocs?: TOC[] }>();
 </script>
 
 <template>
-  <UDrawer direction="right">
+  <UDrawer direction="right" inset>
     <UButton
       label="TOC"
+      title="Toggle TOC"
       color="neutral"
       variant="subtle"
       trailing-icon="lucide:list"
@@ -32,6 +33,7 @@ const { tocs = [] } = defineProps<{ tocs?: TOC[] }>();
               <li v-for="toc in tocs" :key="toc.id">
                 <a
                   :href="`#${toc.id}`"
+                  :title="toc.id"
                   class="group relative flex items-center py-1 text-sm text-(--ui-text-muted) transition-colors hover:text-(--ui-text) focus-visible:outline-(--ui-primary)"
                 >
                   <span class="truncate">
@@ -47,6 +49,7 @@ const { tocs = [] } = defineProps<{ tocs?: TOC[] }>();
                   >
                     <a
                       :href="`#${child.id}`"
+                      :title="child.id"
                       class="group relative flex items-center py-1 text-sm text-(--ui-text-muted) transition-colors hover:text-(--ui-text) focus-visible:outline-(--ui-primary)"
                     >
                       <span class="truncate">

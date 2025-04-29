@@ -5,7 +5,7 @@ import { useRouteParams } from '@vueuse/router';
 
 const slug = useRouteParams('slug');
 
-const { data: post } = await useAsyncData(`blog-${slug.value}`, () =>
+const { data: post } = await useAsyncData(`blog-post-${slug.value}`, () =>
   queryCollection('blog').path(`/blog/${slug.value}`).first(),
 );
 
@@ -15,6 +15,7 @@ const postData = computed(() => ({
   date: post.value?.date || new Date(),
   tags: post.value?.tags || [],
   desc: post.value?.description || 'No description available',
+  image: post.value?.image || '',
 }));
 
 const { data: authorData } = await useAsyncData(
@@ -38,10 +39,7 @@ const tocLinks = computed(() => post.value?.body?.toc?.links || []);
 const breadCrumbItems = ref([
   { label: 'Home', icon: 'lucide:house', to: '/' },
   { label: 'Blog', icon: 'lucide:book-open', to: '/blog' },
-  {
-    label: post.value?.title ? post.value.title : 'Post',
-    icon: 'lucide:file',
-  },
+  { label: post.value?.title ?? 'Post', icon: 'lucide:file' },
 ]);
 
 useSeoMeta(post.value?.seo || {});
@@ -55,11 +53,18 @@ defineOgImageComponent('Nuxt', post.value?.ogImage);
   >
     <UBreadcrumb :items="breadCrumbItems" class="max-md:hidden" />
 
+    <NuxtImg
+      :src="postData.image"
+      sizes="100vw sm:64vw md:480px"
+      fit="contain"
+      :title="`${postData.title} cover image`"
+      class="mx-auto"
+    />
+
     <div class="mx-auto w-full space-y-4 text-center">
       <p class="text-xs font-semibold tracking-wider uppercase">
         <template v-for="tag in postData.tags" :key="tag">
           <NuxtLink
-            external
             :to="`/blog/tags/${tag}`"
             class="inline-block rounded-md bg-(--ui-bg) px-2 py-1 text-xs font-semibold tracking-wider text-(--ui-text-muted) lowercase hover:text-(--ui-text)"
           >
@@ -75,7 +80,6 @@ defineOgImageComponent('Nuxt', post.value?.ogImage);
       <p class="text-sm text-(--ui-text-muted)">
         by
         <NuxtLink
-          external
           :to="`/blog/authors/${postData.author}`"
           class="text-violet-400 underline"
         >

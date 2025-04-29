@@ -130,7 +130,7 @@ const cardStyle = computed(() => ({
       </div>
       <div class="note opacity-1">
         Credit of images to
-        <a href="https://codepen.io/jaromvogel" target="__blank">Jarom Vogel</a>
+        <a href="https://codepen.io/jaromvogel" target="_blank">Jarom Vogel</a>
       </div>
     </div>
   </div>

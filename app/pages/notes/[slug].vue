@@ -5,16 +5,17 @@ import { useRouteParams } from '@vueuse/router';
 
 const slug = useRouteParams('slug');
 
-const { data: post } = await useAsyncData(`note-${slug.value}`, () =>
+const { data: note } = await useAsyncData(`note-${slug.value}`, () =>
   queryCollection('notes').path(`/notes/${slug.value}`).first(),
 );
 
 const noteData = computed(() => ({
-  title: post.value?.title || 'Untitled',
-  author: post.value?.author || 'anonymous',
-  date: post.value?.date || new Date(),
-  tags: post.value?.tags || [],
-  desc: post.value?.description || 'No description available',
+  title: note.value?.title || 'Untitled',
+  author: note.value?.author || 'anonymous',
+  date: note.value?.date || new Date(),
+  tags: note.value?.tags || [],
+  desc: note.value?.description || 'No description available',
+  image: note.value?.image || '',
 }));
 
 const { data: authorData } = await useAsyncData(
@@ -25,20 +26,20 @@ const { data: authorData } = await useAsyncData(
       .first(),
 );
 
-const tocLinks = computed(() => post.value?.body?.toc?.links || []);
+const tocLinks = computed(() => note.value?.body?.toc?.links || []);
 
 const breadCrumbItems = ref([
   { label: 'Home', icon: 'lucide:house', to: '/' },
   { label: 'Notes', icon: 'lucide:notebook-pen', to: '/notes' },
   {
-    label: post.value?.title ? post.value.title : 'Note',
+    label: note.value?.title ? note.value.title : 'Note',
     icon: 'lucide:sticky-note',
   },
 ]);
 
-useSeoMeta(post.value?.seo || {});
-useHead(post.value?.head || {});
-defineOgImageComponent('Nuxt', post.value?.ogImage);
+useSeoMeta(note.value?.seo || {});
+useHead(note.value?.head || {});
+defineOgImageComponent('Nuxt', note.value?.ogImage);
 </script>
 
 <template>
@@ -46,6 +47,14 @@ defineOgImageComponent('Nuxt', post.value?.ogImage);
     class="relative mx-auto max-w-2xl space-y-12 bg-(--ui-bg) px-6 pt-8 pb-24 text-(--ui-text)"
   >
     <UBreadcrumb :items="breadCrumbItems" class="max-md:hidden" />
+
+    <NuxtImg
+      :src="noteData.image"
+      sizes="100vw sm:64vw md:480px"
+      fit="contain"
+      :title="`${noteData.title} cover image`"
+      class="mx-auto"
+    />
 
     <div class="mx-auto w-full space-y-4 text-center">
       <p class="text-xs font-semibold tracking-wider uppercase">
@@ -80,10 +89,10 @@ defineOgImageComponent('Nuxt', post.value?.ogImage);
       <TOC :tocs="tocLinks" />
 
       <ContentRenderer
-        v-if="post"
+        v-if="note"
         class="prose prose-invert container mx-auto"
         :prose="true"
-        :value="post"
+        :value="note"
       />
       <div v-else>
         <p class="p-4 text-center font-bold">Note not found.</p>

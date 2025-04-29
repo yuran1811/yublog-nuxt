@@ -4,7 +4,7 @@ definePageMeta({
   description: 'All my latest, interested, useful posts',
 });
 
-const { data: posts } = await useAsyncData('blog', () =>
+const { data: posts } = await useAsyncData('blog-posts', () =>
   queryCollection('blog').order('date', 'DESC').all(),
 );
 

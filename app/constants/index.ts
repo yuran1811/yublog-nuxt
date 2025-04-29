@@ -202,21 +202,21 @@ export const IconsMapping: Record<string, Record<string, string>> = {
 export const DockItems: DockItemType[] = [
   {
     type: 'component',
-    name: 'Avatar',
+    name: 'yuran1811',
     icon: '',
     img: 'https://avatars.githubusercontent.com/u/76398420?v=4',
     link: '',
   },
   {
     type: 'link',
-    name: 'Github',
+    name: 'GitHub',
     icon: 'lucide:github',
     img: '',
     link: 'https://github.com/yuran1811',
   },
   {
     type: 'link',
-    name: 'Linkedin',
+    name: 'LinkedIn',
     icon: 'lucide:linkedin',
     img: '',
     link: 'https://www.linkedin.com/in/yuran-legends-6252b6222/',
@@ -244,7 +244,7 @@ export const DockItems: DockItemType[] = [
   },
   {
     type: 'link',
-    name: 'Youtube',
+    name: 'YouTube',
     icon: 'lucide:youtube',
     img: '',
     link: 'https://www.youtube.com/channel/UCLXNBb-jZRS_3o_itGGrGRA?view_as=subscriber',

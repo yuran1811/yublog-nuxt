@@ -20,6 +20,7 @@ const mobileItems = ref<any[]>([
   [
     {
       icon: 'lucide:menu',
+      title: 'menu',
       onSelect: () => (showSidebar.value = true),
     },
   ],

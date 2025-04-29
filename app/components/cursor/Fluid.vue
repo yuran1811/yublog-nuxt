@@ -1351,7 +1351,7 @@ onMounted(() => {
 </script>
 
 <template>
-  <div class="pointer-events-none fixed top-0 left-0 z-50 h-screen w-screen">
+  <div class="pointer-events-none fixed top-0 left-0 z-200 h-screen w-screen">
     <canvas id="fluid" ref="canvasRef" class="h-full w-full" />
   </div>
 </template>

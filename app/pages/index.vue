@@ -7,10 +7,10 @@ definePageMeta({
 const { app } = useAppConfig();
 
 const { status: loadPosts, data: latestPostsData } = await useLazyFetch(
-  '/api/latest-posts?limit=6',
+  '/api/latest/blog?limit=6',
 );
 const { status: loadNotes, data: latestNotesData } = await useLazyFetch(
-  '/api/latest-notes?limit=6',
+  '/api/latest/notes?limit=6',
 );
 
 const posts = ref<any[]>([...(latestPostsData.value || [])]);
@@ -41,8 +41,8 @@ defineOgImageComponent('Nuxt');
       <p class="text-center text-3xl font-black tracking-wide">yublog</p>
     </div>
 
-    <div
-      class="mt-4 flex w-full flex-col items-center justify-start gap-16 md:mt-12"
+    <main
+      class="mt-4 flex w-full flex-col items-center justify-start gap-20 md:mt-12"
     >
       <div class="container mx-auto">
         <p class="text-center text-2xl font-semibold">Recent Posts</p>
@@ -57,6 +57,6 @@ defineOgImageComponent('Nuxt');
         <PostsSkeleton v-if="loadNotes === 'pending'" />
         <NoteList v-else :notes="notes" />
       </div>
-    </div>
+    </main>
   </UContainer>
 </template>

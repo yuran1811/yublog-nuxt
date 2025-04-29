@@ -13,9 +13,8 @@ defineProps<{
   >
     <template v-for="note in notes" :key="note.path">
       <NuxtLink
-        external
         :to="note.path"
-        class="hover:animate-background w-full max-w-105 scale-100 rounded-xl bg-gradient-to-r from-green-300 via-blue-500 to-purple-600 p-0.5 shadow-xl transition hover:scale-[1.02] hover:bg-[length:400%_400%] hover:shadow-xs hover:[animation-duration:_4s] dark:shadow-gray-700/25"
+        class="hover:animate-background w-full max-w-105 scale-100 rounded-xl bg-gradient-to-r from-green-300 via-blue-500 to-purple-600 p-0.5 shadow-xl transition hover:scale-[1.01] hover:bg-[length:400%_400%] hover:shadow-xs hover:[animation-duration:_4s] dark:shadow-gray-700/25"
       >
         <div
           class="relative flex h-full flex-col items-start justify-end overflow-hidden rounded-[10px] bg-white p-4 !pt-18 sm:p-6 dark:bg-gray-900"

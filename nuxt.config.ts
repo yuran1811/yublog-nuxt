@@ -138,8 +138,10 @@ export default defineNuxtConfig({
 
   routeRules: {
     // more info: https://github.com/danielroe/nuxt-vercel-isr
-    '/**': { prerender: true },
-    '/md-editor': { isr: false, ssr: false },
+    '/**': { static: true, prerender: true },
+    '/md-editor': { isr: false, ssr: false, prerender: false },
+    '/api/**': { cors: false, isr: false, ssr: false, prerender: false },
+    '/api/cors/**': { cors: true },
   },
 
   future: {
@@ -149,9 +151,6 @@ export default defineNuxtConfig({
     typedPages: true,
   },
   compatibilityDate: '2025-03-01',
-  nitro: {
-    static: true,
-  },
 
   eslint: {
     config: {

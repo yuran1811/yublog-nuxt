@@ -30,11 +30,11 @@ defineOgImageComponent('Nuxt');
 </script>
 
 <template>
-  <div class="mt-20 w-full">
+  <div class="mt-18 w-full md:mt-22">
     <h1 class="pb-6 text-center text-2xl font-bold">Markdown Editor</h1>
 
     <div
-      class="container mx-auto grid overflow-hidden *:h-full *:p-2 *:outline-none sm:h-screen sm:max-h-[calc(100dvh-10rem)] sm:grid-cols-2"
+      class="container mx-auto grid overflow-hidden *:h-full *:p-2 *:outline-none sm:h-screen sm:max-h-[calc(100dvh-11rem)] sm:grid-cols-2"
     >
       <textarea
         v-model="input"
