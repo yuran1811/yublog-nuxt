@@ -45,14 +45,18 @@ defineOgImageComponent('Nuxt');
       class="mt-4 flex w-full flex-col items-center justify-start gap-20 md:mt-12"
     >
       <div class="container mx-auto">
-        <p class="text-center text-2xl font-semibold">Recent Posts</p>
+        <p class="text-center text-2xl font-semibold">
+          {{ $t('recent posts') }}
+        </p>
 
         <PostsSkeleton v-if="loadPosts === 'pending'" />
         <PostList v-else :posts="posts" />
       </div>
 
       <div class="container mx-auto">
-        <p class="text-center text-2xl font-semibold">Recent Notes</p>
+        <p class="text-center text-2xl font-semibold">
+          {{ $t('recent notes') }}
+        </p>
 
         <PostsSkeleton v-if="loadNotes === 'pending'" />
         <NoteList v-else :notes="notes" />

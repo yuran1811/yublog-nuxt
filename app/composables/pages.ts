@@ -1,6 +1,8 @@
 export const usePages = () => {
   const router = useRouter();
+  const { locales, setLocale } = useI18n();
   const { pageCategories } = useAppConfig();
+  const { showSidebar } = useSidebar();
 
   const routes = router
     .getRoutes()
@@ -80,12 +82,20 @@ export const usePages = () => {
       ],
       [
         {
-          label: 'Star',
+          title: 'gh-star',
           icon: 'lucide:github',
-          badge: 'public',
           to: 'https://github.com/yuran1811/yublog-nuxt',
           target: '_blank',
         },
+        ...locales.value
+          // .filter(({ code }) => code !== locale.value)
+          .map(({ code }) => ({
+            label: code,
+            onSelect: () => {
+              setLocale(code);
+              showSidebar.value = false;
+            },
+          })),
       ],
     ],
   };

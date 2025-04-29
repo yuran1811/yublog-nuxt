@@ -1,5 +1,15 @@
 <script setup lang="ts">
+import * as locales from '@nuxt/ui/locale';
 import { Analytics } from '@vercel/analytics/nuxt';
+
+const { locale } = useI18n();
+
+const lang = computed(() => locales[locale.value].code);
+const dir = computed(() => locales[locale.value].dir);
+
+useHead({
+  htmlAttrs: { lang, dir },
+});
 </script>
 
 <template>

@@ -32,11 +32,14 @@ defineOgImageComponent('Nuxt');
               <h2
                 class="mb-4 text-3xl font-bold text-white sm:text-4xl md:text-[40px]"
               >
-                All my posts
+                {{ $t('all my posts') }}
               </h2>
               <p class="text-dark-6 text-base">
-                I write about my life, work, and the things I love. I hope you
-                find something that resonates with you.
+                {{
+                  $t(
+                    `I write about my life, work, and the things I love. I hope you find something that resonates with you.`,
+                  )
+                }}
               </p>
             </div>
           </div>

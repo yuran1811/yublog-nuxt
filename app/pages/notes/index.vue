@@ -27,10 +27,12 @@ defineOgImageComponent('Nuxt');
               <h2
                 class="mb-4 text-3xl font-bold text-white sm:text-4xl md:text-[40px]"
               >
-                My Notes
+                {{ $t('my notes') }}
               </h2>
               <p class="text-dark-6 text-base">
-                My notes for the things I learn and want to remember.
+                {{
+                  $t('My notes for the things I learn and want to remember.')
+                }}
               </p>
             </div>
           </div>

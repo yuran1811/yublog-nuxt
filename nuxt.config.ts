@@ -1,16 +1,17 @@
 export default defineNuxtConfig({
   modules: [
+    '@nuxtjs/i18n',
     '@nuxtjs/mdc',
     '@nuxtjs/seo',
     '@nuxt/content',
     '@nuxt/image',
     '@nuxt/ui',
     '@nuxt/eslint',
-    '@vueuse/nuxt',
-    '@pinia/nuxt',
-    'reka-ui/nuxt',
     'nuxt-llms',
     'nuxt-svgo',
+    'reka-ui/nuxt',
+    '@vueuse/nuxt',
+    '@pinia/nuxt',
   ],
   imports: {
     presets: [
@@ -161,6 +162,22 @@ export default defineNuxtConfig({
       },
     },
   },
+  i18n: {
+    customRoutes: 'config',
+    pages: {
+      about: false,
+    },
+    lazy: true,
+    strategy: 'no_prefix',
+    defaultLocale: 'en',
+    locales: [
+      { code: 'en', language: 'en-US', file: 'en.json' },
+      { code: 'vi', language: 'vi-VN', file: 'vi.json' },
+    ],
+    bundle: {
+      optimizeTranslationDirective: false,
+    },
+  },
   icon: {
     serverBundle: {
       collections: ['catppuccin', 'lucide', 'ic'],
@@ -168,7 +185,7 @@ export default defineNuxtConfig({
     clientBundle: {
       scan: true,
       includeCustomCollections: true,
-      sizeLimitKb: 16,
+      sizeLimitKb: 20,
       icons: ['lucide:x', 'lucide:chevron-right'],
     },
     customCollections: [
