@@ -9,6 +9,7 @@ export default defineNuxtConfig({
     '@vueuse/nuxt',
     '@pinia/nuxt',
     'reka-ui/nuxt',
+    'nuxt-llms',
     'nuxt-svgo',
   ],
   imports: {
@@ -176,6 +177,12 @@ export default defineNuxtConfig({
         dir: './app/assets/icons',
       },
     ],
+  },
+  llms: {
+    domain: 'https://yublog-nuxt.vercel.app',
+    title: 'yuran1811 blog',
+    description:
+      'A blog about programming, technology, and life experiences, written by yuran1811',
   },
   svgo: {
     autoImportPath: '@/assets/icons',

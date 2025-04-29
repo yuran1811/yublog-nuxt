@@ -1,3 +1,7 @@
+<script setup lang="ts">
+import { Analytics } from '@vercel/analytics/nuxt';
+</script>
+
 <template>
   <Html class="dark overflow-x-hidden">
     <Body class="font-sans antialiased">
@@ -17,5 +21,7 @@
         </UToaster>
       </UApp>
     </Body>
+
+    <Analytics />
   </Html>
 </template>
