@@ -23,7 +23,16 @@ defineOgImageComponent('Nuxt');
             color: '#10B981',
             fgClass: 'text-green-500',
             bgClass: 'bg-green-500/20',
-            icon: 'lucide:package',
+            icon: 'local:nuxt-green',
+          },
+          {
+            title: '@nuxtjs/i18n',
+            description:
+              'I18n (Internationalization) module for your Nuxt project powered by Vue I18n.',
+            color: '#10B981',
+            fgClass: 'text-green-500',
+            bgClass: 'bg-green-500/20',
+            icon: 'local:nuxt-green',
           },
           {
             title: '@nuxt/content',
@@ -32,7 +41,7 @@ defineOgImageComponent('Nuxt');
             color: '#10B981',
             fgClass: 'text-green-500',
             bgClass: 'bg-green-500/20',
-            icon: 'lucide:package',
+            icon: 'local:nuxt-green',
           },
           {
             title: '@nuxt/image',
@@ -40,7 +49,7 @@ defineOgImageComponent('Nuxt');
             color: '#10B981',
             fgClass: 'text-green-500',
             bgClass: 'bg-green-500/20',
-            icon: 'lucide:package',
+            icon: 'local:nuxt-green',
           },
           {
             title: '@nuxt/ui',
@@ -49,7 +58,7 @@ defineOgImageComponent('Nuxt');
             color: '#10B981',
             fgClass: 'text-green-500',
             bgClass: 'bg-green-500/20',
-            icon: 'lucide:package',
+            icon: 'local:nuxt-green',
           },
           {
             title: '@pinia/nuxt',
