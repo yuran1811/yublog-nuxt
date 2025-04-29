@@ -1,0 +1,1 @@
+import{_ as s}from"./DlAUqK2U.js";import{c as t,d as o,g as c,D as _}from"./DKjhEE28.js";const a={},n={class:"grid grid-cols-1"},r={class:"px-6 pt-2 pb-10 sm:pt-8 lg:px-8 lg:pt-22"};function d(e,l){return o(),t("div",n,[c("div",r,[_(e.$slots,"default")])])}const m=Object.assign(s(a,[["render",d]]),{__name:"LayoutDefault"});export{m as _};

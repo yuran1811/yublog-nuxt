@@ -1,0 +1,21 @@
+# yuran1811 blog
+
+> A blog about programming, technology, and life experiences, written by yuran1811
+
+## Blog
+
+- [Customize Terminal (Git Bash, CMD)](https://yublog-nuxt.vercel.app/blog/customize-terminal): Customize your terminal with zsh, oh-my-zsh on git bash and cmd (via clink).
+- [Tổng hợp phím tắt trong Sublime Text, VSCode](https://yublog-nuxt.vercel.app/blog/editors-key-shortcuts): Tổng hợp phím tắt trong Sublime Text, VSCode
+- [Fireworks Visualization with Canvas - JavaScript](https://yublog-nuxt.vercel.app/blog/firework): Visualize fireworks with pure Javascript from scratch
+- [10 đoạn code Javascript hữu ích](https://yublog-nuxt.vercel.app/blog/js-code): Những utility function cực kì hữu ích cho project của bạn
+- [Xóa ứng dụng hệ thống trên điện thoại (Thành công 100%)](https://yublog-nuxt.vercel.app/blog/remove-system-app-android): Xóa ứng dụng hệ thống trên điện thoại nhanh gọn và miễn phí với tỉ lệ thành công 100%
+- [Sublime Text x C++ trên Windows](https://yublog-nuxt.vercel.app/blog/sublime-cpp): Hướng dẫn cài đặt C++ cho Sublime Text trên Windows
+- [7+ web features you may not know](https://yublog-nuxt.vercel.app/blog/web-features): 7+ web features you may not know, amazing web features you may not know
+
+## Notes
+
+- [Windows Notes](https://yublog-nuxt.vercel.app/notes/windows): Windows Notes are collection of useful tips and tricks for Windows users.
+
+## Examples
+
+- [H1](https://yublog-nuxt.vercel.app/examples/md-example)
