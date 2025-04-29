@@ -32,13 +32,15 @@ defineOgImageComponent('Nuxt');
 
 <template>
   <UContainer class="relative py-36">
-    <div class="mb-20">
+    <div class="mt-12 mb-32">
       <SvgoLogo
         :filled="true"
         :font-controlled="false"
-        class="mx-auto size-16 sm:size-24"
+        class="mx-auto mb-6 size-20 sm:size-32"
       />
-      <p class="text-center text-3xl font-black tracking-wide">yublog</p>
+      <p class="text-center text-2xl font-black tracking-wide sm:text-3xl">
+        yublog
+      </p>
     </div>
 
     <main

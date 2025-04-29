@@ -56,7 +56,15 @@ defineOgImageComponent('Nuxt');
       </NuxtLink>
     </div>
 
-    <AuthorInfo v-if="authorData" :author="parseAuthorData(authorData)" />
-    <PostList :posts="posts" />
+    <template v-if="authorData">
+      <AuthorInfo :author="parseAuthorData(authorData)" />
+      <PostList :posts="posts" />
+    </template>
+    <template v-else>
+      <p class="text-center text-xl">
+        <span class="font-bold underline">@{{ author }} </span>
+        not found
+      </p>
+    </template>
   </article>
 </template>

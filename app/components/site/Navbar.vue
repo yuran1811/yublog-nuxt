@@ -2,7 +2,7 @@
 const { pages } = usePages();
 const { showSidebar } = useSidebar();
 
-const mobileItems = ref<any[]>([
+const mobileItems = ref([
   [
     {
       avatar: {

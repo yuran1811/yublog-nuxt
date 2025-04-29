@@ -5,10 +5,6 @@ export default defineAppConfig({
     repo: 'https://github.com/yuran1811/yublog-nuxt',
   },
   pageCategories: {
-    ecosystem: {
-      label: 'Ecosystem',
-      icon: 'lucide:layers-2',
-    },
     other: {
       label: 'Other',
       icon: 'lucide:box',
