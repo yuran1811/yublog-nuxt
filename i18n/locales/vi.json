@@ -1,8 +1,15 @@
 {
+  "markdown editor": "trình soạn thảo markdown",
   "recent posts": "bài viết gần đây",
   "recent notes": "ghi chú gần đây",
   "all my posts": "tất cả bài viết",
   "my notes": "ghi chú của tôi",
   "My notes for the things I learn and want to remember.": "Ghi chú cho những điều tôi học và muốn nhớ.",
-  "I write about my life, work, and the things I love. I hope you find something that resonates with you.": "Tôi viết về cuộc sống, công việc và những điều tôi yêu thích. Tôi hy vọng bạn sẽ tìm thấy điều gì đó phù hợp với bạn."
+  "I write about my life, work, and the things I love. I hope you find something that resonates with you.": "Tôi viết về cuộc sống, công việc và những điều tôi yêu thích. Tôi hy vọng bạn sẽ tìm thấy điều gì đó phù hợp với bạn.",
+  "all tags": "tất cả thẻ",
+  "all authors": "tất cả tác giả",
+  "See all tags": "Xem tất cả thẻ",
+  "See all authors": "Xem tất cả tác giả",
+  "color palette": "bảng màu",
+  "Table of Contents": "Mục lục"
 }

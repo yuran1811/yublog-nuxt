@@ -8,6 +8,7 @@ tags:
   - tech
   - utility
 image: /cover-imgs/javascript.jpg
+lang: vi
 seo:
   title: 10 đoạn code Javascript hữu ích
   description: Những utility function cực kì hữu ích cho project của bạn

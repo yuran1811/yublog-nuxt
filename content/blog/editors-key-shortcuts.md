@@ -8,6 +8,7 @@ tags:
   - sublime-text
   - key-shortcuts
 image: /cover-imgs/shortcut.jpg
+lang: vi
 seo:
   title: Tổng hợp phím tắt trong Sublime Text, VSCode
   description: Tổng hợp phím tắt trong Sublime Text, VSCode

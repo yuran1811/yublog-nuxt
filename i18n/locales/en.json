@@ -1,8 +1,15 @@
 {
+  "markdown editor": "markdown editor",
   "recent posts": "recent posts",
   "recent notes": "recent notes",
   "all my posts": "all my posts",
   "my notes": "my notes",
   "My notes for the things I learn and want to remember.": "My notes for the things I learn and want to remember.",
-  "I write about my life, work, and the things I love. I hope you find something that resonates with you.": "I write about my life, work, and the things I love. I hope you find something that resonates with you."
+  "I write about my life, work, and the things I love. I hope you find something that resonates with you.": "I write about my life, work, and the things I love. I hope you find something that resonates with you.",
+  "all tags": "all tags",
+  "all authors": "all authors",
+  "See all tags": "See all tags",
+  "See all authors": "See all authors",
+  "color palette": "color palette",
+  "Table of Contents": "Table of Contents"
 }

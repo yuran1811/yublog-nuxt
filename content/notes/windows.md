@@ -6,6 +6,7 @@ date: 2024-03-15T13:24:00Z
 tags:
   - windows
 image: /cover-imgs/win11-bloom-dark.jpg
+lang: vi
 seo:
   title: Windows Notes
   description: Windows Notes are collection of useful tips and tricks for Windows users.

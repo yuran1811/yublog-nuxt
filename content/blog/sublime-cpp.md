@@ -8,6 +8,7 @@ tags:
   - sublime-text
   - config
 image: /cover-imgs/sublime.png
+lang: vi
 seo:
   title: Sublime Text x C++ trên Windows
   description: Hướng dẫn cài đặt C++ cho Sublime Text trên Windows

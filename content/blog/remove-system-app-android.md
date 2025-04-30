@@ -8,6 +8,7 @@ tags:
   - android
   - tips
 image: /cover-imgs/android.jpg
+lang: vi
 seo:
   title: Xóa ứng dụng hệ thống trên điện thoại (Thành công 100%)
   description: Xóa ứng dụng hệ thống trên điện thoại nhanh gọn và miễn phí với tỉ
