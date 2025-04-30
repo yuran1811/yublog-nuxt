@@ -76,6 +76,7 @@ withDefaults(
         v-for="feature in list"
         :key="feature.title"
         :color="feature.color"
+        :link="feature.link"
         class="group"
       >
         <div

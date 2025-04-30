@@ -20,6 +20,11 @@ const props = defineProps({
     type: Object,
     default: () => ({}),
   },
+  link: {
+    type: String,
+    default: '',
+    required: false,
+  },
 });
 
 const element = ref<HTMLDivElement | null>(null);
@@ -30,6 +35,12 @@ const mask = computed(() => {
     calc(var(--glow-y, -99999px) - var(--glow-top, 0px)), ${props.color} 0%, transparent 100%)
   `;
 });
+
+const openLink = () => {
+  if (props.link && props.link.length > 0) {
+    window.open(props.link, '_blank');
+  }
+};
 
 onMounted(() => {
   if (!element.value) return;
@@ -53,7 +64,14 @@ onMounted(() => {
 </script>
 
 <template>
-  <div ref="element" class="glow grid">
+  <div
+    ref="element"
+    class="glow grid"
+    :class="{
+      'cursor-pointer': props.link && props.link.length > 0,
+    }"
+    @click="openLink"
+  >
     <div
       :class="className"
       :style="{ ...style, gridArea: '1/1/1/1' }"
@@ -61,6 +79,7 @@ onMounted(() => {
     >
       <slot />
     </div>
+
     <div
       class="glow-mask"
       :class="className"

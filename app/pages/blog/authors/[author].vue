@@ -13,7 +13,7 @@ const { data: posts } = await useAsyncData(
   `blog-author-${author.value}-posts`,
   () =>
     queryCollection('blog')
-      .select('title', 'date', 'tags', 'path', 'author')
+      .select('title', 'date', 'tags', 'lang', 'path', 'author')
       .where('author', '=', author.value)
       .order('date', 'DESC')
       .all(),
@@ -52,7 +52,7 @@ defineOgImageComponent('Nuxt');
           />
         </div>
 
-        <span class="text-lg">See all authors</span>
+        <span class="text-lg">{{ $t('See all authors') }}</span>
       </NuxtLink>
     </div>
 

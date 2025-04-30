@@ -3,7 +3,10 @@ import type { BlogCollectionItem } from '@nuxt/content';
 import { DefaultDateFormat } from '@/constants';
 
 defineProps<{
-  posts?: Pick<BlogCollectionItem, 'title' | 'date' | 'path' | 'tags'>[];
+  posts?: Pick<
+    BlogCollectionItem,
+    'title' | 'date' | 'path' | 'tags' | 'lang'
+  >[];
 }>();
 </script>
 
@@ -13,8 +16,21 @@ defineProps<{
   >
     <template v-for="post in posts" :key="post.path">
       <article
-        class="hover:animate-background w-full max-w-105 scale-100 rounded-xl bg-gradient-to-r from-green-300 via-blue-500 to-purple-600 p-0.5 shadow-xl transition hover:scale-[1.01] hover:bg-[length:400%_400%] hover:shadow-xs hover:[animation-duration:_4s] dark:shadow-gray-700/25"
+        class="hover:animate-background relative w-full max-w-105 scale-100 rounded-xl bg-gradient-to-r from-green-300 via-blue-500 to-purple-600 p-0.5 shadow-xl transition hover:scale-[1.01] hover:bg-[length:400%_400%] hover:shadow-xs hover:[animation-duration:_4s] dark:shadow-gray-700/25"
       >
+        <div
+          class="absolute top-0 right-2 left-2 z-10 flex h-10 items-center justify-end"
+        >
+          <FlagVi
+            v-if="!!post.lang && post.lang.includes('vi')"
+            class="absolute size-6"
+          />
+          <FlagEn
+            v-if="!post.lang || post.lang.includes('en')"
+            class="absolute size-6"
+          />
+        </div>
+
         <div
           class="relative flex h-full flex-col items-start justify-end overflow-hidden rounded-[10px] bg-white p-4 !pt-18 sm:p-6 dark:bg-gray-900"
         >

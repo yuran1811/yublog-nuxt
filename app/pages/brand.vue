@@ -55,7 +55,9 @@ defineOgImageComponent('Nuxt');
       </UContainer>
 
       <UContainer>
-        <h2 class="mb-8 text-center text-2xl font-black">color palette</h2>
+        <h2 class="mb-8 text-center text-2xl font-black">
+          {{ $t('color palette') }}
+        </h2>
 
         <UContainer class="flex flex-wrap items-center justify-center gap-8">
           <template v-for="{ name, color } of palette" :key="name">

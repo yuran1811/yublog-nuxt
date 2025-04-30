@@ -5,7 +5,7 @@ const tag = useRouteParams('tag');
 
 const { data: posts } = await useAsyncData(`blog-tag-${tag.value}`, () =>
   queryCollection('blog')
-    .select('title', 'date', 'tags', 'path')
+    .select('title', 'date', 'tags', 'lang', 'path')
     .where('tags', 'like', `%"${tag.value}"%`)
     .order('date', 'DESC')
     .all(),
@@ -42,7 +42,7 @@ defineOgImageComponent('Nuxt');
           />
         </div>
 
-        <span class="text-lg">See all tags</span>
+        <span class="text-lg">{{ $t('See all tags') }}</span>
       </NuxtLink>
     </div>
 

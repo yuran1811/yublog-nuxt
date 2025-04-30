@@ -23,7 +23,7 @@ const { tocs = [] } = defineProps<{ tocs?: TOC[] }>();
           <p
             class="-mt-1.5 flex flex-1 items-center gap-1.5 py-1.5 text-sm font-semibold focus-visible:outline-(--ui-primary)"
           >
-            <span class="truncate">Table of Content</span>
+            <span class="truncate">{{ $t('Table of Contents') }}</span>
           </p>
 
           <div

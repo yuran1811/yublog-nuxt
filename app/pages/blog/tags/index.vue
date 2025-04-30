@@ -34,7 +34,7 @@ defineOgImageComponent('Nuxt');
   >
     <UBreadcrumb :items="breadCrumbItems" class="max-md:hidden" />
 
-    <h2 class="text-center text-2xl font-bold">all tags</h2>
+    <h2 class="text-center text-2xl font-bold">{{ $t('all tags') }}</h2>
     <div
       class="container mx-auto flex flex-wrap items-start justify-center gap-4"
     >
