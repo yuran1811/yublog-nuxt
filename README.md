@@ -12,7 +12,7 @@
   <img alt="Code Size" src="https://img.shields.io/github/languages/code-size/yuran1811/yublog-nuxt">
 </p>
 
-<div style="display:flex;gap: 24px;justify-content:center">
+<div align="center">
   <a href="https://yublog-nuxt.vercel.app" target="_blank">Official Link</a>
 </div>
 
