@@ -1,15 +1,9 @@
 <script setup lang="ts">
+import type { ContentNavigationItem } from '@nuxt/content';
+
 defineProps<{
-  left?: {
-    path: string;
-    title: string;
-    description: string;
-  };
-  right?: {
-    path: string;
-    title: string;
-    description: string;
-  };
+  left?: ContentNavigationItem;
+  right?: ContentNavigationItem;
 }>();
 </script>
 
