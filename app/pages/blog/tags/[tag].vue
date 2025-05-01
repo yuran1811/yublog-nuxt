@@ -6,7 +6,7 @@ const tag = useRouteParams('tag');
 const { data: posts } = await useAsyncData(`blog-tag-${tag.value}`, () =>
   queryCollection('blog')
     .select('title', 'date', 'tags', 'lang', 'path')
-    .where('tags', 'like', `%"${tag.value}"%`)
+    .where('tags', 'LIKE', `%"${tag.value}"%`)
     .order('date', 'DESC')
     .all(),
 );

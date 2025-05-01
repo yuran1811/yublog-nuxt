@@ -15,14 +15,7 @@ useHead({
 <template>
   <Html class="dark overflow-x-hidden">
     <Body class="font-sans antialiased">
-      <UApp
-        :locale="locales[locale]"
-        :toaster="{
-          maxToasts: 4,
-          closeButton: true,
-          closeOnClick: true,
-        }"
-      >
+      <UApp :locale="locales[locale]" :toaster="{ position: 'bottom-center' }">
         <UToaster>
           <NuxtLoadingIndicator />
           <NuxtLayout>
