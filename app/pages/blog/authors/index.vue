@@ -19,7 +19,7 @@ defineOgImageComponent('Nuxt');
 
 <template>
   <article
-    class="mx-auto max-w-2xl space-y-6 bg-(--ui-bg) px-6 pt-8 pb-24 text-(--ui-text) md:space-y-12"
+    class="bg-default text-default mx-auto max-w-2xl space-y-6 px-6 pt-8 pb-24 md:space-y-12"
   >
     <UBreadcrumb :items="breadCrumbItems" class="max-md:hidden" />
 

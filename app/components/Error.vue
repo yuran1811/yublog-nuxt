@@ -11,7 +11,7 @@ defineProps<{ error?: any; clearError?: any }>();
           <h1 class="text-3xl font-bold tracking-tight" sm="text-5xl">
             Something went wrong...
           </h1>
-          <p class="text-base leading-7 text-(--ui-muted)">{{ error }}</p>
+          <p class="text-muted text-base leading-7">{{ error }}</p>
         </div>
 
         <div class="flex-center w-full gap-4">

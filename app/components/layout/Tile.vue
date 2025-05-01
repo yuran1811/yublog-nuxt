@@ -12,7 +12,7 @@ defineProps<{
         <h2 class="text-3xl font-bold tracking-tight">
           {{ title }}
         </h2>
-        <p class="mt-6 text-lg leading-8 text-(--ui-text-muted)">
+        <p class="text-muted mt-6 text-lg leading-8">
           {{ description }}
         </p>
       </div>

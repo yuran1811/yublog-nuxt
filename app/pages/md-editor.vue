@@ -40,7 +40,7 @@ defineOgImageComponent('Nuxt');
     >
       <textarea
         v-model="input"
-        class="resize-none bg-(--ui-bg-muted) max-sm:h-72"
+        class="bg-muted resize-none max-sm:h-72"
         @input="debouncedFn"
       />
       <ContentRenderer

@@ -59,23 +59,23 @@ defineOgImageComponent('Nuxt');
           <template v-for="{ name, color } of palette" :key="name">
             <div class="w-max">
               <div
-                class="aspect-square w-32 max-w-32 divide-y divide-(--ui-border) rounded-[calc(var(--ui-radius)*2)] bg-(--ui-bg) ring ring-(--ui-border)"
+                class="bg-default aspect-square w-32 max-w-32 divide-y divide-(--ui-border) rounded-[calc(var(--ui-radius)*2)] ring ring-(--ui-border)"
                 :style="`background: ${color}`"
               />
 
               <div class="flex items-center justify-between pt-2">
-                <p class="text-base font-semibold text-(--ui-text-highlighted)">
+                <p class="text-highlighted text-base font-semibold">
                   {{ name }}
                 </p>
 
                 <button
-                  class="inline-flex cursor-pointer items-center gap-1.5 rounded-[calc(var(--ui-radius)*1.5)] px-2.5 py-1.5 text-xs font-medium text-(--ui-primary) transition-colors hover:text-(--ui-primary)/75 focus:outline-none focus-visible:ring-2 focus-visible:ring-(--ui-primary) focus-visible:ring-inset disabled:cursor-not-allowed disabled:text-(--ui-primary) disabled:opacity-75 aria-disabled:cursor-not-allowed aria-disabled:text-(--ui-primary) aria-disabled:opacity-75"
+                  class="text-primary hover:text-primary/75 disabled:text-primary aria-disabled:text-primary focus-visible:ring-primary inline-flex cursor-pointer items-center gap-1.5 rounded-[calc(var(--ui-radius)*1.5)] px-2.5 py-1.5 text-xs font-medium transition-colors focus:outline-none focus-visible:ring-2 focus-visible:ring-inset disabled:cursor-not-allowed disabled:opacity-75 aria-disabled:cursor-not-allowed aria-disabled:opacity-75"
                   @click="copyToClipboard(color)"
                 >
                   <span class="truncate">Copy</span>
                 </button>
               </div>
-              <p class="text-sm text-(--ui-text-muted)">{{ color }}</p>
+              <p class="text-muted text-sm">{{ color }}</p>
             </div>
           </template>
         </UContainer>

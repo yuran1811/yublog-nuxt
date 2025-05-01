@@ -24,9 +24,7 @@ defineOgImageComponent('Nuxt');
         <div class="-mx-4 flex flex-wrap justify-center">
           <div class="w-full px-4">
             <div class="mx-auto mb-[60px] max-w-[510px] text-center lg:mb-20">
-              <span
-                class="mb-2 block text-lg font-semibold text-(--ui-primary)"
-              >
+              <span class="text-primary mb-2 block text-lg font-semibold">
                 yublog
               </span>
               <h2

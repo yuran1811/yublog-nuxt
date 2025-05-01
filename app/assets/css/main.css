@@ -48,7 +48,7 @@
 }
 @utility fade-shade-* {
   --tw-gradient-position: --value(--gd-to- *);
-  @apply pointer-events-none from-transparent to-(--ui-bg);
+  @apply to-default pointer-events-none from-transparent;
   background-image: linear-gradient(var(--tw-gradient-stops));
 }
 
@@ -57,7 +57,7 @@
   @apply !select-none;
 
   &::-webkit-scrollbar {
-    @apply rounded-2xl bg-(--ui-bg-muted);
+    @apply bg-muted rounded-2xl;
   }
   &::-webkit-scrollbar:vertical {
     @apply w-1;
@@ -66,12 +66,12 @@
     @apply h-1;
   }
   &::-webkit-scrollbar-thumb {
-    @apply rounded-2xl bg-(--ui-primary);
+    @apply bg-primary rounded-2xl;
   }
 }
 
 html {
-  @apply bg-(--ui-bg) text-(--ui-text);
+  @apply bg-default text-default;
 }
 
 body {
@@ -136,7 +136,7 @@ body {
     @apply relative;
 
     &::before {
-      @apply pointer-events-none invisible absolute top-[-40px] left-1/2 w-max min-w-10 -translate-x-1/2 rounded-xl border-2 border-(--ui-text-muted) bg-(--ui-bg) px-2 py-1 text-center font-semibold whitespace-nowrap text-(--ui-text-muted) opacity-0 duration-250 content-[attr(data-tooltip)];
+      @apply text-muted border-muted bg-default pointer-events-none invisible absolute top-[-40px] left-1/2 w-max min-w-10 -translate-x-1/2 rounded-xl border-2 px-2 py-1 text-center font-semibold whitespace-nowrap opacity-0 duration-250 content-[attr(data-tooltip)];
     }
 
     &:hover::before {
@@ -170,7 +170,7 @@ body {
   }
 
   #prompt {
-    @apply absolute bottom-2 left-3 z-1 max-w-28 text-xl font-bold text-(--ui-text) delay-100 duration-250 ease-in-out;
+    @apply text-default absolute bottom-2 left-3 z-1 max-w-28 text-xl font-bold delay-100 duration-250 ease-in-out;
   }
 
   .canvas {
@@ -189,7 +189,7 @@ body {
   }
 
   .title {
-    @apply absolute text-2xl font-bold text-(--ui-text) opacity-0 delay-100 duration-250 ease-in-out;
+    @apply text-default absolute text-2xl font-bold opacity-0 delay-100 duration-250 ease-in-out;
   }
 }
 

@@ -40,20 +40,20 @@ const breadCrumbItems = computed(() =>
     <div class="[&_ol]:mb-0 [&_ol]:gap-0 [&_ol]:ps-2">
       <div
         v-if="filename"
-        class="rounded-t-md bg-(--ui-bg-muted) font-mono text-sm text-(--ui-text)"
+        class="bg-muted text-default rounded-t-md font-mono text-sm"
       >
         <UBreadcrumb :items="breadCrumbItems">
           <template #item-label="{ item, active }">
             <span
               :class="{
-                'text-(--ui-primary)': active,
-                'text-(--ui-text)': !active,
+                'text-primary': active,
+                'text-default': !active,
               }"
               >{{ item.label }}</span
             >
           </template>
           <template #separator>
-            <span class="text-(--ui-text)">/</span>
+            <span class="text-default">/</span>
           </template>
         </UBreadcrumb>
       </div>

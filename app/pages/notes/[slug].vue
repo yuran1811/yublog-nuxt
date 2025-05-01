@@ -44,7 +44,7 @@ defineOgImageComponent('Nuxt', note.value?.ogImage);
 
 <template>
   <article
-    class="relative mx-auto max-w-2xl space-y-12 bg-(--ui-bg) px-6 pt-8 pb-24 text-(--ui-text)"
+    class="bg-default text-default relative mx-auto max-w-2xl space-y-12 px-6 pt-8 pb-24"
   >
     <UBreadcrumb :items="breadCrumbItems" class="max-md:hidden" />
 
@@ -60,7 +60,7 @@ defineOgImageComponent('Nuxt', note.value?.ogImage);
       <p class="text-xs font-semibold tracking-wider uppercase">
         <template v-for="tag in noteData.tags" :key="tag">
           <span
-            class="inline-block rounded-md bg-(--ui-bg) px-2 py-1 text-xs font-semibold tracking-wider text-(--ui-text-muted) lowercase hover:text-(--ui-text)"
+            class="bg-default hover:text-default text-muted inline-block rounded-md px-2 py-1 text-xs font-semibold tracking-wider lowercase"
           >
             #{{ tag }}
           </span>
@@ -71,7 +71,7 @@ defineOgImageComponent('Nuxt', note.value?.ogImage);
         {{ noteData.title }}
       </h1>
 
-      <p class="text-sm text-(--ui-text-muted)">
+      <p class="text-toned">
         by
         <span itemprop="name" class="text-violet-400">{{
           noteData.author

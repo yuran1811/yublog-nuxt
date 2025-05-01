@@ -54,7 +54,7 @@ const avatar = computed(() => {
             </template>
           </div>
         </div>
-        <p class="text-(--ui-text-muted)">
+        <p class="text-muted">
           {{ author.bio }}
         </p>
       </div>

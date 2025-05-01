@@ -27,18 +27,18 @@ defineOgImageComponent('Nuxt');
 
 <template>
   <article
-    class="mx-auto max-w-2xl space-y-6 bg-(--ui-bg) px-6 pt-8 pb-24 text-(--ui-text) md:space-y-12"
+    class="bg-default text-default mx-auto max-w-2xl space-y-6 px-6 pt-8 pb-24 md:space-y-12"
   >
     <UBreadcrumb :items="breadCrumbItems" class="max-md:hidden" />
 
     <div class="flex-center">
       <NuxtLink to="/blog/tags" class="group flex-center cursor-pointer gap-3">
         <div
-          class="inline-flex items-center rounded-full bg-(--ui-bg-elevated) p-1.5 ring ring-(--ui-border-accented) transition group-hover:-translate-x-0.5 group-hover:bg-(--ui-primary)/10 group-hover:ring-(--ui-primary)/50"
+          class="bg-elevated group-hover:bg-primary/10 group-hover:ring-primary/50 inline-flex items-center rounded-full p-1.5 ring ring-(--ui-border-accented) transition group-hover:-translate-x-0.5"
         >
           <Icon
             name="lucide:arrow-left"
-            class="size-3.5 shrink-0 text-(--ui-text-highlighted) transition-[color,translate] group-hover:text-(--ui-primary) group-active:-translate-x-0.5"
+            class="text-highlighted group-hover:text-primary size-3.5 shrink-0 transition-[color,translate] group-active:-translate-x-0.5"
           />
         </div>
 

@@ -15,13 +15,13 @@ const { tocs = [] } = defineProps<{ tocs?: TOC[] }>();
 
     <template #content>
       <nav
-        class="w-full max-w-md bg-(--ui-bg)/75 transition **:text-base lg:bg-[initial]"
+        class="bg-default/75 w-full max-w-md transition **:text-base lg:bg-[initial]"
       >
         <div
           class="relative top-1/2 right-0 flex max-h-[calc(100%-8rem)] -translate-y-1/2 flex-col px-4"
         >
           <p
-            class="-mt-1.5 flex flex-1 items-center gap-1.5 py-1.5 text-sm font-semibold focus-visible:outline-(--ui-primary)"
+            class="focus-visible:outline-primary -mt-1.5 flex flex-1 items-center gap-1.5 py-1.5 text-sm font-semibold"
           >
             <span class="truncate">{{ $t('Table of Contents') }}</span>
           </p>
@@ -34,7 +34,7 @@ const { tocs = [] } = defineProps<{ tocs?: TOC[] }>();
                 <a
                   :href="`#${toc.id}`"
                   :title="toc.id"
-                  class="group relative flex items-center py-1 text-sm text-(--ui-text-muted) transition-colors hover:text-(--ui-text) focus-visible:outline-(--ui-primary)"
+                  class="group hover:text-default text-muted focus-visible:outline-primary relative flex items-center py-1 text-sm transition-colors"
                 >
                   <span class="truncate">
                     {{ toc.text }}
@@ -50,7 +50,7 @@ const { tocs = [] } = defineProps<{ tocs?: TOC[] }>();
                     <a
                       :href="`#${child.id}`"
                       :title="child.id"
-                      class="group relative flex items-center py-1 text-sm text-(--ui-text-muted) transition-colors hover:text-(--ui-text) focus-visible:outline-(--ui-primary)"
+                      class="group hover:text-default text-muted focus-visible:outline-primary relative flex items-center py-1 text-sm transition-colors"
                     >
                       <span class="truncate">
                         {{ child.text }}
