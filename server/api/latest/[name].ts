@@ -19,7 +19,7 @@ export default defineEventHandler(async (ev) => {
   }
 
   const res = await queryCollection(ev, name)
-    .select('id', 'title', 'date', 'path', 'tags', 'lang')
+    .select('id', 'title', 'date', 'path', 'tags', 'lang', 'rawbody')
     .order('date', 'DESC')
     .all();
 
