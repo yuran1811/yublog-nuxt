@@ -1,6 +1,6 @@
 <script setup lang="ts">
 import { DefaultDateFormat } from '@/constants';
-import { parseAuthorData } from '@/shared/utils';
+import { estimateReadingTime, parseAuthorData } from '@/shared/utils';
 import { useRouteParams } from '@vueuse/router';
 
 const slug = useRouteParams('slug');
@@ -33,6 +33,8 @@ const { data: relatedPosts } = await useAsyncData(
       fields: ['title', 'description'],
     }),
 );
+
+const { words, minutes } = estimateReadingTime(post.value?.rawbody || '');
 
 const tocLinks = computed(() => post.value?.body?.toc?.links || []);
 
@@ -89,6 +91,17 @@ defineOgImageComponent('Nuxt', post.value?.ogImage);
         <time datetime="2021-02-12 15:34:18-0200">{{
           useDateFormat(postData.date, DefaultDateFormat).value
         }}</time>
+      </p>
+
+      <p class="text-muted text-sm">
+        <span class="inline-flex items-center gap-1">
+          <Icon name="lucide:a-large-small" class="inline-block size-4" />
+          {{ `${words} ${$t('words')},` }}
+        </span>
+        <span class="ml-1 inline-flex items-center gap-1">
+          <Icon name="lucide:clock" class="inline-block size-4" />
+          {{ `${minutes} ${$t('min read')}` }}
+        </span>
       </p>
     </div>
 
