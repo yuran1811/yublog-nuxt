@@ -16,3 +16,11 @@ export const parseAuthorData = (
   linkedin: data?.linkedin || '',
   youtube: data?.youtube || '',
 });
+
+export const estimateReadingTime = (text: string) => {
+  const wordsPerMinute = 240; // Average reading speed
+  const words = text.split(/\s+/).length;
+  const minutes = Math.ceil(words / wordsPerMinute);
+
+  return { words, minutes };
+};
