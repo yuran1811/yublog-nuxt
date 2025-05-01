@@ -71,15 +71,15 @@ Tabs
 - ***Ctrl + Tab*** : Di chuyển qua lại giữa các tab
 - ***Ctrl + W*** : Đóng tab hiện tại
 - ***Ctrl + Shift + W*** : Đóng cửa sổ hiện tại
-- ***Alt + <number>*** : Đi tới tab thứ <number>
+- ***Alt + `num`*** : Đi tới tab thứ `num`
 
 ## Chia màn hình
 
-- ***Alt + Shift + <number>*** : Chia màn hình thành <number> cột
+- ***Alt + Shift + `num`*** : Chia màn hình thành `num` cột
 - ***Alt + Shift + 5*** : Chia màn hình thành grid gồm 4 groups
 - ***Alt + Shift + 8*** : Chia màn hình thành 2 hàng
-- ***Ctrl + <number>*** : Đi tới group thứ <number>
-- ***Ctrl + Shift + <number>*** : Chuyển file tới group thứ <number>
+- ***Ctrl + `num`*** : Đi tới group thứ `num`
+- ***Ctrl + Shift + `num`*** : Chuyển file tới group thứ `num`
 - ***Shift + F11*** : Vào mode "nghiêm túc" (không làm phiền)
 
 ## Bookmarks
