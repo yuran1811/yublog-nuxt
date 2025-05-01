@@ -15,9 +15,7 @@ const copyCode = () => {
 
 <template>
   <div ref="code" class="group relative">
-    <slot
-      class="overflow-x-auto rounded-lg bg-(--ui-bg-accented)/30 font-mono text-sm"
-    />
+    <slot />
 
     <UButton
       class="group absolute top-0 right-0 flex items-center gap-1.5 rounded-md bg-transparent px-3 py-1.5 text-sm font-semibold hover:bg-transparent"
@@ -33,7 +31,7 @@ const copyCode = () => {
           <Icon name="lucide:check" class="mr-2 size-4" />
           Copied!
         </span>
-        <span v-else key="copy" class="flex items-center text-(--ui-text)">
+        <span v-else key="copy" class="text-default flex items-center">
           <Icon name="lucide:clipboard" class="mr-2 size-4" />
           Copy
         </span>

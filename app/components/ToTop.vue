@@ -9,7 +9,7 @@ const { y } = useWindowScroll({ behavior: 'smooth' });
     <span
       class="absolute right-0 bottom-0 left-0 text-center text-xl font-bold text-transparent transition-all duration-200 group-hover:bottom-4 group-hover:text-current"
     >
-      Top
+      top
     </span>
   </div>
 </template>

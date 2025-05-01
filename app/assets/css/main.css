@@ -145,6 +145,10 @@ body {
   }
 }
 
+.pulse-ring {
+  @apply absolute animate-[pulse_2s_ease_infinite] rounded-full bg-radial from-transparent max-sm:animate-none;
+}
+
 .card-container {
   @apply relative h-50 w-50 origin-center transition-all;
 

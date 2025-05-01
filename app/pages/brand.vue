@@ -30,7 +30,6 @@ const copyToClipboard = (text: string) => {
   toast.add({
     title: 'Copied to clipboard!',
     color: 'success',
-    position: 'bottom-center',
     duration: 750,
   });
 };
