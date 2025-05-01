@@ -1,7 +1,12 @@
 <script setup lang="ts">
 import { DefaultDateFormat } from '@/constants';
 import { estimateReadingTime, parseAuthorData } from '@/shared/utils';
+import { useWindowScroll } from '@vueuse/core';
 import { useRouteParams } from '@vueuse/router';
+
+const isHighEnough = useMediaQuery('(min-height: 500px)');
+const scrollObserve = useTemplateRef<HTMLElement>('scrollObserve');
+const { y } = useWindowScroll();
 
 const slug = useRouteParams('slug');
 
@@ -107,8 +112,21 @@ defineOgImageComponent('Nuxt', post.value?.ogImage);
 
     <AuthorInfo :author="parseAuthorData(authorData)" />
 
-    <div>
+    <div ref="scrollObserve">
       <TOC :tocs="tocLinks" />
+
+      <UProgress
+        :model-value="
+          Math.min(100, (y / (scrollObserve?.scrollHeight || 1)) * 100)
+        "
+        orientation="vertical"
+        class="max fixed top-1/2 right-2.5 z-50 h-full max-h-[calc(100dvh-60%)] w-1 -translate-x-9 -translate-y-1/2 transition max-md:hidden xl:right-1/5"
+        :class="{
+          hidden: !isHighEnough,
+          '!h-0': !y,
+        }"
+        :color="y >= (scrollObserve?.scrollHeight || 1) ? 'success' : 'neutral'"
+      />
 
       <ContentRenderer
         v-if="post"
