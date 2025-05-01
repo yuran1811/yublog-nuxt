@@ -18,7 +18,7 @@ Nếu dùng **Visual Studio Code** và muốn sử dụng những phím tắt n�
 
 1. Ấn tổ hợp phím ***Ctrl + Shift + X***
 2. Gõ ***Sublime Text Keymap***
-3. Nhấn nút ***Install***
+3. Nhấn ***Install***
 
 ## Chung
 
@@ -70,25 +70,16 @@ Tabs
 - ***Ctrl + Shift + T*** : Mở tab đã đóng gần nhất
 - ***Ctrl + Tab*** : Di chuyển qua lại giữa các tab
 - ***Ctrl + W*** : Đóng tab hiện tại
-- ***Alt + NUM*** : Đi tới tab thứ
-
-  [NUM]
+- ***Ctrl + Shift + W*** : Đóng cửa sổ hiện tại
+- ***Alt + <number>*** : Đi tới tab thứ <number>
 
 ## Chia màn hình
 
-- ***Alt + Shift + NUM*** : Chia màn hình thành
-
-  [NUM]
-
-  cột
+- ***Alt + Shift + <number>*** : Chia màn hình thành <number> cột
 - ***Alt + Shift + 5*** : Chia màn hình thành grid gồm 4 groups
 - ***Alt + Shift + 8*** : Chia màn hình thành 2 hàng
-- ***Ctrl + NUM*** : Đi tới group thứ
-
-  [NUM]
-- ***Ctrl + Shift + NUM*** : Chuyển file tới group thứ
-
-  [NUM]
+- ***Ctrl + <number>*** : Đi tới group thứ <number>
+- ***Ctrl + Shift + <number>*** : Chuyển file tới group thứ <number>
 - ***Shift + F11*** : Vào mode "nghiêm túc" (không làm phiền)
 
 ## Bookmarks
