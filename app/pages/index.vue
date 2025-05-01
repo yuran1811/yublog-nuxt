@@ -33,11 +33,7 @@ defineOgImageComponent('Nuxt');
 <template>
   <UContainer class="relative py-36">
     <div class="mt-12 mb-32">
-      <SvgoLogo
-        :filled="true"
-        :font-controlled="false"
-        class="mx-auto mb-6 size-20 sm:size-32"
-      />
+      <PulseLogo class="mx-auto mb-8" />
       <p class="text-center text-2xl font-black tracking-wide sm:text-3xl">
         yublog
       </p>

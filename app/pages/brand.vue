@@ -47,11 +47,7 @@ defineOgImageComponent('Nuxt');
     <div class="space-y-12">
       <UContainer>
         <h2 class="mb-8 text-center text-2xl font-black">logo</h2>
-        <SvgoLogo
-          :filled="true"
-          :font-controlled="false"
-          class="mx-auto max-w-32 min-w-16"
-        />
+        <PulseLogo class="mx-auto mb-8 max-w-32 min-w-16" />
       </UContainer>
 
       <UContainer>
