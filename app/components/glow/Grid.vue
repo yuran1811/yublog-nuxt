@@ -8,6 +8,7 @@ withDefaults(
       fgClass: string;
       bgClass: string;
       icon: string;
+      link?: string;
     }[];
   }>(),
   {
@@ -76,7 +77,7 @@ withDefaults(
         v-for="feature in list"
         :key="feature.title"
         :color="feature.color"
-        :link="feature.link"
+        :link="feature?.link"
         class="group"
       >
         <div
