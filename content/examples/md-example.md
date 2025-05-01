@@ -72,6 +72,8 @@ Indented code
 
 Syntax Highlighting
 
+- Support [ 'diff', 'bash', 'shell', 'vue', 'html', 'css', 'js', 'ts', 'cpp', 'c', 'python', 'rust', 'md', 'mdc', 'json', 'yaml' ]
+
 ```js
 var foo = function (bar) {
   return bar++;
