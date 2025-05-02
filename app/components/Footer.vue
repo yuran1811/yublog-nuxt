@@ -11,6 +11,7 @@ const items: NavigationMenuItem[] = [
   ],
   [
     ...DockItems.filter((_) => _.link.length > 0).map((item) => ({
+      title: item.name,
       to: item.link,
       icon: item.icon,
       target: '_blank',

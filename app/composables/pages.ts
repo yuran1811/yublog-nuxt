@@ -80,12 +80,12 @@ export const usePages = () => {
       ],
       [
         {
-          label: 'Search',
+          title: 'Search',
           icon: 'lucide:search',
           slot: 'search' as const,
         },
         {
-          label: 'Settings',
+          title: 'Settings',
           icon: 'lucide:settings',
           slot: 'settings' as const,
         },
