@@ -21,8 +21,9 @@ useHead({
           <NuxtLayout>
             <NuxtErrorBoundary>
               <NuxtPage />
-              <ToTop />
+              <Footer />
 
+              <ToTop />
               <HelpModal />
 
               <template #error="{ error }">
