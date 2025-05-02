@@ -23,6 +23,8 @@ useHead({
               <NuxtPage />
               <ToTop />
 
+              <HelpModal />
+
               <template #error="{ error }">
                 <Error :error="error" />
               </template>

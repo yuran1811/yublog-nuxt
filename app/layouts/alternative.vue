@@ -1,5 +1,5 @@
 <template>
-  <LayoutBlank :fixed="true">
+  <LayoutBlank>
     <div class="relative overflow-hidden px-6 lg:px-8">
       <slot />
     </div>

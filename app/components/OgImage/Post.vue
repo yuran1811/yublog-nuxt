@@ -21,7 +21,7 @@ withDefaults(
         <h1 class="p-20 text-left text-[80px] font-black">
           {{ title }}
         </h1>
-        <p class="mb-0 px-20 pb-10 text-2xl font-bold">mycoolsite.com</p>
+        <p class="mb-0 px-20 pb-10 text-2xl font-bold">yublog-nuxt.vercel.app</p>
       </div>
     </div>
   </div>

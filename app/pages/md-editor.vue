@@ -1,7 +1,7 @@
 <script setup lang="ts">
 definePageMeta({
   name: 'Markdown Editor',
-  layout: 'fixnav',
+  layout: 'alternative',
   icon: 'lucide:pen-line',
   description: 'A simple markdown editor using @nuxt/mdc',
 });
@@ -30,7 +30,7 @@ defineOgImageComponent('Nuxt');
 </script>
 
 <template>
-  <div class="mt-18 w-full md:mt-22">
+  <div class="w-full">
     <h1 class="pb-6 text-center text-2xl font-bold">
       {{ $t('markdown editor') }}
     </h1>

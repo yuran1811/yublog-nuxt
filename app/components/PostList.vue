@@ -19,14 +19,16 @@ defineProps<{
         class="hover:animate-background relative w-full max-w-105 scale-100 rounded-xl bg-gradient-to-r from-green-300 via-blue-500 to-purple-600 p-0.5 shadow-xl transition hover:scale-[1.01] hover:bg-[length:400%_400%] hover:shadow-xs hover:[animation-duration:_4s] dark:shadow-gray-700/25"
       >
         <div
-          class="absolute top-0 right-2 left-2 z-10 flex h-10 items-center justify-end"
+          class="absolute top-2 right-4 left-4 z-10 flex h-10 items-center justify-end"
         >
-          <FlagVi
+          <Icon
             v-if="!!post.lang && post.lang.includes('vi')"
+            name="local:flag-vi"
             class="absolute size-6"
           />
-          <FlagEn
+          <Icon
             v-if="!post.lang || post.lang.includes('en')"
+            name="local:flag-en"
             class="absolute size-6"
           />
         </div>

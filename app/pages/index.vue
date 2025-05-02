@@ -1,6 +1,5 @@
 <script setup lang="ts">
 definePageMeta({
-  layout: 'fixnav',
   description: 'yublog home page',
 });
 
@@ -31,15 +30,15 @@ defineOgImageComponent('Nuxt');
 </script>
 
 <template>
-  <UContainer class="relative py-24 md:py-32">
-    <div class="my-12 sm:my-20">
+  <main class="relative">
+    <div class="my-16 sm:my-24">
       <PulseLogo class="mx-auto mb-4 sm:mb-8" />
       <p class="text-center text-2xl font-black tracking-wide sm:text-3xl">
         yublog
       </p>
     </div>
 
-    <main
+    <div
       class="mt-4 flex w-full flex-col items-center justify-start gap-16 md:mt-12 md:gap-20"
     >
       <div class="container mx-auto">
@@ -59,6 +58,6 @@ defineOgImageComponent('Nuxt');
         <PostsSkeleton v-if="loadNotes === 'pending'" />
         <NoteList v-else :notes="notes" />
       </div>
-    </main>
-  </UContainer>
+    </div>
+  </main>
 </template>

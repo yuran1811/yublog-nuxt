@@ -17,7 +17,14 @@ const { showSidebar } = useSidebar();
     </template>
 
     <template #body>
-      <UNavigationMenu orientation="vertical" :items="pages" />
+      <UNavigationMenu orientation="vertical" :items="pages">
+        <template #search>
+          <PostSearch />
+        </template>
+        <template #settings>
+          <LangSwitcher :hide-text="false" />
+        </template>
+      </UNavigationMenu>
     </template>
   </USlideover>
 </template>
