@@ -130,10 +130,16 @@ defineOgImageComponent('Nuxt', post.value?.ogImage);
           )
         "
         orientation="vertical"
-        class="max fixed top-1/2 right-2.5 z-50 h-full max-h-[calc(100dvh-60%)] w-1 -translate-x-9 -translate-y-1/2 transition max-md:hidden xl:right-1/5"
+        class="after:via-primary fixed top-1/2 right-2.5 z-50 h-full max-h-[calc(100dvh-60%)] w-1 -translate-x-9 -translate-y-1/2 transition after:absolute after:inset-0 after:h-full after:w-3 after:origin-center after:scale-0 after:rounded after:bg-gradient-to-b after:blur-2xl after:transition-all after:content-[''] max-md:hidden xl:right-1/5"
         :class="{
           hidden: !isHighEnough,
           '!h-0': !y,
+          'after:scale-100':
+            y >=
+            (scrollObserve?.offsetHeight ?? 0) +
+              (scrollObserve?.offsetTop ?? 0) -
+              230 -
+              height,
         }"
         :color="
           y >=

@@ -3,13 +3,6 @@ import { DockItems } from '@/constants';
 
 const items: NavigationMenuItem[] = [
   [
-    {
-      label: 'yublog',
-      icon: 'local:logo',
-      disabled: true,
-    },
-  ],
-  [
     ...DockItems.filter((_) => _.link.length > 0).map((item) => ({
       title: item.name,
       to: item.link,
@@ -29,10 +22,14 @@ const items: NavigationMenuItem[] = [
 </script>
 
 <template>
-  <div>
-    <USeparator class="mt-12 h-px" />
+  <footer>
+    <USeparator icon="local:logo" class="mt-12 h-px" />
     <div>
-      <UNavigationMenu :items="items" variant="link" />
+      <UNavigationMenu
+        :items="items"
+        variant="link"
+        class="max-xs:flex-col max-xs:gap-0 max-xs:pt-6 [&>div>ul]:flex-wrap [&>div>ul]:justify-center"
+      />
     </div>
-  </div>
+  </footer>
 </template>

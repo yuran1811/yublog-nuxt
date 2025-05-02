@@ -10,6 +10,8 @@ defineProps<{ fixed?: boolean }>();
     />
     <SiteSidebar />
 
-    <slot />
+    <main>
+      <slot />
+    </main>
   </div>
 </template>

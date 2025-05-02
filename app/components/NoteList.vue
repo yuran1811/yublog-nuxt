@@ -14,21 +14,26 @@ defineProps<{
     <template v-for="note in notes" :key="note.path">
       <NuxtLink
         :to="note.path"
-        class="hover:animate-background w-full max-w-105 scale-100 rounded-xl bg-gradient-to-r from-green-300 via-blue-500 to-purple-600 p-0.5 shadow-xl transition hover:scale-[1.01] hover:bg-[length:400%_400%] hover:shadow-xs hover:[animation-duration:_4s] dark:shadow-gray-700/25"
+        class="group border-accented/60 from-accented/20 to-accented/5 relative m-4 w-full max-w-105 cursor-pointer overflow-hidden rounded-lg border-1 bg-gradient-to-br shadow-lg transition-all hover:brightness-90"
       >
         <div
-          class="relative flex h-full flex-col items-start justify-end overflow-hidden rounded-[10px] bg-white p-4 !pt-18 sm:p-6 dark:bg-gray-900"
+          class="relative flex h-[calc(100%-2px)] flex-col items-start justify-end overflow-hidden rounded-[10px] p-4 !pt-18 sm:p-6"
         >
-          <p class="block text-xs text-gray-500 dark:text-gray-400">
+          <p class="block text-xs text-gray-400">
             {{ useDateFormat(note.date || new Date(), DefaultDateFormat) }}
           </p>
 
-          <p
-            class="mt-0.5 line-clamp-2 text-lg font-medium text-gray-900 dark:text-white"
-          >
+          <p class="mt-0.5 line-clamp-2 text-lg font-medium text-white">
             {{ note.title || 'Untitled' }}
           </p>
         </div>
+
+        <div
+          class="via-primary absolute bottom-0 m-auto h-2 w-full rounded bg-gradient-to-l blur-2xl transition-all group-hover:blur-xl"
+        />
+        <div
+          class="group-hover:via-primary via-primary-950 m-auto h-0.5 w-[70%] rounded bg-gradient-to-l transition-all group-hover:w-full"
+        />
       </NuxtLink>
     </template>
 
