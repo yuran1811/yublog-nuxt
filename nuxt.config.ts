@@ -142,8 +142,6 @@ export default defineNuxtConfig({
     // more info: https://github.com/danielroe/nuxt-vercel-isr
     '/**': { static: true, prerender: true },
     '/md-editor': { isr: false, ssr: false, prerender: false },
-    '/api/**': { cors: false, isr: false, ssr: false, prerender: false },
-    '/api/cors/**': { cors: true },
   },
 
   future: {
@@ -185,7 +183,7 @@ export default defineNuxtConfig({
     clientBundle: {
       scan: true,
       includeCustomCollections: true,
-      sizeLimitKb: 20,
+      sizeLimitKb: 24,
       icons: ['lucide:x', 'lucide:chevron-right'],
     },
     customCollections: [
