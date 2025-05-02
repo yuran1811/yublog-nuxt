@@ -60,6 +60,6 @@ defineOgImageComponent('Nuxt');
       </GlowGrid>
     </section>
 
-    <CursorDot />
+    <CursorFluid />
   </LayoutDefault>
 </template>
