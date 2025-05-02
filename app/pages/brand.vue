@@ -43,22 +43,22 @@ defineOgImageComponent('Nuxt');
 
 <template>
   <main class="py-12">
-    <div class="space-y-12">
-      <UContainer>
-        <h2 class="mb-8 text-center text-2xl font-black">logo</h2>
-        <PulseLogo class="mx-auto mb-8 max-w-32 min-w-16" />
-      </UContainer>
+    <UContainer class="space-y-12">
+      <div>
+        <h2 class="mb-4 text-center text-2xl font-black sm:mb-8">logo</h2>
+        <PulseLogo class="mx-auto max-w-32 min-w-16" />
+      </div>
 
-      <UContainer>
+      <div>
         <h2 class="mb-8 text-center text-2xl font-black">
           {{ $t('color palette') }}
         </h2>
 
-        <UContainer class="flex flex-wrap items-center justify-center gap-8">
+        <div class="flex flex-wrap items-center justify-center gap-4 sm:gap-8">
           <template v-for="{ name, color } of palette" :key="name">
-            <div class="w-max">
+            <div class="max-xs:w-full w-max">
               <div
-                class="bg-default aspect-square w-32 max-w-32 divide-y divide-(--ui-border) rounded-[calc(var(--ui-radius)*2)] ring ring-(--ui-border)"
+                class="bg-default max-xs:w-full max-xs:h-20 min-xs:aspect-square min-xs:max-w-32 w-32 divide-y divide-(--ui-border) rounded-[calc(var(--ui-radius)*2)] ring ring-(--ui-border)"
                 :style="`background: ${color}`"
               />
 
@@ -77,9 +77,9 @@ defineOgImageComponent('Nuxt');
               <p class="text-muted text-sm">{{ color }}</p>
             </div>
           </template>
-        </UContainer>
-      </UContainer>
-    </div>
+        </div>
+      </div>
+    </UContainer>
 
     <CursorDot />
   </main>

@@ -3,7 +3,7 @@
     <SvgoLogo
       :filled="true"
       :font-controlled="false"
-      class="size-20 sm:size-32"
+      class="size-24 sm:size-32"
     />
     <div class="flex-center absolute inset-0 z-[-1]">
       <div class="pulse-ring to-primary/10 size-32" />

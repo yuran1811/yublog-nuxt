@@ -33,6 +33,25 @@
     rgb(200, 80, 192) 46%,
     rgb(255, 204, 112) 100%
   );
+
+  --animate-aurora: aurora 4s ease-out infinite;
+  @keyframes aurora {
+    0% {
+      background-position: 50% 0;
+    }
+    25% {
+      background-position: 100% 50%;
+    }
+    50% {
+      background-position: 50% 100%;
+    }
+    75% {
+      background-position: 0 50%;
+    }
+    to {
+      background-position: 50% 0;
+    }
+  }
 }
 
 @utility flex-center {

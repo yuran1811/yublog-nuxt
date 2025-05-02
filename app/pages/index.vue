@@ -31,16 +31,16 @@ defineOgImageComponent('Nuxt');
 </script>
 
 <template>
-  <UContainer class="relative py-36">
-    <div class="mt-12 mb-32">
-      <PulseLogo class="mx-auto mb-8" />
+  <UContainer class="relative py-24 md:py-32">
+    <div class="my-12 sm:my-20">
+      <PulseLogo class="mx-auto mb-4 sm:mb-8" />
       <p class="text-center text-2xl font-black tracking-wide sm:text-3xl">
         yublog
       </p>
     </div>
 
     <main
-      class="mt-4 flex w-full flex-col items-center justify-start gap-20 md:mt-12"
+      class="mt-4 flex w-full flex-col items-center justify-start gap-16 md:mt-12 md:gap-20"
     >
       <div class="container mx-auto">
         <p class="text-center text-2xl font-semibold">

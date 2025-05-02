@@ -1,6 +1,6 @@
 <template>
   <LayoutBlank>
-    <UContainer>
+    <UContainer class="overflow-hidden">
       <slot />
     </UContainer>
   </LayoutBlank>
