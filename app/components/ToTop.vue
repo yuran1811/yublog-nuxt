@@ -1,6 +1,4 @@
 <script setup lang="ts">
-import { useWindowScroll } from '@vueuse/core';
-
 const isTooLow = useMediaQuery('(max-height: 220px)');
 const { y } = useWindowScroll({ behavior: 'smooth' });
 </script>

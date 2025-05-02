@@ -42,7 +42,7 @@ defineOgImageComponent('Nuxt');
 </script>
 
 <template>
-  <main class="py-12">
+  <div class="py-12">
     <UContainer class="space-y-12">
       <div>
         <h2 class="mb-4 text-center text-2xl font-black sm:mb-8">logo</h2>
@@ -82,5 +82,5 @@ defineOgImageComponent('Nuxt');
     </UContainer>
 
     <CursorDot />
-  </main>
+  </div>
 </template>

@@ -3,6 +3,11 @@ import { DefaultDateFormat } from '@/constants';
 import { estimateReadingTime, parseAuthorData } from '@/shared/utils';
 import { useRouteParams } from '@vueuse/router';
 
+const { y } = useWindowScroll();
+const { height } = useWindowSize();
+const isHighEnough = useMediaQuery('(min-height: 500px)');
+const scrollObserve = useTemplateRef<HTMLElement>('scrollObserve');
+
 const slug = useRouteParams('slug');
 
 const { data: note } = await useAsyncData(`note-${slug.value}`, () =>
@@ -46,7 +51,8 @@ defineOgImageComponent('Nuxt', note.value?.ogImage);
 
 <template>
   <article
-    class="bg-default text-default relative mx-auto max-w-2xl space-y-12 px-6 pt-8 pb-24"
+    ref="scrollObserve"
+    class="bg-default text-default relative mx-auto max-w-2xl space-y-12 px-6"
   >
     <UBreadcrumb :items="breadCrumbItems" class="max-md:hidden" />
 
@@ -59,7 +65,7 @@ defineOgImageComponent('Nuxt', note.value?.ogImage);
     />
 
     <div class="mx-auto w-full space-y-4 text-center">
-      <p class="text-xs font-semibold tracking-wider uppercase">
+      <div class="text-xs font-semibold tracking-wider uppercase">
         <template v-for="tag in noteData.tags" :key="tag">
           <span
             class="bg-default hover:text-default text-muted inline-block rounded-md px-2 py-1 text-xs font-semibold tracking-wider lowercase"
@@ -67,7 +73,7 @@ defineOgImageComponent('Nuxt', note.value?.ogImage);
             #{{ tag }}
           </span>
         </template>
-      </p>
+      </div>
 
       <h1 class="text-4xl leading-tight font-bold md:text-5xl">
         {{ noteData.title }}
@@ -75,13 +81,14 @@ defineOgImageComponent('Nuxt', note.value?.ogImage);
 
       <p class="text-toned">
         by
-        <span itemprop="name" class="text-violet-400">{{
-          noteData.author
-        }}</span>
+        <NuxtLink
+          :to="`/blog/authors/${noteData.author}`"
+          class="text-violet-400 underline"
+        >
+          <span itemprop="name">{{ noteData.author }}</span>
+        </NuxtLink>
         on
-        <time datetime="2021-02-12 15:34:18-0200">{{
-          useDateFormat(noteData.date, DefaultDateFormat).value
-        }}</time>
+        <time>{{ useDateFormat(noteData.date, DefaultDateFormat).value }}</time>
       </p>
 
       <p class="text-muted text-sm">
@@ -100,6 +107,36 @@ defineOgImageComponent('Nuxt', note.value?.ogImage);
 
     <div>
       <TOC :tocs="tocLinks" />
+
+      <UProgress
+        :model-value="
+          Math.min(
+            100,
+            Math.max(
+              0,
+              100 *
+                (y /
+                  ((scrollObserve?.offsetHeight ?? 1) +
+                    (scrollObserve?.offsetTop ?? 0) -
+                    height)),
+            ),
+          )
+        "
+        orientation="vertical"
+        class="max fixed top-1/2 right-2.5 z-50 h-full max-h-[calc(100dvh-60%)] w-1 -translate-x-9 -translate-y-1/2 transition max-md:hidden xl:right-1/5"
+        :class="{
+          hidden: !isHighEnough,
+          '!h-0': !y,
+        }"
+        :color="
+          y >=
+          (scrollObserve?.offsetHeight ?? 0) +
+            (scrollObserve?.offsetTop ?? 0) -
+            height
+            ? 'primary'
+            : 'neutral'
+        "
+      />
 
       <ContentRenderer
         v-if="note"
