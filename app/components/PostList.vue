@@ -16,7 +16,7 @@ defineProps<{
   >
     <template v-for="post in posts" :key="post.path">
       <article
-        class="group border-accented/60 from-accented/20 to-accented/5 relative m-4 w-full max-w-105 cursor-pointer overflow-hidden rounded-lg border-1 bg-gradient-to-br shadow-lg transition-all hover:brightness-90"
+        class="group border-accented/60 from-accented/20 to-accented/5 relative w-full max-w-105 cursor-pointer overflow-hidden rounded-lg border-1 bg-gradient-to-br shadow-lg transition-all hover:brightness-90"
       >
         <!-- Lang -->
         <div
