@@ -74,10 +74,15 @@ Syntax Highlighting
 
 - Support [ 'diff', 'bash', 'shell', 'vue', 'html', 'css', 'js', 'ts', 'cpp', 'c', 'python', 'rust', 'md', 'mdc', 'json', 'yaml' ]
 
-```js
+```js [index.js] {1-3,10}
 var foo = function (bar) {
   return bar++;
 };
+
+console.log('Highlighted Code') // [!code highlight]
+
+console.log('Removed Code') // [!code --]
+console.log('Added Code'); // [!code ++]
 
 console.log(foo(5));
 ```

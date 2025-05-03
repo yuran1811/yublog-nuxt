@@ -31,7 +31,7 @@ defineOgImageComponent('Nuxt');
             color: '#10B981',
             fgClass: 'text-green-500',
             bgClass: 'bg-green-500/20',
-            icon: 'local:nuxt-green',
+            icon: 'local:logo',
             link: 'https://yublog-nuxt.vercel.app',
           },
           {

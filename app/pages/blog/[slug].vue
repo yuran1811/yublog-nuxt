@@ -56,6 +56,7 @@ defineOgImageComponent('Nuxt', post.value?.ogImage);
 
 <template>
   <article
+    v-if="post"
     ref="scrollObserve"
     class="bg-default text-default relative mx-auto max-w-2xl space-y-12 px-6"
   >
@@ -115,6 +116,7 @@ defineOgImageComponent('Nuxt', post.value?.ogImage);
       <TOC :tocs="tocLinks" />
 
       <UProgress
+        data-allow-mismatch="class"
         :model-value="
           Math.min(
             100,
@@ -153,14 +155,10 @@ defineOgImageComponent('Nuxt', post.value?.ogImage);
       />
 
       <ContentRenderer
-        v-if="post"
         class="prose prose-invert container mx-auto"
         :prose="true"
         :value="post"
       />
-      <div v-else>
-        <p class="p-4 text-center font-bold">Post not found.</p>
-      </div>
     </div>
 
     <SurroundPosts
@@ -169,4 +167,16 @@ defineOgImageComponent('Nuxt', post.value?.ogImage);
       :right="relatedPosts[1]"
     />
   </article>
+  <div
+    v-else
+    class="max-xs:min-h-[calc(100dvh-72px-72px-136px)] mx-auto min-h-[calc(100dvh-88px-88px-48px)] py-12"
+  >
+    <p class="p-4 text-center text-2xl font-bold">
+      {{ $t('Post not found.') }}
+    </p>
+
+    <div class="flex-center mx-auto mt-2">
+      <FancyButton to="/blog" :label="$t('See all posts')" />
+    </div>
+  </div>
 </template>

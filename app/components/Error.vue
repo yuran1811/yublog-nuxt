@@ -3,7 +3,9 @@ defineProps<{ error?: any; clearError?: any }>();
 </script>
 
 <template>
-  <div class="flex-center-col container mx-auto h-full max-w-xl">
+  <div
+    class="flex-center-col max-xs:max-h-[calc(100dvh-136px)] container mx-auto h-full max-h-[calc(100dvh-48px)] max-w-xl"
+  >
     <div class="grid place-items-center py-12 md:py-24">
       <div class="flex flex-col items-center gap-y-4 md:gap-y-8">
         <p class="font-semibold text-(--ui-success)">Error</p>

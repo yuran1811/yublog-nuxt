@@ -51,6 +51,7 @@ defineOgImageComponent('Nuxt', note.value?.ogImage);
 
 <template>
   <article
+    v-if="note"
     ref="scrollObserve"
     class="bg-default text-default relative mx-auto max-w-2xl space-y-12 px-6"
   >
@@ -145,14 +146,22 @@ defineOgImageComponent('Nuxt', note.value?.ogImage);
       />
 
       <ContentRenderer
-        v-if="note"
         class="prose prose-invert container mx-auto"
         :prose="true"
         :value="note"
       />
-      <div v-else>
-        <p class="p-4 text-center font-bold">Note not found.</p>
-      </div>
     </div>
   </article>
+  <div
+    v-else
+    class="max-xs:min-h-[calc(100dvh-72px-72px-136px)] mx-auto min-h-[calc(100dvh-88px-88px-48px)] py-12"
+  >
+    <p class="p-4 text-center text-2xl font-bold">
+      {{ $t('Note not found.') }}
+    </p>
+
+    <div class="flex-center mx-auto mt-2">
+      <FancyButton to="/notes" :label="$t('See all notes')" />
+    </div>
+  </div>
 </template>

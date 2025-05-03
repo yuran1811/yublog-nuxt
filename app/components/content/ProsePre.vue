@@ -49,8 +49,9 @@ const breadCrumbItems = computed(() =>
                 'text-primary': active,
                 'text-default': !active,
               }"
-              >{{ item.label }}</span
             >
+              {{ item.label }}
+            </span>
           </template>
           <template #separator>
             <span class="text-default">/</span>
@@ -69,8 +70,37 @@ const breadCrumbItems = computed(() =>
   </CodeBlock>
 </template>
 
-<style scoped>
-pre code .line {
-  display: block;
+<style lang="postcss">
+pre {
+  code {
+    display: inline-block;
+    width: 100%;
+    min-width: max-content;
+
+    .line {
+      display: block;
+
+      span {
+        background: transparent !important;
+      }
+
+      &.highlight,
+      &.highlighted {
+        background: color-mix(
+          in srgb,
+          var(--tw-prose-pre-bg) 75%,
+          #808080
+        ) !important;
+      }
+
+      &.diff.remove {
+        background: color-mix(in srgb, var(--tw-prose-pre-bg) 65%, #f43f5e);
+      }
+
+      &.diff.add {
+        background: color-mix(in srgb, var(--tw-prose-pre-bg) 75%, #10b981);
+      }
+    }
+  }
 }
 </style>

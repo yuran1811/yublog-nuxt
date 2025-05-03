@@ -131,6 +131,7 @@ export default defineNuxtConfig({
         'json',
         'yaml',
       ],
+      wrapperStyle: true,
     },
   },
   dir: {
@@ -151,6 +152,11 @@ export default defineNuxtConfig({
     typedPages: true,
   },
   compatibilityDate: '2025-03-01',
+  postcss: {
+    plugins: {
+      'postcss-nested': {},
+    },
+  },
 
   eslint: {
     config: {

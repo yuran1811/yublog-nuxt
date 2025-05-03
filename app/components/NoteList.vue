@@ -29,16 +29,16 @@ defineProps<{
         </div>
 
         <div
-          class="via-primary absolute bottom-0 m-auto h-2 w-full rounded bg-gradient-to-l blur-2xl transition-all group-hover:blur-xl"
+          class="via-primary-300 absolute bottom-0 m-auto h-2 w-full rounded bg-gradient-to-l blur-2xl transition-all group-hover:blur-xl"
         />
         <div
-          class="group-hover:via-primary via-primary-950 m-auto h-0.5 w-[70%] rounded bg-gradient-to-l transition-all group-hover:w-full"
+          class="group-hover:via-primary-300 via-primary-950 m-auto h-0.5 w-[70%] rounded bg-gradient-to-l transition-all group-hover:w-full"
         />
       </NuxtLink>
     </template>
 
     <div v-if="notes?.length === 0" class="col-span-full">
-      <p class="text-center">No notes found.</p>
+      <p class="text-center">{{ $t('No notes found.') }}</p>
     </div>
   </div>
 </template>

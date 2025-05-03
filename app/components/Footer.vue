@@ -28,7 +28,7 @@ const items: NavigationMenuItem[] = [
       <UNavigationMenu
         :items="items"
         variant="link"
-        class="max-xs:flex-col max-xs:gap-0 max-xs:pt-6 [&>div>ul]:flex-wrap [&>div>ul]:justify-center"
+        class="max-xs:flex-col max-xs:gap-0 max-xs:pt-6 max-xs:pb-4 [&>div>ul]:flex-wrap [&>div>ul]:justify-center"
       />
     </div>
   </footer>

@@ -63,7 +63,7 @@ defineOgImageComponent('Nuxt');
     <template v-else>
       <p class="text-center text-xl">
         <span class="font-bold underline">@{{ author }} </span>
-        not found
+        {{ $t('not found') }}
       </p>
     </template>
   </article>

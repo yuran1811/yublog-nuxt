@@ -52,6 +52,16 @@
       background-position: 50% 0;
     }
   }
+
+  --animate-breath: breath 2.5s ease-in-out infinite alternate;
+  @keyframes breath {
+    from {
+      opacity: 0.4;
+    }
+    to {
+      opacity: 1;
+    }
+  }
 }
 
 @utility flex-center {
@@ -110,7 +120,7 @@ body {
 }
 
 .totop {
-  @apply fixed right-2.5 bottom-16 z-100 size-12 -translate-x-3.5 cursor-pointer xl:right-1/5;
+  @apply text-toned fixed right-2.5 bottom-16 z-100 size-12 -translate-x-3.5 cursor-pointer xl:right-1/5;
 
   &:hover {
     &::after,
@@ -120,14 +130,14 @@ body {
   }
   &::after,
   &::before {
-    @apply absolute bottom-2.5 h-1 w-[29.6px] bg-current transition-all duration-200 content-[""];
+    @apply absolute bottom-2.5 h-[3.75px] w-6 rounded-[1.75px] bg-current transition-all duration-200 content-[""];
   }
   &::after {
-    left: 0;
+    @apply left-[4.75px];
     transform: rotateZ(-225deg);
   }
   &::before {
-    right: 0;
+    @apply right-[4.75px];
     transform: rotateZ(225deg);
   }
 }
@@ -165,7 +175,7 @@ body {
 }
 
 .pulse-ring {
-  @apply absolute animate-[pulse_2s_ease_infinite] rounded-full bg-radial from-transparent max-sm:animate-none;
+  @apply animate-breath absolute rounded-full shadow-md max-sm:animate-none;
 }
 
 .card-container {
