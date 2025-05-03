@@ -48,6 +48,10 @@ defineOgImageComponent('Nuxt');
 
         <PostsSkeleton v-if="loadPosts === 'pending'" />
         <PostList v-else :posts="posts" />
+
+        <div class="flex-center mx-auto mt-2 **:text-lg">
+          <FancyButton to="/blog" :label="$t('See all posts')" />
+        </div>
       </div>
 
       <div class="container mx-auto">
@@ -57,6 +61,10 @@ defineOgImageComponent('Nuxt');
 
         <PostsSkeleton v-if="loadNotes === 'pending'" />
         <NoteList v-else :notes="notes" />
+
+        <div class="flex-center mx-auto mt-2 **:text-lg">
+          <FancyButton to="/notes" :label="$t('See all notes')" />
+        </div>
       </div>
     </div>
   </div>

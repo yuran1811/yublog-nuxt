@@ -29,12 +29,7 @@ defineOgImageComponent('Nuxt');
       class="container mx-auto flex flex-wrap items-start justify-center gap-4"
     >
       <template v-for="_ in authors" :key="_.name">
-        <UButton
-          :label="`@${_.name}`"
-          :to="`/blog/authors/${_.name}`"
-          color="neutral"
-          variant="subtle"
-        />
+        <FancyButton :to="`/blog/authors/${_.name}`" :label="`@${_.name}`" />
       </template>
     </div>
     <div v-else-if="status === 'pending'">
