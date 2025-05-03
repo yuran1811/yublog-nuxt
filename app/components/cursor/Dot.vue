@@ -1,12 +1,12 @@
 <script setup lang="ts">
-const isLarge = useMediaQuery('(min-width: 1024px)');
+const showCursor = useMediaQuery('(min-width: 1024px)');
 const { pressed } = useMousePressed();
 const { x, y } = usePointer();
 </script>
 
 <template>
   <div
-    v-if="isLarge"
+    v-if="showCursor"
     class="pointer-events-none fixed -top-full -left-full z-200 size-3.5 mix-blend-difference *:origin-center *:transition-all"
     :style="{
       top: `${y}px`,

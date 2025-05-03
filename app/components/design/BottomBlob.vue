@@ -1,6 +1,6 @@
 <template>
   <div
-    class="top=1/5 pointer-events-none absolute inset-x-0 -z-10 transform-gpu blur-3xl"
+    class="top=1/5 pointer-events-none absolute inset-x-0 -z-10 transform-gpu sm:blur-3xl"
     aria-hidden="true"
   >
     <div

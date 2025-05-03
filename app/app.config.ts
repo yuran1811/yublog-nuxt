@@ -43,9 +43,9 @@ export default defineAppConfig({
     },
     modal: {
       slots: {
-        overlay: 'fixed inset-0 bg-elevated/45 backdrop-blur-sm',
+        overlay: 'fixed inset-0 sm:bg-elevated/45 sm:backdrop-blur-sm',
         content:
-          'fixed bg-default/30 backdrop-blur-2xl divide-y divide-default flex flex-col focus:outline-none',
+          'fixed sm:bg-default/30 sm:backdrop-blur-2xl divide-y divide-default flex flex-col focus:outline-none',
       },
     },
     navigationMenu: {
