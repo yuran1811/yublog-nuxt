@@ -57,19 +57,14 @@ export const usePages = () => {
     pages: [
       [
         {
-          label: 'Posts',
-          icon: 'lucide:book-open',
-          to: '/blog',
+          label: 'Series',
+          icon: 'lucide:gallery-horizontal-end',
+          to: '/blog/series',
         },
         {
           label: 'Tags',
           icon: 'lucide:tags',
           to: '/blog/tags',
-        },
-        {
-          label: 'Notes',
-          icon: 'lucide:pen-line',
-          to: '/notes',
         },
         {
           label: 'About',

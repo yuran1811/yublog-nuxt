@@ -19,6 +19,7 @@ const postData = computed(() => ({
   author: post.value?.author || 'anonymous',
   date: post.value?.date || new Date(),
   tags: post.value?.tags || [],
+  series: post.value?.series || [],
   desc: post.value?.description || 'No description available',
   image: post.value?.image || '',
 }));
@@ -61,6 +62,26 @@ defineOgImageComponent('Nuxt', post.value?.ogImage);
     class="bg-default text-default relative mx-auto max-w-2xl space-y-12 px-6"
   >
     <UBreadcrumb :items="breadCrumbItems" class="max-md:hidden" />
+
+    <div
+      v-if="postData.series.length > 0"
+      class="border-muted flex w-full items-center justify-between"
+    >
+      <div class="flex items-center gap-2">
+        <Icon name="lucide:book-open" class="size-4" />
+        <span class="text-sm font-semibold">In Series:</span>
+      </div>
+      <div class="flex flex-wrap gap-2">
+        <template v-for="seri in postData.series" :key="seri">
+          <NuxtLink
+            :to="`/blog/series/${seri}`"
+            class="bg-default hover:text-default text-muted inline-block rounded-md px-2 py-1 text-xs font-semibold tracking-wider lowercase"
+          >
+            {{ seri }}
+          </NuxtLink>
+        </template>
+      </div>
+    </div>
 
     <NuxtImg
       :src="postData.image"

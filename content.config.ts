@@ -51,6 +51,7 @@ export default defineContentConfig({
           author: z.string().trim(),
           date: z.date(),
           tags: z.array(z.string().trim()),
+          series: z.array(z.string().trim()).optional(),
           image: z.string().trim(),
           lang: z.string().trim().optional(),
           rawbody: z.string(),
