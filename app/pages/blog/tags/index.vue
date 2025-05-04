@@ -7,11 +7,21 @@ const { data: posts, status } = await useAsyncData('blog-tag-all', () =>
 );
 
 const allTags = computed(() => {
-  const allTagsSet = new Set<string>();
+  const tags = new Set<string>();
+  const tagsMap = new Map<string, int>();
   posts.value?.forEach((post) => {
-    post.tags?.forEach((tag) => allTagsSet.add(tag));
+    post.tags?.forEach((tag) => {
+      if (tagsMap.has(tag)) {
+        tagsMap.set(tag, tagsMap.get(tag)! + 1);
+      } else {
+        tagsMap.set(tag, 1);
+      }
+
+      tags.add(tag);
+    });
   });
-  return Array.from(allTagsSet).sort();
+
+  return { tags: Array.from(tags).sort(), tagsMap };
 });
 
 const breadCrumbItems = ref([
@@ -40,8 +50,11 @@ defineOgImageComponent('Nuxt');
       v-if="status === 'success'"
       class="container mx-auto flex flex-wrap items-start justify-center gap-4"
     >
-      <template v-for="_ in allTags" :key="_">
-        <FancyButton :to="`/blog/tags/${_}`" :label="`#${_}`" />
+      <template v-for="_ in allTags.tags" :key="_">
+        <FancyButton
+          :to="`/blog/tags/${_}`"
+          :label="`#${_} (${allTags.tagsMap.get(_)!})`"
+        />
       </template>
     </div>
     <div v-else-if="status === 'pending'">

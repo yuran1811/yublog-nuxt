@@ -17,7 +17,22 @@ const { showSidebar } = useSidebar();
     </template>
 
     <template #body>
-      <UNavigationMenu orientation="vertical" :items="pages">
+      <UNavigationMenu
+        orientation="vertical"
+        :items="[
+          {
+            label: 'Posts',
+            icon: 'lucide:book-open',
+            to: '/blog',
+          },
+          {
+            label: 'Notes',
+            icon: 'lucide:pen-line',
+            to: '/notes',
+          },
+          ...pages,
+        ]"
+      >
         <template #search>
           <PostSearch />
         </template>

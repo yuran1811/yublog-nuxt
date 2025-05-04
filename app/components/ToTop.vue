@@ -6,7 +6,7 @@ const { y } = useWindowScroll({ behavior: 'smooth' });
 <template>
   <div
     class="totop group"
-    :class="{ hidden: y < 350 || isTooLow }"
+    :class="{ '!hidden': y < 400 || isTooLow }"
     @click="y = 0"
   >
     <span

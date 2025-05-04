@@ -74,32 +74,38 @@ defineOgImageComponent('Nuxt');
         </template>
 
         <template #content="{ item: { label: _ } }">
-          <ul class="space-y-2 pl-3">
+          <ul class="space-y-2">
             <template
               v-for="item in allSeries.seriesMap.get(_)!"
               :key="item.path"
             >
-              <li>
+              <li
+                class="hover:bg-accented/40 rounded-md px-2 py-1 transition-colors"
+              >
                 <NuxtLink
                   :to="item.path"
-                  class="flex w-full items-center justify-start py-1"
+                  class="flex w-full items-center justify-between"
                 >
-                  <Icon
-                    v-if="!!item.lang && item.lang.includes('vi')"
-                    name="local:flag-vi"
-                    class="mr-2 size-4"
-                  />
-                  <Icon
-                    v-if="!item.lang || item.lang.includes('en')"
-                    name="local:flag-en"
-                    class="mr-2 size-4"
-                  />
+                  <div
+                    class="flex w-2/3 items-center justify-start max-sm:w-full"
+                  >
+                    <Icon
+                      v-if="!!item.lang && item.lang.includes('vi')"
+                      name="local:flag-vi"
+                      class="mr-2 size-4 min-w-4"
+                    />
+                    <Icon
+                      v-if="!item.lang || item.lang.includes('en')"
+                      name="local:flag-en"
+                      class="mr-2 size-4 min-w-4"
+                    />
 
-                  <p class="line-clamp-1 w-2/3">
-                    {{ item.title }}
-                  </p>
-                  <Icon name="lucide:dot" class="text-toned size-6 min-w-6" />
-                  <span class="text-sm text-gray-400">
+                    <p class="line-clamp-1 text-left">
+                      {{ item.title }}
+                    </p>
+                  </div>
+
+                  <span class="text-right text-sm text-gray-400 max-sm:hidden">
                     {{
                       useDateFormat(item.date || new Date(), DefaultDateFormat)
                     }}
