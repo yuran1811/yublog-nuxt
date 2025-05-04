@@ -24,6 +24,7 @@ export const usePages = () => {
             pageCategories[category as keyof typeof pageCategories]?.icon ||
             'i-lucide-folder',
           to: route.path,
+          slot: 'posts' as const,
           children: [],
         };
       }
@@ -33,6 +34,7 @@ export const usePages = () => {
         description: route.meta.description as string,
         icon: (route.meta.icon as string) || 'i-lucide-package',
         to: route.path,
+        slot: 'posts' as const,
       });
 
       return acc;
@@ -43,11 +45,13 @@ export const usePages = () => {
         label: string;
         icon: string;
         to: string;
+        slot: string;
         children: Array<{
           label: string;
           description: string;
           icon: string;
           to: string;
+          slot: string;
         }>;
       }
     >,
@@ -57,19 +61,34 @@ export const usePages = () => {
     pages: [
       [
         {
+          label: 'Posts',
+          icon: 'lucide:book-open',
+          to: '/blog',
+          slot: 'posts' as const,
+        },
+        {
           label: 'Series',
           icon: 'lucide:gallery-horizontal-end',
           to: '/blog/series',
+          slot: 'posts' as const,
         },
         {
           label: 'Tags',
           icon: 'lucide:tags',
           to: '/blog/tags',
+          slot: 'posts' as const,
+        },
+        {
+          label: 'Notes',
+          icon: 'lucide:pen-line',
+          to: '/notes',
+          slot: 'posts' as const,
         },
         {
           label: 'About',
           icon: 'lucide:info',
           to: '/about',
+          slot: 'posts' as const,
         },
         ...Object.values(categorizedRoutes),
       ],

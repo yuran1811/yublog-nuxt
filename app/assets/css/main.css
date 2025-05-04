@@ -17,6 +17,7 @@
 
   --breakpoint-ss: 384px;
   --breakpoint-xs: 512px;
+  --breakpoint-4xl: 896px;
 
   --gd-to-top: to top in oklab;
   --gd-to-bottom: to bottom in oklab;

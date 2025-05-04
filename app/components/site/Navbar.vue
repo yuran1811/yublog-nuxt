@@ -56,10 +56,9 @@ const desktopItems = ref([
       <UNavigationMenu
         variant="link"
         :items="mobileItems"
-        :ui="{
-          root: 'md:hidden',
-        }"
+        :ui="{ root: 'md:hidden' }"
       />
+
       <UNavigationMenu
         variant="link"
         :items="desktopItems"
@@ -69,6 +68,10 @@ const desktopItems = ref([
           list: 'md:gap-x-2',
         }"
       >
+        <template #posts-leading="{ item }">
+          <Icon :name="item.icon" class="max-4xl:hidden size-5" />
+        </template>
+
         <template #search>
           <PostSearch />
         </template>
