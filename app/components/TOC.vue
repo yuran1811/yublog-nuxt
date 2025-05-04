@@ -1,5 +1,6 @@
 <script setup lang="ts">
 const { tocs = [] } = defineProps<{ tocs?: TOC[] }>();
+const scrollDir = useScrollDir();
 </script>
 
 <template>
@@ -10,7 +11,10 @@ const { tocs = [] } = defineProps<{ tocs?: TOC[] }>();
       color="neutral"
       variant="subtle"
       trailing-icon="lucide:list"
-      class="fixed top-19 right-2.5 z-50 md:top-25 xl:right-1/5"
+      class="fixed top-19 right-2.5 z-50 transition-opacity md:top-25 xl:right-1/5"
+      :class="{
+        'opacity-0': scrollDir,
+      }"
     />
 
     <template #content>
