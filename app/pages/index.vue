@@ -32,7 +32,7 @@ defineOgImageComponent('Nuxt');
 <template>
   <div class="relative">
     <div class="my-16 sm:my-24">
-      <PulseLogo class="mx-auto mb-4 sm:mb-8" />
+      <RippleLogo class="mx-auto mb-4 sm:mb-8" />
       <p class="text-center text-2xl font-black tracking-wide sm:text-3xl">
         yublog
       </p>
@@ -67,5 +67,7 @@ defineOgImageComponent('Nuxt');
         </div>
       </div>
     </div>
+
+    <CursorDot />
   </div>
 </template>
