@@ -2,7 +2,7 @@
 title: Customize Terminal (Git Bash, CMD)
 description: Customize your terminal with zsh, oh-my-zsh on git bash and cmd (via clink).
 author: yuran1811
-date: 2023-08-12T17:30:00Z
+date: 2023-08-12T17:35:00Z
 tags:
   - custom
   - terminal

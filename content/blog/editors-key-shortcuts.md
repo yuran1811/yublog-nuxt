@@ -65,7 +65,7 @@ Nếu dùng **Visual Studio Code** và muốn sử dụng những phím tắt n�
 - ***Ctrl + H*** : Thay thế
 - ***Ctrl + Shift + F*** : Tìm trong các file đang mở
 
-Tabs
+## Tabs
 
 - ***Ctrl + Shift + T*** : Mở tab đã đóng gần nhất
 - ***Ctrl + Tab*** : Di chuyển qua lại giữa các tab
