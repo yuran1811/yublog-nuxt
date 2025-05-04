@@ -61,6 +61,7 @@ defineOgImageComponent('Nuxt', post.value?.ogImage);
     ref="scrollObserve"
     class="bg-default text-default relative mx-auto max-w-2xl space-y-12 px-6"
   >
+    <ToTop />
     <UBreadcrumb :items="breadCrumbItems" class="max-md:hidden" />
 
     <div
@@ -158,18 +159,20 @@ defineOgImageComponent('Nuxt', post.value?.ogImage);
           hidden: !isHighEnough,
           '!h-0': !y,
           'after:scale-100':
-            y >=
-            (scrollObserve?.offsetHeight ?? 0) +
-              (scrollObserve?.offsetTop ?? 0) -
-              230 -
-              height,
+            y /
+              ((scrollObserve?.offsetHeight ?? 1) +
+                (scrollObserve?.offsetTop ?? 0) -
+                230 -
+                height) >=
+            1,
         }"
         :color="
-          y >=
-          (scrollObserve?.offsetHeight ?? 0) +
-            (scrollObserve?.offsetTop ?? 0) -
-            230 -
-            height
+          y /
+            ((scrollObserve?.offsetHeight ?? 1) +
+              (scrollObserve?.offsetTop ?? 0) -
+              230 -
+              height) >=
+          1
             ? 'primary'
             : 'neutral'
         "
