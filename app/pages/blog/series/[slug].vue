@@ -5,8 +5,8 @@ const serie = useRouteParams('slug');
 
 const { data: posts } = await useAsyncData(`blog-serie-${serie.value}`, () =>
   queryCollection('blog')
-    .select('title', 'date', 'series', 'lang', 'path')
-    .where('series', 'LIKE', `%"${serie.value}"%`)
+    .select('title', 'date', 'tags', 'lang', 'path')
+    .where('tags', 'LIKE', `%"${serie.value}"%`)
     .order('date', 'DESC')
     .all(),
 );

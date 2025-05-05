@@ -10,7 +10,10 @@ const { data: posts, status } = await useAsyncData('blog-series-all', () =>
 
 const allSeries = computed(() => {
   const allSeriesSet = new Set<string>();
-  const seriesMap = new Map<string, string[]>();
+  const seriesMap = new Map<
+    string,
+    Pick<BlogCollectionItem, 'title' | 'path' | 'date' | 'series' | 'lang'>[]
+  >();
 
   posts.value?.forEach((post) => {
     post.series?.forEach((_) => {

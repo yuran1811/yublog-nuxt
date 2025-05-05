@@ -1,9 +1,9 @@
 <script setup lang="ts">
 import { DockItems } from '@/constants';
 
-const items: NavigationMenuItem[] = [
+const items = [
   [
-    ...DockItems.filter((_) => _.link.length > 0).map((item) => ({
+    ...DockItems.filter((_) => _.link && _.link.length > 0).map((item) => ({
       title: item.name,
       to: item.link,
       icon: item.icon,

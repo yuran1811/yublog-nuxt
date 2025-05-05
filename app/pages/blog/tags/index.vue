@@ -8,7 +8,7 @@ const { data: posts, status } = await useAsyncData('blog-tag-all', () =>
 
 const allTags = computed(() => {
   const tags = new Set<string>();
-  const tagsMap = new Map<string, int>();
+  const tagsMap = new Map<string, number>();
   posts.value?.forEach((post) => {
     post.tags?.forEach((tag) => {
       if (tagsMap.has(tag)) {
