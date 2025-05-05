@@ -157,6 +157,19 @@ export default defineNuxtConfig({
       'postcss-nested': {},
     },
   },
+  debug: {
+    // Enable specific debugging features
+    templates: false,
+    modules: false,
+    watchers: false,
+    hooks: {
+      client: false,
+      server: false,
+    },
+    nitro: false,
+    router: false,
+    hydration: true,
+  },
 
   eslint: {
     config: {
