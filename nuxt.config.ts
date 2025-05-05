@@ -7,6 +7,7 @@ export default defineNuxtConfig({
     '@nuxt/image',
     '@nuxt/ui',
     '@nuxt/eslint',
+    '@nuxt/test-utils/module',
     'nuxt-llms',
     'nuxt-svgo',
     'reka-ui/nuxt',
@@ -157,7 +158,7 @@ export default defineNuxtConfig({
       'postcss-nested': {},
     },
   },
-  debug: {
+  /* debug: {
     // Enable specific debugging features
     templates: false,
     modules: false,
@@ -168,8 +169,8 @@ export default defineNuxtConfig({
     },
     nitro: false,
     router: false,
-    hydration: true,
-  },
+    hydration: false,
+  }, */
 
   eslint: {
     config: {

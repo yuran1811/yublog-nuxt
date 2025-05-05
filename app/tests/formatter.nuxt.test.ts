@@ -1,10 +1,14 @@
 import { describe, expect, it } from 'vitest';
-import {
-  formatByteSize,
-  toTitleCase,
-} from '~/utils/formatter';
+import { formatByteSize, formatDate, toTitleCase } from '~/utils';
 
 describe('formatter', () => {
+  describe('formatDate', () => {
+    it('should format date correctly', () => {
+      const date = new Date('2023-10-01T12:00:00Z');
+      expect(formatDate(date)).toBe('Oct 01, 2023');
+    });
+  });
+
   describe('formatByteSize', () => {
     it('should format byte values correctly', () => {
       expect(formatByteSize(0)).toBe('0.0 B');

@@ -1,5 +1,4 @@
 <script setup lang="ts">
-import { DefaultDateFormat } from '@/constants';
 import { estimateReadingTime, parseAuthorData } from '@/shared/utils';
 import { useRouteParams } from '@vueuse/router';
 
@@ -105,9 +104,7 @@ defineOgImageComponent('Nuxt', post.value?.ogImage);
             <span itemprop="name">{{ postData.author }}</span>
           </NuxtLink>
           on
-          <time>{{
-            useDateFormat(postData.date, DefaultDateFormat).value
-          }}</time>
+          <time>{{ formatDate(postData.date) }}</time>
         </p>
 
         <p class="text-muted text-sm">

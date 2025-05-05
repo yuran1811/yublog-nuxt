@@ -1,6 +1,5 @@
 <script setup lang="ts">
 import type { BlogCollectionItem } from '@nuxt/content';
-import { DefaultDateFormat } from '@/constants';
 
 defineProps<{
   posts?: Pick<
@@ -40,7 +39,7 @@ defineProps<{
         >
           <!-- Datetime -->
           <p class="block text-xs text-gray-400">
-            {{ useDateFormat(post.date || new Date(), DefaultDateFormat) }}
+            {{ formatDate(post.date) }}
           </p>
 
           <!-- Title -->

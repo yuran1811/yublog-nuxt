@@ -1,6 +1,5 @@
 <script setup lang="ts">
 import type { NotesCollectionItem } from '@nuxt/content';
-import { DefaultDateFormat } from '@/constants';
 
 defineProps<{
   notes?: Pick<NotesCollectionItem, 'title' | 'date' | 'path' | 'tags'>[];
@@ -20,7 +19,7 @@ defineProps<{
           class="relative flex h-[calc(100%-2px)] flex-col items-start justify-end overflow-hidden rounded-[10px] p-4 !pt-18 sm:p-6"
         >
           <p class="block text-xs text-gray-400">
-            {{ useDateFormat(note.date || new Date(), DefaultDateFormat) }}
+            {{ formatDate(note.date) }}
           </p>
 
           <p class="mt-0.5 line-clamp-2 text-lg font-medium text-white">

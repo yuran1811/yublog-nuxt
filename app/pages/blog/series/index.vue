@@ -1,5 +1,5 @@
 <script setup lang="ts">
-import { DefaultDateFormat } from '@/constants';
+import type { BlogCollectionItem } from '@nuxt/content';
 
 const { data: posts, status } = await useAsyncData('blog-series-all', () =>
   queryCollection('blog')
@@ -106,9 +106,7 @@ defineOgImageComponent('Nuxt');
                   </div>
 
                   <span class="text-right text-sm text-gray-400 max-sm:hidden">
-                    {{
-                      useDateFormat(item.date || new Date(), DefaultDateFormat)
-                    }}
+                    {{ formatDate(item.date) }}
                   </span>
                 </NuxtLink>
               </li>
