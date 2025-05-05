@@ -1,5 +1,4 @@
 // @ts-nocheck
-
 /**
  * Credit to [@cursify](https://github.com/ui-layouts/cursify)
  * @see https://cursify.vercel.app/components/fluid-cursor

@@ -65,8 +65,8 @@ const clickHandler = (name: string) => {
         <Icon v-if="item.icon.length" :name="item.icon" class="size-full" />
         <NuxtImg
           v-else-if="item.img.length"
-          :src="item.img"
           :placeholder="36"
+          :src="item.img"
           :alt="item.name"
           :title="item.name"
         />

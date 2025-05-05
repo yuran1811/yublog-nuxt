@@ -66,9 +66,10 @@ defineOgImageComponent('Nuxt', post.value?.ogImage);
       <NuxtImg
         v-slot="{ src, isLoaded, imgAttrs }"
         :src="postData.image"
+        :alt="`${postData.title} cover image`"
+        :title="`${postData.title} cover image`"
         sizes="100vw sm:64vw md:480px"
         fit="contain"
-        :title="`${postData.title} cover image`"
         class="mx-auto"
         :custom="true"
       >

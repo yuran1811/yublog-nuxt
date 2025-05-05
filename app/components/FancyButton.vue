@@ -2,6 +2,8 @@
 /**
  * Credit to [@HugoRCD](https://github.com/HugoRCD)
  * @see https://github.com/HugoRCD/canvas/blob/main/app/components/SpotlightButton.vue
+ *
+ * Modified by [me (@yuran1811)](https://github.com/yuran1811)
  */
 defineProps({
   label: {

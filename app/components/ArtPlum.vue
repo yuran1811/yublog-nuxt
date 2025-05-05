@@ -1,4 +1,5 @@
 <script setup lang="ts">
+// @ts-nocheck
 /**
  * Credit to [@antfu](https://github.com/antfu)
  * @see https://github.com/antfu/antfu.me/blob/main/src/components/ArtPlum.vue

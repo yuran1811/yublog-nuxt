@@ -60,9 +60,10 @@ defineOgImageComponent('Nuxt', note.value?.ogImage);
       <NuxtImg
         v-slot="{ src, isLoaded, imgAttrs }"
         :src="noteData.image"
+        :alt="`${noteData.title} cover image`"
+        :title="`${noteData.title} cover image`"
         sizes="100vw sm:64vw md:480px"
         fit="contain"
-        :title="`${noteData.title} cover image`"
         class="mx-auto"
         :custom="true"
       >
