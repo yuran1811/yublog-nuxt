@@ -2,7 +2,7 @@
 title: Sublime Text x C++ trên Windows
 description: Hướng dẫn cài đặt C++ cho Sublime Text trên Windows
 author: yuran1811
-date: 2023-08-04T18:27:13Z
+date: 2023-08-04T09:27:13.000Z
 tags:
   - cpp
   - sublime-text

@@ -2,7 +2,7 @@
 title: 10 đoạn code Javascript hữu ích
 description: Những utility function cực kì hữu ích cho project của bạn
 author: napthedev
-date: 2022-05-20T06:52:57Z
+date: 2022-05-20T06:52:57.000Z
 tags:
   - js
   - tech
