@@ -67,6 +67,6 @@ defineOgImageComponent('Nuxt');
       <ProjectList />
     </section>
 
-    <LazyCursorFluid hydrate-on-interaction="mousemove" />
+    <LazyCursorFluid :hydrate-after="1500" />
   </LayoutDefault>
 </template>
