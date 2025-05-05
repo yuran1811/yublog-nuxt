@@ -67,7 +67,5 @@ defineOgImageComponent('Nuxt');
         </div>
       </div>
     </div>
-
-    <CursorDot />
   </div>
 </template>

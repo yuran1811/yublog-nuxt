@@ -13,7 +13,7 @@ const { app } = useAppConfig();
 <template>
   <div class="w-full">
     <div
-      class="text-default bg-elevated overflow-hidden rounded-lg px-5 py-4 font-mono text-sm leading-normal subpixel-antialiased shadow-lg"
+      class="text-default bg-elevated overflow-hidden rounded-lg px-5 py-4 font-mono text-sm leading-normal subpixel-antialiased sm:shadow-lg"
     >
       <div v-if="!hideTitle" class="top mb-4 flex">
         <div class="h-3 w-3 rounded-full bg-red-400"></div>

@@ -14,7 +14,7 @@ defineProps<{
     <template v-for="note in notes" :key="note.path">
       <NuxtLink
         :to="note.path"
-        class="group border-accented/60 from-accented/20 to-accented/5 relative w-full max-w-105 cursor-pointer overflow-hidden rounded-lg border-1 bg-gradient-to-br shadow-lg transition-all hover:brightness-90"
+        class="group max-sm:bg-muted sm:border-accented/60 sm:from-accented/20 sm:to-accented/5 relative w-full max-w-105 cursor-pointer overflow-hidden rounded-lg transition-all hover:brightness-90 sm:border-1 sm:bg-gradient-to-br"
       >
         <div
           class="relative flex h-[calc(100%-2px)] flex-col items-start justify-end overflow-hidden rounded-[10px] p-4 !pt-18 sm:p-6"
@@ -29,10 +29,10 @@ defineProps<{
         </div>
 
         <div
-          class="via-primary-300 absolute bottom-0 m-auto h-2 w-full rounded bg-gradient-to-l blur-2xl transition-all group-hover:blur-xl"
+          class="via-primary-300 absolute bottom-0 m-auto h-2 w-full rounded bg-gradient-to-l blur-2xl transition-all group-hover:blur-xl max-sm:hidden"
         />
         <div
-          class="group-hover:via-primary-300 via-primary-950 m-auto h-0.5 w-[70%] rounded bg-gradient-to-l transition-all group-hover:w-full"
+          class="group-hover:via-primary-300 via-primary-950 m-auto h-0.5 w-[70%] rounded bg-gradient-to-l transition-all group-hover:w-full max-sm:hidden"
         />
       </NuxtLink>
     </template>

@@ -204,6 +204,10 @@ body {
   @apply !p-0;
 }
 
+.aurora-text {
+  @apply animate-aurora scale-120 bg-gradient-to-br from-[#FF9C03] via-[#A78BFA] to-[#00A2E5] bg-size-[200%] bg-clip-text font-black tracking-wide text-transparent duration-75;
+}
+
 .no-scrollbar::-webkit-scrollbar,
 .no-scrollbar::-webkit-scrollbar-thumb {
   @apply !size-0;
@@ -222,7 +226,7 @@ body {
   &:hover {
     &::after,
     &::before {
-      transform: rotateZ(0);
+      @apply sm:rotate-z-0;
     }
   }
   &::after,
@@ -272,10 +276,10 @@ body {
 }
 
 .pulse-ring {
-  @apply animate-breath absolute rounded-full shadow-xl max-sm:animate-none;
+  @apply animate-breath absolute rounded-full max-sm:animate-none sm:shadow-md;
 }
 .ripple-ring {
-  @apply animate-ripple absolute rounded-full shadow-xl max-sm:animate-none;
+  @apply animate-ripple absolute rounded-full max-sm:animate-none sm:shadow-md;
 }
 
 .card-container {

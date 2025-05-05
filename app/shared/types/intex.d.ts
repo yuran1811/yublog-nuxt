@@ -1,3 +1,9 @@
+declare interface ProjectDataType {
+  name: string;
+  release: string;
+  link: string;
+}
+
 declare interface DockItemType {
   name: string;
   icon: string;

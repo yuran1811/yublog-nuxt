@@ -10,7 +10,7 @@ defineOgImageComponent('Nuxt');
 
 <template>
   <LayoutDefault>
-    <ArtPlum />
+    <LazyArtPlum :hydrate-after="1000" />
     <!-- <DesignTopBlob class="hidden lg:block" />
     <DesignBottomBlob class="hidden lg:block" /> -->
 
@@ -86,6 +86,6 @@ defineOgImageComponent('Nuxt');
     </section>
 
     <Dock />
-    <CursorDot />
+    <LazyCursorDot hydrate-on-interaction="mousemove" />
   </LayoutDefault>
 </template>

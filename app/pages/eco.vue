@@ -14,7 +14,7 @@ defineOgImageComponent('Nuxt');
 
 <template>
   <LayoutDefault>
-    <section class="space-y-12">
+    <section class="hidden space-y-12">
       <GlowGrid
         :list="[
           {
@@ -50,16 +50,23 @@ defineOgImageComponent('Nuxt');
             class="flex-center-col gap-2 text-center text-2xl sm:text-4xl md:text-5xl"
           >
             <span class="font-bold"> yuran1811's </span>
-            <span
-              class="animate-aurora scale-120 bg-gradient-to-br from-[#FF9C03] via-[#A78BFA] to-[#00A2E5] bg-size-[200%] bg-clip-text font-black tracking-wide text-transparent duration-75"
-            >
-              products
-            </span>
+            <span class="aurora-text"> products </span>
           </p>
         </div>
       </GlowGrid>
     </section>
 
-    <CursorFluid />
+    <section class="space-y-12">
+      <p
+        class="flex-center-col mx-auto gap-2 text-center text-2xl sm:text-3xl md:text-4xl"
+      >
+        <span class="font-bold"> yuran1811's </span>
+        <span class="aurora-text"> products </span>
+      </p>
+
+      <ProjectList />
+    </section>
+
+    <LazyCursorFluid hydrate-on-interaction="mousemove" />
   </LayoutDefault>
 </template>

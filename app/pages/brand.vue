@@ -81,6 +81,6 @@ defineOgImageComponent('Nuxt');
       </div>
     </UContainer>
 
-    <CursorDot />
+    <LazyCursorDot hydrate-on-interaction="mousemove" />
   </div>
 </template>
