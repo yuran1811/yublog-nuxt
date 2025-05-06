@@ -158,7 +158,7 @@ export default defineNuxtConfig({
       'postcss-nested': {},
     },
   },
-  debug: {
+  /* debug: {
     // Enable specific debugging features
     templates: false,
     modules: false,
@@ -170,7 +170,7 @@ export default defineNuxtConfig({
     nitro: false,
     router: false,
     hydration: true,
-  },
+  }, */
 
   eslint: {
     config: {

@@ -56,7 +56,7 @@ defineOgImageComponent('Nuxt');
       </GlowGrid>
     </section>
 
-    <section class="space-y-12">
+    <section class="space-y-12 md:space-y-22">
       <p
         class="flex-center-col mx-auto gap-2 text-center text-2xl sm:text-3xl md:text-4xl"
       >
