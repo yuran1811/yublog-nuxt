@@ -23,9 +23,10 @@
 ## Features
 
 - Markdown support with `@nuxt/content`
-- SEO with `@nuxtjs/seo`
-- LLMs with `@nuxtjs/llm`
+- Image optimization with `@nuxt/image`
 - Multi-language support with `@nuxtjs/i18n`
+- SEO with `@nuxtjs/seo`
+- LLMs with `nuxt-llms`
 
 ## Tech Stack
 
@@ -35,11 +36,15 @@
 
 <div style="display:flex;gap:12px;justify-content:center;flex-wrap:wrap">
   <img src="./public/screenshots/demo/home.png" style="width:45%;max-width:380px">
+  <img src="./public/screenshots/demo/posts.png" style="width:45%;max-width:380px">
+  <img src="./public/screenshots/demo/series.png" style="width:45%;max-width:380px">
+  <img src="./public/screenshots/demo/tags.png" style="width:45%;max-width:380px">
   <img src="./public/screenshots/demo/about.png" style="width:45%;max-width:380px">
+  <img src="./public/screenshots/demo/eco.png" style="width:45%;max-width:380px">
   <img src="./public/screenshots/demo/brand.png" style="width:45%;max-width:380px">
   <img src="./public/screenshots/demo/md-editor.png" style="width:45%;max-width:380px">
-  <img src="./public/screenshots/demo/post1.png" style="width:45%;max-width:380px">
-  <img src="./public/screenshots/demo/post2.png" style="width:45%;max-width:380px">
+  <img src="./public/screenshots/demo/post-beg.png" style="width:45%;max-width:380px">
+  <img src="./public/screenshots/demo/post-end.png" style="width:45%;max-width:380px">
 </div>
 
 ## Quick Start
