@@ -224,10 +224,7 @@ body {
   @apply text-toned fixed right-2.5 bottom-16 z-100 size-12 -translate-x-3.5 cursor-pointer xl:right-1/5;
 
   &:hover {
-    &::after,
-    &::before {
-      @apply sm:rotate-z-0;
-    }
+    @apply before:sm:rotate-z-0 after:sm:rotate-z-0;
   }
   &::after,
   &::before {
