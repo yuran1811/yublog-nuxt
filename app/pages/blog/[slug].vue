@@ -1,6 +1,6 @@
 <script setup lang="ts">
-import { estimateReadingTime, parseAuthorData } from '@/shared/utils';
 import { useRouteParams } from '@vueuse/router';
+import { estimateReadingTime, parseAuthorData } from '@/shared/utils';
 
 const { y } = useWindowScroll();
 const { height } = useWindowSize();
@@ -75,7 +75,7 @@ defineOgImageComponent('Nuxt', post.value?.ogImage);
         <img v-if="isLoaded" v-bind="imgAttrs" :src="src" />
         <USkeleton
           v-else
-          class="w-100vw sm:w-64vw md:w-480px mx-auto aspect-video max-h-64"
+          class="w-100vw sm:w-64vw mx-auto aspect-video md:w-[480px]"
         />
       </NuxtImg>
 
